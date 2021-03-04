@@ -1,0 +1,33 @@
+.facebookLogo {
+  height: 50px;
+  width: 52px;
+}
+
+.instagramLogo {
+  height: 50px;
+  width: 52px;
+}
+
+.twitterLogo {
+  height: 50px;
+  width: 52px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hamburgerMenu {
+  width: 40px;
+}
+
+.barFrontMobile {
+  width: 100%;
+}
+
+.googleMap {
+  width: 800px;
+  height: 450px;
+}
+/*# sourceMappingURL=contactPage.css.map */

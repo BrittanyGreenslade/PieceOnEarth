@@ -1,0 +1,29 @@
+.facebookLogo {
+  height: 50px;
+  width: 52px;
+}
+
+.instagramLogo {
+  height: 50px;
+  width: 52px;
+}
+
+.twitterLogo {
+  height: 50px;
+  width: 52px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hamburgerMenu {
+  width: 40px;
+}
+
+.introVideo {
+  width: 560px;
+  height: 315px;
+}
+/*# sourceMappingURL=aboutPage.css.map */

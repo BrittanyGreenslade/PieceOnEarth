@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hamburgerMenu {
+  width: 40px;
+}
+
+.facebookLogo {
+  height: 50px;
+  width: 52px;
+}
+
+.instagramLogo {
+  height: 50px;
+  width: 52px;
+}
+
+.twitterLogo {
+  height: 50px;
+  width: 52px;
+}
+
+body {
+  background-image: url(/images/darkWoodenBackgroundMobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.facebookLogo {
+  width: 50px;
+  height: 52px;
+}
+
+.instagramLogo {
+  width: 50px;
+  height: 52px;
+}
+
+.twitterLogo {
+  width: 50px;
+  height: 52px;
+}
+/*# sourceMappingURL=style.css.map */

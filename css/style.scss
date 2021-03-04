@@ -1,2 +1,20 @@
-@import "_footer.scss";
 @import "_header.scss";
+@import "_footer.scss";
+body {
+  background-image: url(/images/darkWoodenBackgroundMobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: cover;
+}
+.facebookLogo {
+  width: 50px;
+  height: 52px;
+}
+.instagramLogo {
+  width: 50px;
+  height: 52px;
+}
+.twitterLogo {
+  width: 50px;
+  height: 52px;
+}
