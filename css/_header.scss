@@ -2,7 +2,24 @@
   margin: 0;
   padding: 0;
 }
-.hamburgerMenu {
-  width: 40px;
+a {
+  text-decoration: none;
 }
-
+header {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr;
+  align-items: center;
+  min-height: 10vh;
+}
+.logoAndTitle {
+  width: 90%;
+  object-fit: cover;
+  padding-left: 8px;
+  padding-top: 5%;
+}
+.hamburgerMenu {
+  width: 50%;
+  justify-self: end;
+  padding-right: 18px;
+  padding-top: 3px;
+}

@@ -16,32 +16,40 @@
       />
       <img
         class="hamburgerMenu"
-        src="/images/hamburgerMenu.svg"
+        src="/images/hamburgerMenuThin.svg"
         alt="hamburger menu icon"
       />
     </header>
     <main>
-      <section class="heroSectionContactPg">
+      <section>
         <img
-          class="barFrontMobile"
-          src="/images/barFrontDarkSmall2.jpg"
+          class="barFrontImg"
+          src="/images/barFrontDarkCropped.jpg"
           alt="front of bar in restaurant"
         />
       </section>
-      <section class="contactSection">
-        <h1>- Contact Us -</h1>
-        <p>8424 109 St NW</p>
-        <p>Edmonton, AB</p>
-        <a href="tel:7805874567">780 587 4567</a>
+      <section class="contactUsContainer">
+        <h1 class="pageTitle">- Contact Us -</h1>
+        <div class="contactInfo">
+          <p>8424 109 St NW</p>
+          <p>Edmonton, AB</p>
+          <a href="tel:7805874567">780 587 4567</a>
+        </div>
       </section>
       <section class="contactForm">
-        <h3>Name*</h3>
-        <div class="formBox"></div>
-        <h3>Email*</h3>
-        <div class="formBox"></div>
-        <h3>Message*</h3>
-        <div class="formBox"></div>
-        <div><p>Submit</p></div>
+        <div class="contactFormItem">
+          <label for="name"><p class="formSectionTitle">Name*</p></label>
+          <input type="text" name="name" class="formBox" required />
+        </div>
+        <div class="contactFormItem">
+          <label for="email"><p class="formSectionTitle">Email*</p></label>
+          <input type="text" name="email" class="formBox" required />
+        </div>
+        <div class="contactFormItem">
+          <label for="message"><p class="formSectionTitle">Message*</p></label>
+          <input type="text" name="message" class="formBox" required />
+        </div>
+        <div class="submitButton"><p>Submit</p></div>
       </section>
       <iframe
         class="googleMap"

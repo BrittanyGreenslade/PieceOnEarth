@@ -18,8 +18,35 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 0.5fr;
+      grid-template-columns: 2fr 0.5fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10vh;
+}
+
+.logoAndTitle {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-left: 8px;
+  padding-top: 5%;
+}
+
 .hamburgerMenu {
-  width: 40px;
+  width: 50%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  padding-right: 18px;
+  padding-top: 3px;
 }
 
 .introVideo {

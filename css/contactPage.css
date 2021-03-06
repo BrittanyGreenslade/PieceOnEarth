@@ -1,3 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 0.5fr;
+      grid-template-columns: 2fr 0.5fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10vh;
+}
+
+.logoAndTitle {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-left: 8px;
+  padding-top: 5%;
+}
+
+.hamburgerMenu {
+  width: 50%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  padding-right: 18px;
+  padding-top: 3px;
+}
+
 .facebookLogo {
   height: 50px;
   width: 52px;
@@ -13,21 +49,92 @@
   width: 52px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.hamburgerMenu {
-  width: 40px;
-}
-
-.barFrontMobile {
+.barFrontImg {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 2%;
+}
+
+a {
+  color: #403637;
+}
+
+.contactUsContainer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  font-size: 5vw;
+  letter-spacing: 6px;
+  font-weight: bold;
+  color: #403637;
+  padding-top: 10%;
+}
+
+.contactUsContainer .pageTitle {
+  color: #403637;
+}
+
+.contactUsContainer .contactInfo {
+  text-align: center;
+}
+
+.contactForm {
+  width: 100%;
+  margin-left: 3%;
+  margin-top: 5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.contactForm .contactFormItem {
+  padding-top: 8px;
+}
+
+.contactForm input {
+  width: 90%;
+  background: #f1f1f1;
+  border: #403637 solid 1px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.contactForm .formSectionTitle {
+  color: #403637;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contactFormItem {
+  padding-top: 8px;
+}
+
+.submitButton {
+  background: #d3b468;
+  border-radius: 10px;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  color: #403637;
+  font-size: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-top: 5px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-right: 6%;
 }
 
 .googleMap {
-  width: 800px;
-  height: 450px;
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  padding-bottom: 2%;
 }
 /*# sourceMappingURL=contactPage.css.map */
