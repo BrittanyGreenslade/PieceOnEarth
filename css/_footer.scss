@@ -1,13 +1,44 @@
+@import "_global.scss";
+footer {
+  min-height: 10vh;
+}
 
-.facebookLogo {
-  height: 50px;
-  width: 52px;
+hr {
+  border: 1px solid $contentColor;
+  opacity: 0.6;
+  width: 90%;
+  margin: auto;
 }
-.instagramLogo {
-  height: 50px;
-  width: 52px;
-}
-.twitterLogo {
-  height: 50px;
-  width: 52px;
+.footerGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+  text-align: center;
+  .textFooter,
+  .addressInfo {
+    color: $contentColor;
+    font-family: $contentFont;
+    font-size: 12px;
+  }
+  .addressInfo {
+    padding-top: 5%;
+  }
+  .socialMediaLogos {
+    display: grid;
+    width: 40%;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: end;
+    justify-items: center;
+    .smLogo {
+      width: 42px;
+      opacity: 0.7;
+    }
+  }
+  .copyrightInfo {
+    font-size: 10px;
+    padding-top: 5%;
+  }
 }

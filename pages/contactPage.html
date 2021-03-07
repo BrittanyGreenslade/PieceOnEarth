@@ -14,11 +14,14 @@
         src="/images/PieceOnEarthHorizontal.png"
         alt="Piece on Earth logo and name"
       />
-      <img
-        class="hamburgerMenu"
-        src="/images/hamburgerMenuThin.svg"
-        alt="hamburger menu icon"
-      />
+      <div class="hamburgerMenu">
+        <input type="checkbox" name="hamburgerMenuChkbx" />
+        <div class="mobileHamburgerContainer">
+        <span class="hamburgerMenuLine"></span>
+        <span class="hamburgerMenuLine"></span>
+        <span class="hamburgerMenuLine"></span>
+      </div>
+      </div>
     </header>
     <main>
       <section>
@@ -38,16 +41,16 @@
       </section>
       <section class="contactForm">
         <div class="contactFormItem">
-          <label for="name"><p class="formSectionTitle">Name*</p></label>
+          <label for="name" class="formSectionTitle">Name*</label>
           <input type="text" name="name" class="formBox" required />
         </div>
         <div class="contactFormItem">
-          <label for="email"><p class="formSectionTitle">Email*</p></label>
+          <label for="email" class="formSectionTitle">Email*</label>
           <input type="text" name="email" class="formBox" required />
         </div>
         <div class="contactFormItem">
-          <label for="message"><p class="formSectionTitle">Message*</p></label>
-          <input type="text" name="message" class="formBox" required />
+          <label for="message" class="formSectionTitle">Message*</label>
+          <textarea class="messageBox" name="subject"></textarea>
         </div>
         <div class="submitButton"><p>Submit</p></div>
       </section>
@@ -61,31 +64,35 @@
     </main>
     <footer>
       <hr />
-      <p>8424 109 St NW</p>
-      <p>Edmonton, AB</p>
-      <a href="tel:7805874567">780 587 4567</a>
-      <div class="socialMediaLogos">
-        <img
-          class="facebookLogo"
-          src="/images/facebookLogo.svg"
-          alt="Facebook logo"
-        />
-        <img
-          class="instagramLogo"
-          src="/images/instagramLogo.svg"
-          alt="Instagram logo"
-        />
-        <img
-          class="twitterLogo"
-          src="/images/twitterLogo.svg"
-          alt="Twitter logo"
-        />
+      <div class="footerGrid">
+        <div>
+          <p class="addressInfo" class="textFooter">8424 109 St NW</p>
+          <p class="textFooter">Edmonton, AB</p>
+          <a class="textFooter" href="tel:7805874567">780 587 4567</a>
+        </div>
+        <div class="socialMediaLogos">
+          <img
+            class="smLogo"
+            src="/images/facebookLogo.svg"
+            alt="Facebook logo"
+          />
+          <img
+            class="smLogo"
+            src="/images/instagramLogo.svg"
+            alt="Instagram logo"
+          />
+          <img
+            class="smLogo"
+            src="/images/twitterLogo.svg"
+            alt="Twitter logo"
+          />
+        </div>
+        <div class="textFooter">
+          <p>Sun - Thu 12 pm - 11 pm</p>
+          <p>Fri - Sat 12 pm - 1 am</p>
+          <p class="copyrightInfo">Copyright © 2021, Brittany</p>
+        </div>
       </div>
-      <div class="hoursFooter">
-        <p>Sun - Thu 12 pm - 11 pm</p>
-        <p>Fri - Sat 12 pm - 1 am</p>
-      </div>
-      <div class="copyrightTag">Copyright © 2021, Brittany Greenslade</div>
     </footer>
   </body>
 </html>
