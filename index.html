@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piece on Earth</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/homepage.css" />
   </head>
   <body>
     <header>
@@ -16,12 +16,31 @@
         alt="Piece on Earth logo and name"
       />
       <div class="hamburgerMenu">
-        <div class="hamburgerMenuLine"></div>
-        <div class="hamburgerMenuLine"></div>
-        <div class="hamburgerMenuLine"></div>
+        <input
+          class="mobileMenuCheckbox"
+          type="checkbox"
+          name="hamburgerMenuChkbx"
+        />
+        <div class="mobileHamburgerContainer">
+          <span class="hamburgerMenuLine"></span>
+          <span class="hamburgerMenuLine"></span>
+          <span class="hamburgerMenuLine"></span>
+        </div>
+        <div class="mobileHeaderDropdown">
+          <div class="dropdownLinksContainer">
+            <a class="linkHeaderDropdown" href="/index.html">Home</a>
+            <a class="linkHeaderDropdown" href="./pages/menuPage.html">Menu</a>
+            <a class="linkHeaderDropdown" href="./pages/contactPage.html"
+              >Contact Us</a
+            >
+            <a class="linkHeaderDropdown" href="./pages/aboutPage.html"
+              >Our Story</a
+            >
+          </div>
+        </div>
       </div>
     </header>
-    <main>
+    <article>
       <div class="infoHomePage">
         <div class="addressPhoneNumber">
           <p>8424 109 St NW</p>
@@ -31,7 +50,7 @@
         <p class="linksHomepage">MENU</p>
         <p class="linksHomepage">ORDER</p>
       </div>
-    </main>
+    </article>
     <div class="socialMediaLogos">
       <img class="smLogo" src="/images/facebookLogo2.svg" alt="Facebook logo" />
       <img

@@ -15,12 +15,24 @@
         alt="Piece on Earth logo and name"
       />
       <div class="hamburgerMenu">
-        <input type="checkbox" name="hamburgerMenuChkbx" />
+        <input
+          class="mobileMenuCheckbox"
+          type="checkbox"
+          name="hamburgerMenuChkbx"
+        />
         <div class="mobileHamburgerContainer">
-        <span class="hamburgerMenuLine"></span>
-        <span class="hamburgerMenuLine"></span>
-        <span class="hamburgerMenuLine"></span>
-      </div>
+          <span class="hamburgerMenuLine"></span>
+          <span class="hamburgerMenuLine"></span>
+          <span class="hamburgerMenuLine"></span>
+        </div>
+        <div class="mobileHeaderDropdown">
+          <div class="dropdownLinksContainer">
+            <a class="linkHeaderDropdown" href="/index.html">Home</a>
+            <a class="linkHeaderDropdown" href="menuPage.html">Menu</a>
+            <a class="linkHeaderDropdown" href="contactPage.html">Contact Us</a>
+            <a class="linkHeaderDropdown" href="aboutPage.html">Our Story</a>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -36,7 +48,7 @@
         <div class="contactInfo">
           <p>8424 109 St NW</p>
           <p>Edmonton, AB</p>
-          <a href="tel:7805874567">780 587 4567</a>
+          <a class="phoneLink" href="tel:7805874567">780 587 4567</a>
         </div>
       </section>
       <section class="contactForm">
@@ -50,9 +62,11 @@
         </div>
         <div class="contactFormItem">
           <label for="message" class="formSectionTitle">Message*</label>
-          <textarea class="messageBox" name="subject"></textarea>
+          <textarea class="formBox" name="message"></textarea>
         </div>
-        <div class="submitButton"><p>Submit</p></div>
+        <div class="submitButtonContainer">
+          <div class="submitButton"><p>Submit</p></div>
+        </div>
       </section>
       <iframe
         class="googleMap"
@@ -65,8 +79,8 @@
     <footer>
       <hr />
       <div class="footerGrid">
-        <div>
-          <p class="addressInfo" class="textFooter">8424 109 St NW</p>
+        <div class="addressInfo">
+          <p class="textFooter">8424 109 St NW</p>
           <p class="textFooter">Edmonton, AB</p>
           <a class="textFooter" href="tel:7805874567">780 587 4567</a>
         </div>

@@ -1,75 +1,66 @@
 @import "_header.scss";
 @import "_footer.scss";
-
+main {
+  min-height: 80vh;
+}
 .barFrontImg {
-  width: 100%;
   height: 250px;
   object-fit: cover;
   padding-top: 5%;
-}
-a {
-  color: $featureColor;
+  width: 100%;
 }
 .contactUsContainer {
+  color: $contentColor;
   display: grid;
-  place-items: center;
-  grid-template-rows: 1fr 1fr;
   font-size: 5vw;
-  letter-spacing: 6px;
   font-weight: bold;
-  color: #403637;
+  grid-template-rows: 1fr 1fr;
+  letter-spacing: 6px;
   padding-top: 8%;
-  .pageTitle {
-    color: #403637;
-  }
-  .contactInfo {
-    text-align: center;
+  place-items: center;
+  text-align: center;
+  .phoneLink {
+    color: $featureColor;
   }
 }
 .contactForm {
-  width: 90%;
   margin-left: 5%;
   margin-top: 5%;
-  // display: grid;
-  // grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 90%;
   .contactFormItem {
     padding-top: 8px;
   }
-  input,
-  .messageBox {
-    width: 95%;
-    background: #f1f1f1;
-    border: #403637 solid 1px;
-    display: block;
+  .formSectionTitle {
+    color: $contentColor;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .formBox {
+    background: $homepageFontColor;
+    border: $contentColor solid 0.5px;
+    max-width: 95%;
+    min-width: 95%;
     padding: 5px;
   }
-  .messageBox {
-    max-width: 95%;
+  .submitButtonContainer {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    .submitButton {
+      @include button();
+      font-size: 16px;
+      height: 20px;
+      padding-top: 2px;
+      margin-top: 10px;
+      margin-right: 1%;
+      width: 30%;
+    }
   }
-  .formSectionTitle {
-    color: #403637;
-    font-weight: bold;
-    font-size: 16px;
-  }
-}
-
-.submitButton {
-  background: #d3b468;
-  border-radius: 8px;
-  text-align: center;
-  width: 100px;
-  height: 20px;
-  font-weight: bold;
-  color: #403637;
-  font-size: 16px;
-  margin-top: 10px;
-  padding-top: 2px;
-  margin-left: 70%;
 }
 .googleMap {
-  width: 100%;
-  max-width: 500px;
-  height: 250px;
-  padding-bottom: 2%;
-  padding-top: 10%;
+  height: 40vh;
+  max-width: 2000px;
+  padding: 10% 5% 2% 5%;
+  width: 90%;
 }

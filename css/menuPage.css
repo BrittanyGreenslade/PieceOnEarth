@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Shippori+Mincho:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Shippori+Mincho:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
+}
+
+main {
+  min-height: 80vh;
 }
 
 footer {
@@ -24,31 +33,30 @@ hr {
   text-align: center;
 }
 
-.footerGrid .textFooter,
-.footerGrid .addressInfo {
+.footerGrid .textFooter {
   color: #403637;
   font-family: "Libre Baskerville", serif;
-  font-size: 12px;
+  font-size: 55%;
+  letter-spacing: 5px;
 }
 
 .footerGrid .addressInfo {
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .footerGrid .socialMediaLogos {
-  display: -ms-grid;
-  display: grid;
-  width: 40%;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
-  margin-left: auto;
-  margin-right: auto;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  margin: auto;
+  width: 40%;
 }
 
 .footerGrid .socialMediaLogos .smLogo {
@@ -57,17 +65,22 @@ hr {
 }
 
 .footerGrid .copyrightInfo {
-  font-size: 10px;
+  font-size: 100%;
+  letter-spacing: normal;
   padding-top: 5%;
 }
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+main {
+  min-height: 80vh;
 }
 
 header {
@@ -75,36 +88,81 @@ header {
   display: grid;
   -ms-grid-columns: 2fr 0.5fr;
       grid-template-columns: 2fr 0.5fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-height: 10vh;
+  width: 100%;
 }
 
 .logoAndTitle {
-  width: 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
   padding-left: 15px;
   padding-top: 5%;
+  width: 80%;
 }
 
-.mobileHamburgerContainer {
+.hamburgerMenu {
+  padding-right: 15%;
+  place-self: center;
+}
+
+.hamburgerMenu .mobileMenuCheckbox {
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+  width: 40px;
+  z-index: 11;
+}
+
+.hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
+  opacity: 0.95;
+  top: 0vh;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburgerMenu .mobileHamburgerContainer {
+  display: -ms-grid;
+  display: grid;
+  height: 30px;
+  margin-top: 8px;
+  place-items: center;
+  position: relative;
+  width: 30px;
+  z-index: 10;
+}
+
+.hamburgerMenu .hamburgerMenuLine {
+  background-color: #d3b468;
+  border-radius: 10px;
+  height: 4px;
+  margin: 4px 0;
+  padding: 0.5px;
+  width: 35px;
+}
+
+.hamburgerMenu .mobileHeaderDropdown {
+  background-color: #010a0a;
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  place-items: center;
+  position: absolute;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  top: -200vh;
+  width: 100%;
+}
+
+.hamburgerMenu .mobileHeaderDropdown .dropdownLinksContainer {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: 50%;
-  -ms-grid-column-align: end;
-      justify-self: end;
-  padding-right: 14px;
-  padding-top: 12px;
 }
 
-.hamburgerMenuLine {
-  height: 5px;
-  width: 30px;
-  background-color: #d3b468;
-  margin: 6px 0;
-  border-radius: 10px;
+.hamburgerMenu .mobileHeaderDropdown .linkHeaderDropdown {
+  color: #d3b468;
+  font-family: "Shippori Mincho", serif;
+  font-size: 13vw;
+  font-weight: bold;
 }
 /*# sourceMappingURL=menuPage.css.map */

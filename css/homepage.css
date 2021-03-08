@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Shippori+Mincho:wght@400;500&display=swap");
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+main {
+  min-height: 80vh;
 }
 
 header {
@@ -13,37 +17,82 @@ header {
   display: grid;
   -ms-grid-columns: 2fr 0.5fr;
       grid-template-columns: 2fr 0.5fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-height: 10vh;
+  width: 100%;
 }
 
 .logoAndTitle {
-  width: 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
   padding-left: 15px;
   padding-top: 5%;
+  width: 80%;
 }
 
-.mobileHamburgerContainer {
+.hamburgerMenu {
+  padding-right: 15%;
+  place-self: center;
+}
+
+.hamburgerMenu .mobileMenuCheckbox {
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+  width: 40px;
+  z-index: 11;
+}
+
+.hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
+  opacity: 0.95;
+  top: 0vh;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburgerMenu .mobileHamburgerContainer {
+  display: -ms-grid;
+  display: grid;
+  height: 30px;
+  margin-top: 8px;
+  place-items: center;
+  position: relative;
+  width: 30px;
+  z-index: 10;
+}
+
+.hamburgerMenu .hamburgerMenuLine {
+  background-color: #d3b468;
+  border-radius: 10px;
+  height: 4px;
+  margin: 4px 0;
+  padding: 0.5px;
+  width: 35px;
+}
+
+.hamburgerMenu .mobileHeaderDropdown {
+  background-color: #010a0a;
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  place-items: center;
+  position: absolute;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  top: -200vh;
+  width: 100%;
+}
+
+.hamburgerMenu .mobileHeaderDropdown .dropdownLinksContainer {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: 50%;
-  -ms-grid-column-align: end;
-      justify-self: end;
-  padding-right: 14px;
-  padding-top: 12px;
 }
 
-.hamburgerMenuLine {
-  height: 5px;
-  width: 30px;
-  background-color: #d3b468;
-  margin: 6px 0;
-  border-radius: 10px;
+.hamburgerMenu .mobileHeaderDropdown .linkHeaderDropdown {
+  color: #d3b468;
+  font-family: "Shippori Mincho", serif;
+  font-size: 13vw;
+  font-weight: bold;
 }
 
 body {
@@ -56,7 +105,7 @@ a {
   color: #ededed;
 }
 
-main {
+article {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -65,27 +114,26 @@ main {
   min-height: 80vh;
 }
 
-main .infoHomePage {
+article .infoHomePage {
   display: -ms-grid;
   display: grid;
-  margin: auto;
-  width: 100%;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
   place-items: center;
+  width: 100%;
 }
 
-main .infoHomePage .addressPhoneNumber {
+article .infoHomePage .addressPhoneNumber {
   color: #ededed;
-  font-size: 3.5vw;
+  font-size: 4vw;
   font-family: "Shippori Mincho", serif;
   font-style: italic;
   font-weight: bold;
   text-align: center;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
 }
 
-main .infoHomePage .linksHomepage {
+article .infoHomePage .linksHomepage {
   color: #ededed;
   font-size: 18vw;
   padding: 2%;
@@ -102,8 +150,7 @@ main .infoHomePage .linksHomepage {
   -webkit-column-gap: 5px;
           column-gap: 5px;
   min-height: 10vh;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
@@ -115,4 +162,4 @@ main .infoHomePage .linksHomepage {
   width: 42px;
   opacity: 0.7;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=homepage.css.map */

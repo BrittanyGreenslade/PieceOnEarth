@@ -1,32 +1,67 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 @import "_global.scss";
 header {
   display: grid;
   grid-template-columns: 2fr 0.5fr;
-  align-items: center;
   max-height: 10vh;
+  width: 100%;
 }
 .logoAndTitle {
-  width: 80%;
-  object-fit: cover;
   padding-left: 15px;
   padding-top: 5%;
+  width: 80%;
 }
-.mobileHamburgerContainer {
-  display: grid;
-  place-items: center;
-  width: 50%;
-  justify-self: end;
-  padding-right: 14px;
-  padding-top: 12px;
-}
-.hamburgerMenuLine {
-  height: 5px;
-  width: 30px;
-  background-color: $featureColor;
-  margin: 6px 0;
-  border-radius: 10px;
+.hamburgerMenu {
+  padding-right: 15%;
+  place-self: center;
+  .mobileMenuCheckbox {
+    height: 50px;
+    opacity: 0;
+    position: absolute;
+    width: 40px;
+    z-index: 11;
+  }
+  .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
+    opacity: 0.95;
+    top: 0vh;
+    transition: all 0.5s ease-in-out;
+  }
+  .mobileHamburgerContainer {
+    display: grid;
+    height: 30px;
+    margin-top: 8px;
+    place-items: center;
+    position: relative;
+    width: 30px;
+    z-index: 10;
+  }
+  .hamburgerMenuLine {
+    background-color: $featureColor;
+    border-radius: 10px;
+    height: 4px;
+    margin: 4px 0;
+    padding: 0.5px;
+    width: 35px;
+  }
+  .mobileHeaderDropdown {
+    background-color: #010a0a;
+    display: grid;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    place-items: center;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    top: -200vh;
+    width: 100%;
+    .dropdownLinksContainer {
+      display: grid;
+      place-items: center;
+    }
+    .linkHeaderDropdown {
+      color: $featureColor;
+      font-family: $homepageFont;
+      font-size: 13vw;
+      font-weight: bold;
+    }
+  }
 }
