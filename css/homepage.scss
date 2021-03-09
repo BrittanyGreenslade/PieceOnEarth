@@ -11,7 +11,7 @@ a {
 article {
   display: grid;
   align-items: center;
-  min-height: 80vh;
+  min-height: 75vh;
   .infoHomePage {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -50,3 +50,13 @@ article {
     opacity: 0.7;
   }
 }
+// .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
+//   opacity: 1 !important;
+// }
+// IS THIS OK ALEX
+@media only screen and (min-height: 800px){
+  article {
+    height: 80vh;
+  }
+}
+// @media only screen and (min-width: 600)
