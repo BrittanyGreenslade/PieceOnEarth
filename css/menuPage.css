@@ -11,7 +11,7 @@ a {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 footer {
@@ -38,7 +38,7 @@ hr {
   color: #403637;
   font-family: "Libre Baskerville", serif;
   font-size: 55%;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .footerGrid .addressInfo {
@@ -57,7 +57,7 @@ hr {
       grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   margin: auto;
-  width: 200px;
+  width: 40%;
 }
 
 .footerGrid .socialMediaLogos .smLogo {
@@ -81,30 +81,30 @@ a {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 0.5fr;
-      grid-template-columns: 2fr 0.5fr;
-  height: 15vh;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  max-height: 20vh;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  place-items: center;
+}
+
+.phoneIcon {
+  height: 30px;
+  margin-left: 5px;
+  opacity: 0.8;
+  padding-top: 10px;
 }
 
 .logoAndTitle {
-  padding-left: 15px;
+  padding-left: 20px;
   width: 80%;
-}
-
-.hamburgerMenu {
-  padding-right: 15%;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  margin-top: 10px;
 }
 
 .hamburgerMenu .mobileMenuCheckbox {
@@ -116,7 +116,7 @@ header {
 }
 
 .hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
-  opacity: 0.95;
+  opacity: 0.89;
   top: 0vh;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -130,7 +130,7 @@ header {
   display: -ms-grid;
   display: grid;
   height: 30px;
-  margin-bottom: 10px;
+  padding-top: 8px;
   place-items: center;
   position: relative;
   width: 30px;
@@ -141,9 +141,10 @@ header {
   background-color: #d3b468;
   border-radius: 10px;
   height: 4px;
-  margin: 4px 0;
+  margin: 3px 0;
   padding: 0.5px;
-  width: 35px;
+  width: 30px;
+  opacity: 0.8;
 }
 
 .hamburgerMenu .mobileHeaderDropdown {
@@ -179,12 +180,6 @@ header {
   color: #ededed;
 }
 
-@media only screen and (min-height: 800px) {
-  header {
-    height: 10vh;
-  }
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -195,7 +190,63 @@ a {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 70vh;
+}
+
+.pageTitle {
+  color: #403637;
+  display: -ms-grid;
+  display: grid;
+  font-size: 5vw;
+  font-weight: bold;
+  place-items: center;
+  text-align: center;
+}
+
+.mblFoodDropdown .mblFoodChkbox {
+  height: 50px;
+  width: 80%;
+  margin-left: 10%;
+  position: absolute;
+  opacity: 0;
+  z-index: 1001;
+}
+
+.mblFoodDropdown .mblFoodMenuContents {
+  position: absolute;
+  width: 100%;
+  background: red;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  top: -50;
+  left: 0;
+  min-height: 20vh;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.mblFoodDropdown .mblFoodMenuContents p {
+  color: #403637;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mblFoodDropdown .mblFoodMenuContents h3 {
+  color: #403637;
+  font-size: 16px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.mblFoodDropdown .mblFoodChkbox:checked ~ .mblFoodMenuContents {
+  top: 50;
+  opacity: 1;
+  z-index: 1000;
+  position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 img {

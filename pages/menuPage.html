@@ -9,11 +9,18 @@
   </head>
   <body>
     <header>
-      <img
-        class="logoAndTitle"
-        src="/images/PieceOnEarthHorizontal.png"
-        alt="Piece on Earth logo and name"
-      />
+      <a class="phoneLink" href="tel:7805874567">
+        <img
+          class="phoneIcon"
+          src="/images/phoneIcon.svg"
+          alt="phone icon, click to call"
+      /></a>
+      <a href="../index.html">
+        <img
+          class="logoAndTitle"
+          src="/images/PieceOnEarthVerticalSmall.png"
+          alt="Piece on Earth logo and name"
+      /></a>
       <div class="hamburgerMenu">
         <input
           class="mobileMenuCheckbox"
@@ -27,10 +34,14 @@
         </div>
         <div class="mobileHeaderDropdown">
           <div class="dropdownLinksContainer">
-            <a class="linkHeaderDropdown" href="/index.html">Home</a>
-            <a class="linkHeaderDropdown" href="menuPage.html" id="active">Menu</a>
-            <a class="linkHeaderDropdown" href="contactPage.html">Contact Us</a>
-            <a class="linkHeaderDropdown" href="aboutPage.html">Our Story</a>
+            <a class="linkHeaderDropdown" href="../index.html">Home</a>
+            <a class="linkHeaderDropdown" href="./menuPage.html" id="active"
+              >Menu</a
+            >
+            <a class="linkHeaderDropdown" href="./contactPage.html"
+              >Contact Us</a
+            >
+            <a class="linkHeaderDropdown" href="./aboutPage.html">Our Story</a>
           </div>
         </div>
       </div>
@@ -38,24 +49,24 @@
     <main>
       <div><p>Call to order button</p></div>
       <p>Gluten free options available for items with *</p>
+      <h1 class="pageTitle">- Menu -</h1>
       <section class="startersSection" class="dropdownMenu3Items">
-        <h1>- Starters Dropdown -</h1>
+        <div class="mblFoodDropdown">
+          <input type="checkbox" name="mblFoodChkbox" class="mblFoodChkbox" />
+          <div class="mblFoodMenuTitle"><h1>- Starters -</h1></div>
+          <div class="mblFoodMenuContents">
+            <h3>Starter 1 Name</h3>
+            <p>price/description about starter 1</p>
+            <h3>Starter 2 Name</h3>
+            <p>description about starter 2</p>
+            <h3>Starter 3 Name</h3>
+            <p>description about starter 3</p>
+          </div>
+        </div>
         <img
           src="/images/bruschettaAppetizer.jpg"
           alt="bruschetta appetizer on place, place of fruit in background"
         />
-        <div class="menuItemAndDescription">
-          <h3>Starter 1 Name</h3>
-          <p>description about starter 1</p>
-        </div>
-        <div class="menuItemAndDescription">
-          <h3>Starter 2 Name</h3>
-          <p>description about starter 2</p>
-        </div>
-        <div class="menuItemAndDescription">
-          <h3>Starter 3 Name</h3>
-          <p>description about starter 3</p>
-        </div>
       </section>
       <section class="pizzaSection" class="dropdownMenu9Items">
         <h1>- Pizza Dropdown -</h1>
@@ -186,8 +197,8 @@
     <footer>
       <hr />
       <div class="footerGrid">
-        <div>
-          <p class="addressInfo" class="textFooter">8424 109 St NW</p>
+        <div class="addressInfo">
+          <p class="textFooter">8424 109 St NW</p>
           <p class="textFooter">Edmonton, AB</p>
           <a class="textFooter" href="tel:7805874567">780 587 4567</a>
         </div>

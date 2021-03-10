@@ -9,11 +9,18 @@
   </head>
   <body>
     <header>
-      <img
-        class="logoAndTitle"
-        src="/images/PieceOnEarthHorizontal.png"
-        alt="Piece on Earth logo and name"
-      />
+      <a class="phoneLink" href="tel:7805874567">
+        <img
+          class="phoneIcon"
+          src="/images/phoneIcon.svg"
+          alt="phone icon, click to call"
+      /></a>
+      <a href="../index.html">
+        <img
+          class="logoAndTitle"
+          src="/images/PieceOnEarthVerticalSmall.png"
+          alt="Piece on Earth logo and name"
+      /></a>
       <div class="hamburgerMenu">
         <input
           class="mobileMenuCheckbox"
@@ -27,52 +34,87 @@
         </div>
         <div class="mobileHeaderDropdown">
           <div class="dropdownLinksContainer">
-            <a class="linkHeaderDropdown" href="/index.html">Home</a>
-            <a class="linkHeaderDropdown" href="menuPage.html">Menu</a>
-            <a class="linkHeaderDropdown" href="contactPage.html" id="active">Contact Us</a>
-            <a class="linkHeaderDropdown" href="aboutPage.html">Our Story</a>
+            <a class="linkHeaderDropdown" href="../index.html">Home</a>
+            <a class="linkHeaderDropdown" href="./menuPage.html">Menu</a>
+            <a class="linkHeaderDropdown" href="./contactPage.html"
+              >Contact Us</a
+            >
+            <a class="linkHeaderDropdown" href="./aboutPage.html" id="active"
+              >Our Story</a
+            >
           </div>
         </div>
       </div>
     </header>
     <main>
-      <section class="heroSectionAboutPg">
-        <img
-          src="/images/pizzaInFrontOfFire.jpg"
-          alt="pizza in front of fire oven"
-        />
-        <img
-          src="/images/farmFressIngredientsSmall.jpg"
-          alt="mix of farm fresh ingredients"
-        />
-        <img
-          src="/images/fireStovePizza.jpg"
-          alt="wood fire oven for firing pizza"
-        />
-        <img src="/images/farmFreshVeggies.jpg" alt="farm fresh vegetables" />
-        <img
-          src="/images/pieceOnEarthOwners.jpg"
-          alt="owners of Piece on Earth in flower field"
-        />
-        <img
-          src="/images/oustideWindowPieceOnEarth.jpg"
-          alt="sign saying 'Real Pizza' and 'Craft Beer' on window of restaurant"
-        />
+      <section class="caroAbtPg">
+        <div class="imgSpace"></div>
+        <input type="radio" class="radio" name="about" id="carOne" checked />
+        <input type="radio" class="radio" name="about" id="carTwo" />
+        <input type="radio" class="radio" name="about" id="carThree" />
+        <input type="radio" class="radio" name="about" id="carFour" />
+        <input type="radio" class="radio" name="about" id="carFive" />
+        <input type="radio" class="radio" name="about" id="carSix" />
+        <div class="caroImg" id="abtOne">
+          <img
+            src="/images/pizzaInFrontOfFire.jpg"
+            alt="pizza in front of fire oven"
+          />
+        </div>
+        <div class="caroImg" id="abtTwo">
+          <img
+            src="/images/farmFressIngredientsSmall.jpg"
+            alt="mix of farm fresh ingredients"
+          />
+        </div>
+        <div class="caroImg" id="abtThree">
+          <img
+            src="/images/fireStovePizza.jpg"
+            alt="wood fire oven for firing pizza"
+          />
+        </div>
+        <div class="caroImg" id="abtFour">
+          <img src="/images/farmFreshVeggies.jpg" alt="farm fresh vegetables" />
+        </div>
+        <div class="caroImg" id="abtFive">
+          <img
+            src="/images/pieceOnEarthOwners.jpg"
+            alt="owners of Piece on Earth in flower field"
+          />
+        </div>
+        <div class="caroImg" id="abtSix">
+          <img
+            src="/images/oustideWindowPieceOnEarth.jpg"
+            alt="sign saying 'Real Pizza' and 'Craft Beer' on window of restaurant"
+          />
+        </div>
       </section>
       <section class="aboutUsSection">
         <h1>- Our Story -</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, unde.
-          Illum quo ipsam quas voluptatibus corporis possimus autem modi eveniet
-          praesentium cumque repellat, dolores ratione distinctio nisi optio
-          maxime fugit.
+          We’re a small but nimble family-run take out and delivery pizza shop
+          in Edmonton, Alberta. When we’re not scouring the globe (okay, the
+          prairies) for the freshest, ripest and boldest ingredients, we’re
+          crafting perfect pizzas for you and your family to enjoy. From our
+          artisan pizzas, to handmade pastas, to our decadent canollis,
+          everything at Piece on Earth is baked with love. After watching his
+          parents run a very successful pizza business in Italy, Matt Cleveland
+          learned how to make people happy, one topping at a time. Opening the
+          doors to Piece on Earth in 2019, Matt has managed to evolve the fresh,
+          traditional Greek-style pizza his family perfected back in the mid 80s
+          to a more modern and convenient comfort food for today’s family on the
+          go.
         </p>
         <h1>- Farm to Table -</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
-          adipisci placeat officiis ipsum consequuntur quibusdam sunt eligendi
-          at, iusto, similique soluta deserunt cum. Reiciendis esse nemo fuga
-          nesciunt eaque rerum.
+        <p class="f2TContent">
+          Piece on Earth's pizzas are made with only the freshest, locally
+          sourced ingredients like mozzarella, roma tomatoes, made-from-scratch
+          sauce and even features premium toppings like Sorriso Pepperoni,
+          salami from Acme Meat Market, and a healthy flax crust. You feel good
+          about ordering it. You feel good about eating it. And you feel even
+          better knowing we're always ready to make you more. Our drink
+          selection is also sourced by local Alberta breweries, wineries, and
+          distilleries.
         </p>
       </section>
       <iframe
@@ -81,13 +123,14 @@
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-      ></iframe>
+      >
+      </iframe>
     </main>
     <footer>
       <hr />
       <div class="footerGrid">
-        <div>
-          <p class="addressInfo" class="textFooter">8424 109 St NW</p>
+        <div class="addressInfo">
+          <p class="textFooter">8424 109 St NW</p>
           <p class="textFooter">Edmonton, AB</p>
           <a class="textFooter" href="tel:7805874567">780 587 4567</a>
         </div>
@@ -117,3 +160,4 @@
     </footer>
   </body>
 </html>
+<!-- There are no short cuts when it comes to our passion. We pull out all the stops, giving you the ‘wow’ flavour, experience and consistency you not only want, but deserve. Our customers keep coming back, again, again, and again. -->

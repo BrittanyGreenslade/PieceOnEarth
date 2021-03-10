@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Shippori+Mincho:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Shippori+Mincho:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Shippori+Mincho:wght@400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -10,30 +11,30 @@ a {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 0.5fr;
-      grid-template-columns: 2fr 0.5fr;
-  height: 15vh;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  max-height: 20vh;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  place-items: center;
+}
+
+.phoneIcon {
+  height: 30px;
+  margin-left: 5px;
+  opacity: 0.8;
+  padding-top: 10px;
 }
 
 .logoAndTitle {
-  padding-left: 15px;
+  padding-left: 20px;
   width: 80%;
-}
-
-.hamburgerMenu {
-  padding-right: 15%;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  margin-top: 10px;
 }
 
 .hamburgerMenu .mobileMenuCheckbox {
@@ -45,7 +46,7 @@ header {
 }
 
 .hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
-  opacity: 0.95;
+  opacity: 0.89;
   top: 0vh;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -59,7 +60,7 @@ header {
   display: -ms-grid;
   display: grid;
   height: 30px;
-  margin-bottom: 10px;
+  padding-top: 8px;
   place-items: center;
   position: relative;
   width: 30px;
@@ -70,9 +71,10 @@ header {
   background-color: #d3b468;
   border-radius: 10px;
   height: 4px;
-  margin: 4px 0;
+  margin: 3px 0;
   padding: 0.5px;
-  width: 35px;
+  width: 30px;
+  opacity: 0.8;
 }
 
 .hamburgerMenu .mobileHeaderDropdown {
@@ -108,12 +110,6 @@ header {
   color: #ededed;
 }
 
-@media only screen and (min-height: 800px) {
-  header {
-    height: 10vh;
-  }
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -124,7 +120,7 @@ a {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 footer {
@@ -151,7 +147,7 @@ hr {
   color: #403637;
   font-family: "Libre Baskerville", serif;
   font-size: 55%;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .footerGrid .addressInfo {
@@ -170,7 +166,7 @@ hr {
       grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   margin: auto;
-  width: 200px;
+  width: 40%;
 }
 
 .footerGrid .socialMediaLogos .smLogo {
@@ -184,11 +180,24 @@ hr {
   padding-top: 5%;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 70vh;
+}
+
 .barFrontImg {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  padding-top: 5%;
+  padding-top: 2%;
   width: 100%;
 }
 
@@ -198,12 +207,12 @@ hr {
   display: grid;
   font-size: 5vw;
   font-weight: bold;
+  place-items: center;
+  text-align: center;
+  padding-top: 8%;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   letter-spacing: 6px;
-  padding-top: 8%;
-  place-items: center;
-  text-align: center;
 }
 
 .contactUsContainer .phoneLink {
@@ -246,10 +255,10 @@ hr {
 }
 
 .contactForm .submitButtonContainer .submitButton {
-  background: #d3b468;
+  background: #ddc589;
   border-radius: 8px;
-  -webkit-box-shadow: 1.5px 1.5px 5px #ddc589;
-          box-shadow: 1.5px 1.5px 5px #ddc589;
+  -webkit-box-shadow: 1.5px 1.5px 5px;
+          box-shadow: 1.5px 1.5px 5px;
   color: #403637;
   font-weight: bold;
   text-align: center;

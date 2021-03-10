@@ -1,37 +1,42 @@
 @import "_global.scss";
 header {
   display: grid;
-  grid-template-columns: 2fr 0.5fr;
-  height: 15vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  max-height: 20vh;
   width: 100%;
-  align-items:center
+  place-items: center;
+}
+.phoneIcon {
+  height: 30px;
+  margin-left: 5px;
+  opacity: 0.8;
+  padding-top: 10px;
 }
 .logoAndTitle {
-  padding-left: 15px;
+  padding-left: 20px;
   width: 80%;
+  margin-top: 10px;
 }
 .hamburgerMenu {
-  padding-right: 15%;
-  justify-self: center;
   .mobileMenuCheckbox {
-    height:40px;
+    height: 40px;
     opacity: 0;
     position: absolute;
     width: 40px;
     z-index: 1001;
   }
   .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
-    opacity: 0.95;
+    opacity: 0.89;
     top: 0vh;
     transition: all 0.5s ease-in-out;
   }
-  #homepageDropdown{
-       opacity: 1;
+  #homepageDropdown {
+    opacity: 1;
   }
   .mobileHamburgerContainer {
     display: grid;
     height: 30px;
-    margin-bottom: 10px;
+    padding-top: 8px;
     place-items: center;
     position: relative;
     width: 30px;
@@ -41,9 +46,10 @@ header {
     background-color: $featureColor;
     border-radius: 10px;
     height: 4px;
-    margin: 4px 0;
+    margin: 3px 0;
     padding: 0.5px;
-    width: 35px;
+    width: 30px;
+    opacity: 0.8;
   }
   .mobileHeaderDropdown {
     background-color: #010a0a;
@@ -56,7 +62,7 @@ header {
     transition: all 0.5s ease-in-out;
     top: -200vh;
     width: 100%;
-    z-index:999;
+    z-index: 999;
     .dropdownLinksContainer {
       display: grid;
       place-items: center;
@@ -67,14 +73,15 @@ header {
       font-size: 13vw;
       font-weight: bold;
     }
-    #active{
+    #active {
       color: $homepageFontColor;
     }
   }
 }
 
-@media only screen and (min-height: 800px){
-  header{
-    height: 10vh;
-  }
-} 
+// @media only screen and (min-height: 800px){
+//   // header{
+//   //   max-height: 20vh;
+//   // }
+
+// }

@@ -1,4 +1,5 @@
 @import "_header.scss";
+@import"_global.scss";
 body {
   background-image: url(/images/darkWoodenBackgroundMobile2.jpg);
   background-repeat: no-repeat;
@@ -11,7 +12,7 @@ a {
 article {
   display: grid;
   align-items: center;
-  min-height: 75vh;
+  min-height: 70vh;
   .infoHomePage {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -28,7 +29,7 @@ article {
     }
     .linksHomepage {
       color: $homepageFontColor;
-      font-size: 18vw;
+      font-size: 17vw;
       padding: 2%;
       font-family: $homepageFont;
       font-weight: 500;
@@ -56,7 +57,7 @@ article {
 // IS THIS OK ALEX
 @media only screen and (min-height: 800px){
   article {
-    height: 80vh;
+    max-height: 70vh;
   }
 }
 // @media only screen and (min-width: 600)

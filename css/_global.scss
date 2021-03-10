@@ -8,16 +8,17 @@ $homepageFontColor: #ededed;
 $contentFont: "Libre Baskerville", serif;
 $contentColor: #403637;
 $featureColor: #d3b468;
+$buttonColor:#ddc589;
 a {
   text-decoration: none;
 }
 main {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 @mixin button {
-  background: $featureColor;
+  background:$buttonColor;
   border-radius: 8px;
-  box-shadow: 1.5px 1.5px 5px #ddc589;
+  box-shadow: 1.5px 1.5px 5px;
   color: $contentColor;
   font-weight: bold;
   text-align: center;
@@ -28,3 +29,16 @@ main {
 // @mixin contentTextStyling{
 
 // }
+@mixin pageTitle{
+  color: $contentColor;
+  display: grid;
+  font-size: 5vw;
+  font-weight: bold;
+  place-items: center;
+  text-align: center;
+}
+@mixin pageContent{
+  color: $contentColor;
+  font-size: 16px;
+  font-weight: bold;
+}
