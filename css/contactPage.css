@@ -193,7 +193,7 @@ main {
   min-height: 70vh;
 }
 
-.barFrontImg {
+.heroImg {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -209,7 +209,7 @@ main {
   font-weight: bold;
   place-items: center;
   text-align: center;
-  padding-top: 8%;
+  margin-top: 8%;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   letter-spacing: 6px;
