@@ -130,7 +130,7 @@ header {
   display: -ms-grid;
   display: grid;
   height: 30px;
-  padding-top: 8px;
+  padding-top: 5px;
   place-items: center;
   position: relative;
   width: 30px;
@@ -201,26 +201,6 @@ main {
   width: 100%;
 }
 
-.foodImg {
-  width: 100%;
-  height: 80px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.mblFoodMenuTitle {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  place-items: center;
-  background: #ddc589;
-}
-
-.dropdownArrow {
-  width: 15px;
-}
-
 .menuContainer {
   color: #403637;
   display: -ms-grid;
@@ -229,6 +209,9 @@ main {
   font-weight: bold;
   place-items: center;
   text-align: center;
+  margin-top: 10px;
+  display: grid;
+  place-items: center;
 }
 
 .menuContainer h1 {
@@ -236,7 +219,14 @@ main {
   margin-top: 8%;
 }
 
-.mblFoodDropdown .mblFoodChkbox {
+.menuContainer .gfItem {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodChkbox {
   height: 50px;
   width: 50vw;
   left: 25vw;
@@ -245,41 +235,100 @@ main {
   z-index: 1001;
 }
 
-.mblFoodDropdown .mblFoodMenuContents {
-  position: absolute;
-  width: 100%;
-  background: red;
+.menuContainer .mblFoodDropdown .mblFoodMenuTitle {
   display: -ms-grid;
   display: grid;
+  border-radius: 15px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   place-items: center;
-  top: -50;
-  left: 0;
-  min-height: 20vh;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  background: #d3b468;
+  margin: auto;
+  width: 180px;
+  margin-bottom: 5px;
 }
 
-.mblFoodDropdown .mblFoodMenuContents p {
+.menuContainer .mblFoodDropdown .mblFoodMenuTitle .dropdownArrow {
+  width: 15px;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodMenuContents {
+  position: absolute;
+  width: 100px;
+  background: #ededed;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  top: -50;
+  min-height: 20vh;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodMenuContents p {
   color: #403637;
   font-size: 16px;
   font-weight: bold;
+  font-size: 12px;
+  text-align: left;
 }
 
-.mblFoodDropdown .mblFoodMenuContents h3 {
+.menuContainer .mblFoodDropdown .mblFoodMenuContents h3 {
   color: #403637;
   font-size: 16px;
   font-weight: bold;
   font-size: 25px;
 }
 
-.mblFoodDropdown .mblFoodChkbox:checked ~ .mblFoodMenuContents {
+.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItem {
+  width: 70%;
+  margin-bottom: 5px;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItemHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 0.5fr;
+      grid-template-columns: 2fr 0.5fr;
+  width: 80vw;
+  place-items: start;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItemHeader h3 {
+  font-size: 18px;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItemHeader .price {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  border-left: 1px solid black;
+  padding-left: 27px;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodChkbox:checked ~ .mblFoodMenuTitle {
+  margin: auto;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodChkbox:checked ~ .mblFoodMenuContents {
   top: 50;
+  place-items: start;
   opacity: 1;
   z-index: 1000;
+  width: 80vw;
   position: relative;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  margin-top: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuContainer .foodImg {
+  border-radius: 15px;
+  width: 80vw;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .orderButton {

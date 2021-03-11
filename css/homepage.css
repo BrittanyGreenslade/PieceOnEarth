@@ -59,7 +59,7 @@ header {
   display: -ms-grid;
   display: grid;
   height: 30px;
-  padding-top: 8px;
+  padding-top: 5px;
   place-items: center;
   position: relative;
   width: 30px;

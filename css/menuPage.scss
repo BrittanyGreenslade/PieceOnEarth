@@ -7,69 +7,109 @@
   padding-top: 2%;
   width: 100%;
 }
-.foodImg {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-}
-.mblFoodMenuTitle {
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
-  background: $buttonColor;
-  // h2,
-  // .dropdownArrow {
-  //   background: $buttonColor;
-  // }
-}
-.dropdownArrow {
-  width: 15px;
-}
 .menuContainer {
   @include pageTitle;
-  // grid-template-rows: 1fr 0.5fr 3fr;
+  margin-top: 10px;
+  display: grid;
+  place-items: center;
+
   h1 {
     letter-spacing: 6px;
     margin-top: 8%;
   }
-}
-.mblFoodDropdown {
-  .mblFoodChkbox {
-    height: 50px;
-    width: 50vw;
-    left: 25vw;
-    position: absolute;
-    opacity: 0;
-    z-index: 1001;
+  .gfItem {
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 20px;
+    margin-top: 10px;
   }
-  .mblFoodMenuContents {
-    position: absolute;
-    width: 100%;
-    background: red;
-    display: grid;
-    place-items: center;
-    top: -50;
-    left: 0;
-    min-height: 20vh;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+  .mblFoodDropdown {
+    .mblFoodChkbox {
+      height: 50px;
+      width: 50vw;
+      left: 25vw;
+      position: absolute;
+      opacity: 0;
+      z-index: 1001;
+    }
+    .mblFoodMenuTitle {
+      display: grid;
+      border-radius: 15px;
+      grid-template-columns: 1fr;
+      place-items: center;
+      background: $featureColor;
+margin: auto;
+      width: 180px;
+      margin-bottom: 5px;
+      .dropdownArrow {
+        width: 15px;
+      }
+    }
+    .mblFoodMenuContents {
+      position: absolute;
+      width: 100px;
+      background: $homepageFontColor;
+      border-radius: 10px;
+      display: grid;
+      top: -50;
+      min-height: 20vh;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
 
-    p {
-      @include pageContent;
+      p {
+        @include pageContent;
+        font-size: 12px;
+        text-align: left;
+      }
+      h3 {
+        @include pageContent;
+        font-size: 25px;
+      }
+      .menuItem {
+        width: 70%;
+        margin-bottom: 5px;
+      }
+      .menuItemHeader {
+        display: grid;
+        grid-template-columns: 2fr 0.5fr;
+        width: 80vw;
+        place-items: start;
+        h3 {
+          font-size: 18px;
+        }
+        .price {
+          justify-self: end;
+          border-left: 1px solid black;
+          padding-left: 27px;
+        }
+      }
     }
-    h3 {
-      @include pageContent;
-      font-size: 25px;
+   .mblFoodChkbox:checked ~ .mblFoodMenuTitle{
+      margin: auto;}
+    .mblFoodChkbox:checked ~ .mblFoodMenuContents {
+      top: 50;
+place-items: start;
+      opacity: 1;
+      z-index: 1000;
+      width: 80vw;
+      position: relative;
+      margin-top: 10px;
+      transition: all 0.3s ease-in-out;
     }
   }
-  .mblFoodChkbox:checked ~ .mblFoodMenuContents {
-    top: 50;
-    opacity: 1;
-    z-index: 1000;
-    position: relative;
-    transition: all 0.5s ease-in-out;
+  .foodImg {
+    border-radius: 15px;
+    width: 80vw;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
   }
 }
+// .dropdownMenu3Items, .dropdownMenu9Items{
+//   display:grid;
+//   grid-auto-flow: row;
+//   place-items: center;
+// }
 .orderButton {
   @include button;
   font-size: 18px;
@@ -78,7 +118,7 @@
   margin-top: 10px;
   margin-right: 1%;
   width: 30%;
-  a{
+  a {
     color: $contentColor;
   }
   margin-bottom: 10px;

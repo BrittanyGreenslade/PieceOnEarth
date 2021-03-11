@@ -47,13 +47,14 @@
       </div>
     </header>
     <main>
-      <section>
-        <img class="heroImg"src="../images/pizzaAndBeer.jpg" alt="pint of beer sitting in front of a pizza in a brick oven">
-      </section>
+      <img
+        class="heroImg"
+        src="../images/pizzaAndBeer.jpg"
+        alt="pint of beer sitting in front of a pizza in a brick oven"
+      />
       <article class="menuContainer">
-        <!-- <div class="orderButton"><p>Order now!</p></div> -->
         <h1>- Menu -</h1>
-        <p>Gluten free options available for items with *</p>
+        <p class="gfItem">Gluten free options available for items with *</p>
         <section class="dropdownMenu3Items">
           <div class="mblFoodDropdown">
             <input type="checkbox" name="mblFoodChkbox" class="mblFoodChkbox" />
@@ -68,18 +69,37 @@
               </h2>
             </div>
             <div class="mblFoodMenuContents">
-              <h3>Starter 1 Name</h3>
-              <p>price/description about starter 1</p>
-              <h3>Starter 2 Name</h3>
-              <p>description about starter 2</p>
-              <h3>Starter 3 Name</h3>
-              <p>description about starter 3</p>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Bruschetta*</h3>
+                  <h3 class="price">$14.5</h3>
+                </div>
+                <p>
+                  Roma tomatoes and red onions tossed in Italiano oil and
+                  balsamic vinaigrette, garnished with Grana Padano. Served with
+                  garlic flatbread.
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Calamari</h3>
+                  <h3 class="price">$17.0</h3>
+                </div>
+                <p>Breaded calamari & jalapeño served with chipotle aioli</p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Spinach Dip*</h3>
+                  <h3 class="price">$15.5</h3>
+                </div>
+                <p>Homemade spinach dip baked with cheese, served with bread</p>
+              </div>
             </div>
           </div>
           <img
-          class="foodImg"
-            src="/images/bruschettaAppetizer.jpg"
-            alt="bruschetta appetizer on place, place of fruit in background"
+            class="foodImg"
+            src="/images/bruschettaAppetizer2.jpg"
+            alt="bruschetta appetizer on plate, place of fruit in background"
           />
         </section>
         <section class="dropdownMenu9Items">
@@ -96,33 +116,98 @@
               </h2>
             </div>
             <div class="mblFoodMenuContents">
-              <h3>Pizza 1 Name</h3>
-              <p>description about pizza 1</p>
-              <h3>Pizza 2 Name</h3>
-              <p>description about pizza 2</p>
-              <h3>Pizza 3 Name</h3>
-              <p>description about pizza 3</p>
-              <h3>Pizza 4 Name</h3>
-              <p>description about pizza 4</p>
-              <h3>Pizza 5 Name</h3>
-              <p>description about pizza 5</p>
-              <h3>Pizza 6 Name</h3>
-              <p>description about pizza 6</p>
-              <h3>Pizza 7 Name</h3>
-              <p>description about pizza 7</p>
-              <h3>Pizza 8 Name</h3>
-              <p>description about pizza 8</p>
-              <h3>Pizza 9 Name</h3>
-              <p>description about pizza 9</p>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Roasted Duck & Arugula&</h3>
+                  <h3 class="price">$21.0</h3>
+                </div>
+                <p>Roasted duck, arugula, red onion, Grana Padano</p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Quattro Formaggi*</h3>
+                  <h3 class="price">$18.0</h3>
+                </div>
+                <p>
+                  Fior-Di-Latte, Smoked Mozzarella, Gorgonzola, Grana Padano
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Spicoli*</h3>
+                  <h3 class="price">$18.0</h3>
+                </div>
+                <p>
+                  Italian sausage, mushrooms, black olives, basil, Fior Di Latte
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Smoked Meatzza*</h3>
+                  <h3 class="price">$20.5</h3>
+                </div>
+                <p>
+                  Montreal smoked meat, cream cheese, white cheddar, parmesan,
+                  fresh arugula
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Black Garlic & Truffle*</h3>
+                  <h3 class="price">$21.0</h3>
+                </div>
+                <p>
+                  Black garlic & truffle sauce, truffle white cheddar, parmesan,
+                  micro radishes
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Pizza Margherita*</h3>
+                  <h3 class="price">$17.5</h3>
+                </div>
+                <p>San Marzano tomatoes, Mozzarella, fresh basil</p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>The Mediterranean*</h3>
+                  <h3 class="price">$20.5</h3>
+                </div>
+                <p>
+                  San Marzano tomatoes, artichokes, kalamata olives, Mozzarella,
+                  pesto
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Pierogi Pizza*</h3>
+                  <h3 class="price">$21.5</h3>
+                </div>
+                <p>
+                  Shaved potato, cheddar sauce, feta, sour cream, green onions,
+                  bacon, parmesan
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Four Meat Siciliana*</h3>
+                  <h3 class="price">$19.9</h3>
+                </div>
+                <p>
+                  Oven-roasted Italian sausage, artisan ham, prosciutto,
+                  capicola
+                </p>
+              </div>
             </div>
+            <img
+              class="foodImg"
+              src="/images/duckRadishPizza.jpg"
+              alt="closeup image of duck, radish and parsley on pizza"
+            />
           </div>
-          <img          class="foodImg"
-            src="/images/duckRadishPizza.jpg"
-            alt="closeup image of duck, radish and parsley on pizza"
-          />
         </section>
         <section class="dropdownMenu9Items">
-          <class class="mblFoodDropdown">
+          <div class="mblFoodDropdown">
             <input type="checkbox" name="mblFoodChkbox" class="mblFoodChkbox" />
             <div class="mblFoodMenuTitle">
               <h2>
@@ -135,30 +220,92 @@
               </h2>
             </div>
             <div class="mblFoodMenuContents">
-              <h3>Pasta 1 Name</h3>
-              <p>description about pasta 1</p>
-              <h3>Pasta 2 Name</h3>
-              <p>description about pasta 2</p>
-              <h3>Pasta 3 Name</h3>
-              <p>description about pasta 3</p>
-              <h3>Pasta 4 Name</h3>
-              <p>description about pasta 4</p>
-              <h3>Pasta 5 Name</h3>
-              <p>description about pasta 5</p>
-              <h3>Pasta 6 Name</h3>
-              <p>description about pasta 6</p>
-              <h3>Pasta 7 Name</h3>
-              <p>description about pasta 7</p>
-              <h3>Pasta 8 Name</h3>
-              <p>description about pasta 8</p>
-              <h3>Pasta 9 Name</h3>
-              <p>description about pasta 9</p>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Mushroom Pappardelle</h3>
+                  <h3 class="price">$20.5</h3>
+                </div>
+                <p>Mushroom pappardelle, spinach, white wine cream sauce</p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Fettuccine Alfredo</h3>
+                  <h3 class="price">$22.5</h3>
+                </div>
+                <p>
+                  Cream, butter, Parmesan, Grana Padano with fire-roasted prawns
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Chicken Parmigiana</h3>
+                  <h3 class="price">$21.5</h3>
+                </div>
+                <p>
+                  Forno roasted breaded chicken breast, authentico pomodoro,
+                  Mozzarella, Parmesan, linguine
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Rigatoni Rosé</h3>
+                  <h3 class="price">$19.0</h3>
+                </div>
+                <p>
+                  Rosé sauce with garlic, tomatoes, basil, cream, Grana Padano
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Gnocchi*</h3>
+                  <h3 class="price">$22.0</h3>
+                </div>
+                <p>
+                  Potato gnocchi with bacon, green onions, cream sauce,
+                  parmigiano
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Lasagna Bolognese</h3>
+                  <h3 class="price">$22.0</h3>
+                </div>
+                <p>
+                  Layered pasta, traditional bolognese sauce, bechamal sauce,
+                  parmigiano
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Penne Gorgonzola</h3>
+                  <h3 class="price">$23.5</h3>
+                </div>
+                <p>Shrimp, scallops, gorgonzola cream sauce</p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Linguini Di Mare</h3>
+                  <h3 class="price">$26.5</h3>
+                </div>
+                <p>
+                  Grilled jumbo tiger prawns, scallops, mussels, red snapper,
+                  tomato sauce
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Risotto*</h3>
+                  <h3 class="price">$22.0</h3>
+                </div>
+                <p>Wild mushrooms, mascarpone, fontina, parmigiano</p>
+              </div>
             </div>
+            <img
+              class="foodImg"
+              src="/images/mushroomSpinachPappardelle.jpg"
+              alt="closeup image of mushroom pappardelle with spinach in a white bowl"
+            />
           </div>
-          <img          class="foodImg"
-                src="/images/mushroomSpinachPappardelle.jpg"
-                alt="closeup image of mushroom and spinach pappardelle pasta in a white bowl"
-              />
         </section>
         <section class="dropdownMenu3Items">
           <div class="mblFoodDropdown">
@@ -174,18 +321,37 @@
               </h2>
             </div>
             <div class="mblFoodMenuContents">
-              <h3>Drink 1 Name</h3>
-              <p>description about drink 1</p>
-              <h3>Drink 2 Name</h3>
-              <p>description about drink 2</p>
-              <h3>Drink 3 Name</h3>
-              <p>description about drink 3</p>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Craft Beer (16oz glass)*</h3>
+                  <h3 class="price">$8.50</h3>
+                </div>
+                <p>10 craft beers on tap from local Alberta breweries</p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Wine (9oz glass)*</h3>
+                  <h3 class="price">$15.5</h3>
+                </div>
+                <p>Red or white wine from Albertan wineries</p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Daily Cocktail (2oz)*</h3>
+                  <h3 class="price">$16.0</h3>
+                </div>
+                <p>
+                  Our cocktails are made with local Alebrta spirits. Ask your
+                  server for the daily special
+                </p>
+              </div>
             </div>
+            <img
+              class="foodImg"
+              src="/images/craftBeerPints2.jpg"
+              alt="six pints of different types of craft beer lined up side by side"
+            />
           </div>
-          <img          class="foodImg"
-            src="/images/craftBeerPints.jpg"
-            alt="six pints of different craft beers side by side in different shaped glasses on table in front of cement wall"
-          />
         </section>
         <section class="dropdownMenu3Items">
           <div class="mblFoodDropdown">
@@ -201,17 +367,39 @@
               </h2>
             </div>
             <div class="mblFoodMenuContents">
-              <h3>Dessert 1 Name</h3>
-              <p>description about dessert 1</p>
-              <h3>Dessert 2 Name</h3>
-              <p>description about dessert 2</p>
-              <h3>Dessert 3 Name</h3>
-              <p>description about dessert 3</p>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Cannoli</h3>
+                  <h3 class="price">$11.5</h3>
+                </div>
+                <p>
+                  House-made canoli - chocolate vanilla cream or salted caramel
+                  available
+                </p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Gelato* (2 scoops)*</h3>
+                  <h3 class="price">$10.0</h3>
+                </div>
+                <p>Ask your server for the current flavour</p>
+              </div>
+              <div class="menuItem">
+                <div class="menuItemHeader">
+                  <h3>Tiramisu*</h3>
+                  <h3 class="price">$12.0</h3>
+                </div>
+                <p>
+                  House-made ladyfingers dipped in Ace coffee, layered with
+                  Mascarpone cheese and icing
+                </p>
+              </div>
             </div>
           </div>
-          <img           class="foodImg"
-            src="/images/cannoliDessert.jpg"
-            alt="closeup of chocolate chip and custard cannolis on aluminum plate"
+          <img
+            class="foodImg"
+            src="/images/cannoliDessert2.jpg"
+            alt="closeup of five canollis on a plate"
           />
         </section>
         <div class="orderButton"><a href="tel:7805874567">Order Now!</a></div>
