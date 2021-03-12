@@ -28,10 +28,11 @@ hr {
 .footerGrid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: row;
   place-items: center;
   text-align: center;
+  width: 70%;
+  margin: auto;
 }
 
 .footerGrid .textFooter {
@@ -41,23 +42,23 @@ hr {
   letter-spacing: 3px;
 }
 
-.footerGrid .addressInfo {
+.footerGrid :first-child {
   padding-top: 3%;
 }
 
+.footerGrid #inactiveDsktp {
+  pointer-events: none;
+}
+
 .footerGrid .socialMediaLogos {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
   -webkit-column-gap: 5px;
           column-gap: 5px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  margin: auto;
   width: 40%;
+  margin-right: 40px;
 }
 
 .footerGrid .socialMediaLogos .smLogo {
@@ -95,10 +96,10 @@ header {
 }
 
 .phoneIcon {
-  height: 30px;
+  height: 35px;
   margin-left: 5px;
   opacity: 0.8;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .logoAndTitle {
@@ -112,7 +113,7 @@ header {
   opacity: 0;
   position: absolute;
   width: 40px;
-  z-index: 1001;
+  z-index: 1005;
 }
 
 .hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
@@ -134,7 +135,7 @@ header {
   place-items: center;
   position: relative;
   width: 30px;
-  z-index: 1000;
+  z-index: 1004;
 }
 
 .hamburgerMenu .hamburgerMenuLine {
@@ -160,7 +161,7 @@ header {
   transition: all 0.5s ease-in-out;
   top: -200vh;
   width: 100%;
-  z-index: 999;
+  z-index: 1003;
 }
 
 .hamburgerMenu .mobileHeaderDropdown .dropdownLinksContainer {
@@ -178,6 +179,31 @@ header {
 
 .hamburgerMenu .mobileHeaderDropdown #active {
   color: #ededed;
+}
+
+@media only screen and (min-width: 600px) {
+  .phoneIcon {
+    height: 50px;
+  }
+  .logoAndTitle {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 30vw;
+    margin-top: 20px;
+  }
+  .hamburgerMenu .mobileHamburgerContainer {
+    height: 50px;
+    width: 40px;
+  }
+  .hamburgerMenu .hamburgerMenuLine {
+    height: 5px;
+    padding: 1px;
+    width: 40px;
+  }
+  .hamburgerMenu .mobileHeaderDropdown .linkHeaderDropdown {
+    font-size: 10vw;
+  }
 }
 
 * {
@@ -239,7 +265,7 @@ main {
   color: #403637;
   display: -ms-grid;
   display: grid;
-  font-size: 5vw;
+  font-size: 1.5em;
   font-weight: bold;
   place-items: center;
   text-align: center;
@@ -250,7 +276,7 @@ main {
 
 .aboutUsSection p {
   color: #403637;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
   width: 90%;
   font-style: italic;

@@ -7,10 +7,10 @@ header {
   place-items: center;
 }
 .phoneIcon {
-  height: 30px;
+  height: 35px;
   margin-left: 5px;
   opacity: 0.8;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 .logoAndTitle {
   padding-left: 20px;
@@ -23,7 +23,7 @@ header {
     opacity: 0;
     position: absolute;
     width: 40px;
-    z-index: 1001;
+    z-index: 1005;
   }
   .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
     opacity: 0.89;
@@ -40,7 +40,7 @@ header {
     place-items: center;
     position: relative;
     width: 30px;
-    z-index: 1000;
+    z-index: 1004;
   }
   .hamburgerMenuLine {
     background-color: $featureColor;
@@ -62,7 +62,7 @@ header {
     transition: all 0.5s ease-in-out;
     top: -200vh;
     width: 100%;
-    z-index: 999;
+    z-index: 1003;
     .dropdownLinksContainer {
       display: grid;
       place-items: center;
@@ -79,9 +79,30 @@ header {
   }
 }
 
-// @media only screen and (min-height: 800px){
-//   // header{
-//   //   max-height: 20vh;
-//   // }
+@media only screen and (min-width: 600px){
+  .phoneIcon {
+    height: 50px;
+  }
 
-// }
+  .logoAndTitle {
+    align-self: center;
+    width: 30vw; 
+    margin-top: 20px;
+  }
+  .hamburgerMenu {
+    .mobileHamburgerContainer {
+      height: 50px;
+      width: 40px;
+    }
+    .hamburgerMenuLine {
+      height: 5px;
+      padding: 1px;
+      width: 40px;
+    }
+    .mobileHeaderDropdown {
+      .linkHeaderDropdown {
+        font-size: 10vw;
+      }
+    }
+  }
+}

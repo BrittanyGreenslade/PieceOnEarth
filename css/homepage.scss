@@ -1,5 +1,5 @@
 @import "_header.scss";
-@import"_global.scss";
+@import "_global.scss";
 body {
   background-image: url(/images/darkWoodenBackgroundMobile2.jpg);
   background-repeat: no-repeat;
@@ -38,10 +38,11 @@ article {
 }
 .socialMediaLogos {
   display: grid;
-  width: 40%;
+  width: 50%;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
   min-height: 10vh;
+  margin-top: 5vh;
   margin: auto;
   align-items: end;
   justify-items: center;
@@ -51,13 +52,29 @@ article {
     opacity: 0.7;
   }
 }
-// .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
-//   opacity: 1 !important;
-// }
-// IS THIS OK ALEX
-@media only screen and (min-height: 800px){
+@media only screen and (min-width: 650px) {
   article {
-    max-height: 70vh;
+    min-height: 70vh;
+    .infoHomePage {
+      grid-template-rows: 1fr 1.5fr 1.5fr;
+      margin-top: 50px;
+      .addressPhoneNumber {
+        font-size: 3.75vw;
+      }
+      .linksHomepage {
+        font-size: 15vw;
+      }
+    }
+  }
+  #inactiveDsktp{
+    pointer-events: none;
+
+  }
+  .socialMediaLogos {
+    width: 40%;
+    .smLogo {
+      width: 50px;
+    }
   }
 }
-// @media only screen and (min-width: 600)
+// @media only screen and (min-width: 1000px;){}

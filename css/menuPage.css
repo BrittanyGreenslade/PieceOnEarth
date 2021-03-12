@@ -28,10 +28,11 @@ hr {
 .footerGrid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: row;
   place-items: center;
   text-align: center;
+  width: 70%;
+  margin: auto;
 }
 
 .footerGrid .textFooter {
@@ -41,23 +42,23 @@ hr {
   letter-spacing: 3px;
 }
 
-.footerGrid .addressInfo {
+.footerGrid :first-child {
   padding-top: 3%;
 }
 
+.footerGrid #inactiveDsktp {
+  pointer-events: none;
+}
+
 .footerGrid .socialMediaLogos {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
   -webkit-column-gap: 5px;
           column-gap: 5px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  margin: auto;
   width: 40%;
+  margin-right: 40px;
 }
 
 .footerGrid .socialMediaLogos .smLogo {
@@ -95,10 +96,10 @@ header {
 }
 
 .phoneIcon {
-  height: 30px;
+  height: 35px;
   margin-left: 5px;
   opacity: 0.8;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .logoAndTitle {
@@ -112,7 +113,7 @@ header {
   opacity: 0;
   position: absolute;
   width: 40px;
-  z-index: 1001;
+  z-index: 1005;
 }
 
 .hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
@@ -134,7 +135,7 @@ header {
   place-items: center;
   position: relative;
   width: 30px;
-  z-index: 1000;
+  z-index: 1004;
 }
 
 .hamburgerMenu .hamburgerMenuLine {
@@ -160,7 +161,7 @@ header {
   transition: all 0.5s ease-in-out;
   top: -200vh;
   width: 100%;
-  z-index: 999;
+  z-index: 1003;
 }
 
 .hamburgerMenu .mobileHeaderDropdown .dropdownLinksContainer {
@@ -180,6 +181,31 @@ header {
   color: #ededed;
 }
 
+@media only screen and (min-width: 600px) {
+  .phoneIcon {
+    height: 50px;
+  }
+  .logoAndTitle {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 30vw;
+    margin-top: 20px;
+  }
+  .hamburgerMenu .mobileHamburgerContainer {
+    height: 50px;
+    width: 40px;
+  }
+  .hamburgerMenu .hamburgerMenuLine {
+    height: 5px;
+    padding: 1px;
+    width: 40px;
+  }
+  .hamburgerMenu .mobileHeaderDropdown .linkHeaderDropdown {
+    font-size: 10vw;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -194,7 +220,7 @@ main {
 }
 
 .heroImg {
-  height: 250px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   padding-top: 2%;
@@ -205,7 +231,7 @@ main {
   color: #403637;
   display: -ms-grid;
   display: grid;
-  font-size: 5vw;
+  font-size: 1.5em;
   font-weight: bold;
   place-items: center;
   text-align: center;
@@ -216,7 +242,7 @@ main {
 
 .menuContainer h1 {
   letter-spacing: 6px;
-  margin-top: 8%;
+  margin-top: 5%;
 }
 
 .menuContainer .gfItem {
@@ -227,9 +253,9 @@ main {
 }
 
 .menuContainer .mblFoodDropdown .mblFoodChkbox {
-  height: 50px;
-  width: 50vw;
-  left: 25vw;
+  height: 120px;
+  width: 80vw;
+  left: 10vw;
   position: absolute;
   opacity: 0;
   z-index: 1001;
@@ -238,21 +264,58 @@ main {
 .menuContainer .mblFoodDropdown .mblFoodMenuTitle {
   display: -ms-grid;
   display: grid;
-  border-radius: 15px;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   place-items: center;
-  background: #d3b468;
   margin: auto;
-  width: 180px;
+  border-radius: 10px;
+  width: 80vw;
+  height: 120px;
   margin-bottom: 5px;
+  background-size: cover;
+}
+
+.menuContainer .mblFoodDropdown .mblFoodMenuTitle h2 {
+  background: rgba(0, 0, 0, 0.7);
+  border: solid 1px rgba(198, 198, 198, 0.4);
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 4px #000000;
+          box-shadow: 2px 2px 4px #000000;
+  width: 45vw;
+  color: #ededed;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .menuContainer .mblFoodDropdown .mblFoodMenuTitle .dropdownArrow {
   width: 15px;
 }
 
+.menuContainer .mblFoodDropdown #foodMenuTitle1 {
+  background-image: url(../images/bruschettaAppetizer2.jpg);
+}
+
+.menuContainer .mblFoodDropdown #foodMenuTitle2 {
+  background-image: url(/images/duckRadishPizza.jpg);
+}
+
+.menuContainer .mblFoodDropdown #foodMenuTitle3 {
+  background-image: url(../images/mushroomSpinachPappardelle.jpg);
+}
+
+.menuContainer .mblFoodDropdown #foodMenuTitle4 {
+  background-image: url(../images/craftBeerPints2.jpg);
+}
+
+.menuContainer .mblFoodDropdown #foodMenuTitle5 {
+  background-image: url(../images/cannoliDessert2.jpg);
+}
+
 .menuContainer .mblFoodDropdown .mblFoodMenuContents {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
   position: absolute;
   width: 100px;
   background: #ededed;
@@ -266,74 +329,61 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.menuContainer .mblFoodDropdown .mblFoodMenuContents p {
-  color: #403637;
-  font-size: 16px;
-  font-weight: bold;
-  font-size: 12px;
-  text-align: left;
-}
-
-.menuContainer .mblFoodDropdown .mblFoodMenuContents h3 {
-  color: #403637;
-  font-size: 16px;
-  font-weight: bold;
-  font-size: 25px;
-}
-
 .menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItem {
   width: 70%;
   margin-bottom: 5px;
 }
 
-.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItemHeader {
+.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItem .menuItemHeader {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 0.5fr;
       grid-template-columns: 2fr 0.5fr;
   width: 80vw;
   place-items: start;
+  margin-top: 2%;
 }
 
-.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItemHeader h3 {
+.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItem .menuItemHeader h3 {
+  color: #403637;
+  font-size: 1em;
+  font-weight: bold;
   font-size: 18px;
 }
 
-.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItemHeader .price {
+.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItem .menuItemHeader .price {
   -ms-grid-column-align: end;
       justify-self: end;
   border-left: 1px solid black;
-  padding-left: 27px;
+  padding-left: 25px;
 }
 
-.menuContainer .mblFoodDropdown .mblFoodChkbox:checked ~ .mblFoodMenuTitle {
-  margin: auto;
+.menuContainer .mblFoodDropdown .mblFoodMenuContents .menuItem p {
+  color: #403637;
+  font-size: 1em;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  font-style: italic;
 }
 
 .menuContainer .mblFoodDropdown .mblFoodChkbox:checked ~ .mblFoodMenuContents {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
   top: 50;
   place-items: start;
   opacity: 1;
   z-index: 1000;
   width: 80vw;
   position: relative;
-  margin-top: 10px;
+  margin-top: 5px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.menuContainer .foodImg {
-  border-radius: 15px;
-  width: 80vw;
-  height: 120px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 15px;
-}
-
 .orderButton {
   background: #ddc589;
-  border-radius: 8px;
+  border-radius: 10px;
   -webkit-box-shadow: 1.5px 1.5px 5px;
           box-shadow: 1.5px 1.5px 5px;
   color: #403637;
@@ -342,13 +392,60 @@ main {
   font-size: 18px;
   height: 25px;
   padding-top: 3px;
-  margin-top: 10px;
-  margin-right: 1%;
-  width: 30%;
+  width: 35%;
   margin-bottom: 10px;
+}
+
+.orderButton:active {
+  height: 25px;
+  background: #d3b468;
+  font-size: 20px;
+  -webkit-transition: font 0.2s ease-in-out;
+  transition: font 0.2s ease-in-out;
 }
 
 .orderButton a {
   color: #403637;
+}
+
+@media only screen and (min-width: 600px) {
+  .heroImg {
+    height: 400px;
+  }
+  .menuContainer h1 {
+    font-size: 3em;
+  }
+  .menuContainer .gfItem {
+    font-size: 22px;
+  }
+  .menuContainer .mblFoodDropdown .mblFoodChkbox {
+    height: 250px;
+    width: 50vw;
+    left: 25%;
+  }
+  .menuContainer .mblFoodDropdown .mblFoodMenuTitle {
+    height: 250px;
+  }
+  .menuContainer .mblFoodDropdown .mblFoodMenuTitle h2 {
+    width: 30vw;
+    font-size: 2em;
+  }
+  .menuContainer .mblFoodDropdown .mblFoodMenuTitle .dropdownArrow {
+    width: 30px;
+  }
+  .orderButton {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    height: 50px;
+    width: 30%;
+  }
+  .orderButton #inactiveDsktp {
+    pointer-events: none;
+  }
+  #inactiveDsktp {
+    pointer-events: none;
+  }
 }
 /*# sourceMappingURL=menuPage.css.map */

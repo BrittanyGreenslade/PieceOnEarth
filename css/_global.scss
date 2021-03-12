@@ -8,7 +8,7 @@ $homepageFontColor: #ededed;
 $contentFont: "Libre Baskerville", serif;
 $contentColor: #403637;
 $featureColor: #d3b468;
-$buttonColor:#ddc589;
+$buttonColor: #ddc589;
 a {
   text-decoration: none;
 }
@@ -16,29 +16,36 @@ main {
   min-height: 70vh;
 }
 @mixin button {
-  background:$buttonColor;
-  border-radius: 8px;
+  background: $buttonColor;
+  border-radius: 10px;
   box-shadow: 1.5px 1.5px 5px;
   color: $contentColor;
   font-weight: bold;
   text-align: center;
+  // & :hover {
+  // }
+  &:active {
+    height:25px;
+    background: $featureColor;
+    font-size: 20px;
+    transition: font 0.2s ease-in-out;
+  }
 }
 //  @mixin button: hover {
 //    background:#C9A446}
 // @mixin buttonActive{}
-// @mixin contentTextStyling{
 
-// }
-@mixin pageTitle{
+@mixin pageTitle {
   color: $contentColor;
   display: grid;
-  font-size: 5vw;
+  font-size: 1.5em;
   font-weight: bold;
   place-items: center;
   text-align: center;
+  // font-family: $contentFont;
 }
-@mixin pageContent{
+@mixin pageContent {
   color: $contentColor;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
 }
