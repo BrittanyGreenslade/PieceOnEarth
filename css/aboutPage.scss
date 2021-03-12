@@ -3,18 +3,14 @@
 @import "_global.scss";
 .caroAbtPg {
   position: relative;
-  // .radio {
-  //   margin-right: 30px;
-  // }
-  // #carOne {
-  //   margin-left: 60px;
-  // }
   .imgSpace {
     height: 250px;
     width: 100%;
     margin-bottom: 15px;
   }
-  .caroImg {
+.radio{
+  display: none;
+}  .caroImg {
     width: 100%;
     height: 250px;
     position: absolute;
@@ -30,7 +26,13 @@
     height: 250px;
     object-fit: cover;
   }
-
+  .radioLbl{
+@include pageContent; 
+font-size: 1.5em;
+letter-spacing: 6px; }
+#carOne:checked~ #radioLbl1,#carTwo:checked ~#radioLbl2,#carThree:checked~#radioLbl3,#carFour:checked~#radioLbl4,#carFive:checked~#radioLbl5,#carSix:checked~#radioLbl6{
+color:$featureColor;
+} 
   #carOne:checked ~ #abtOne,
   #carTwo:checked ~ #abtTwo,
   #carThree:checked ~ #abtThree,
