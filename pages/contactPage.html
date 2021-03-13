@@ -8,7 +8,22 @@
     <link rel="stylesheet" href="../css/contactPage.css" />
   </head>
   <body>
-    <header>
+    <header class="dsktpHeader">
+      <a href="../index.html">
+        <img
+          class="logoAndTitleDsktp"
+          src="../images/PieceOnEarthHorizontal.png"
+          alt="Piece on Earth logo and name"
+      /></a>
+      <div class="dsktpLinks">
+        <p>780 587 4567</p>
+        <a href="../index.html">Home</a>
+        <a href="/pages/menuPage.html">Menu</a>
+        <a href="/pages/contactPage.html">Contact Us</a>
+        <a href="/pages/aboutPage.html">Our Story</a>
+      </div>
+    </header>
+    <header class="mblHeader">
       <a class="phoneLink" id="inactiveDsktp" ref="tel:7805874567">
         <img
           class="phoneIcon"
@@ -44,7 +59,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="mblMain">
       <img
         class="heroImg"
         src="/images/barFrontDarkCropped.jpg"
@@ -55,7 +70,10 @@
         <div class="contactInfo">
           <p>8424 109 St NW</p>
           <p>Edmonton, AB</p>
-          <a class="phoneLink" id="inactiveDsktp" href="tel:7805874567">780 587 4567</a>
+          <p>info@pieceonearth.com</p>
+          <a class="phoneLink" id="inactiveDsktp" href="tel:7805874567"
+            >780 587 4567</a
+          >
         </div>
       </section>
       <section class="contactForm">
@@ -83,13 +101,79 @@
         loading="lazy"
       ></iframe>
     </main>
-    <footer>
+    <main class="dsktpMain">
+      <img
+        class="heroImg"
+        src="/images/barFrontDarkCropped.jpg"
+        alt="front of bar in restaurant"
+      />
+      <div class="contactInfoContainer">
+        <div class="contactInfoDsktp">
+          <h2>Contact Info</h2>
+          <div class="contactFormContainerDsk">
+          <div class="dsktpContactItem">
+            <img
+              class="contactIcon"
+              src="../images/pinIcon.svg"
+              alt="pin drop icon"
+            />
+            <p>8424 109 St NW, Edmonton, AB</p>
+          </div>
+          <div class="dsktpContactItem">
+            <img
+              class="contactIcon"
+              src="../images/emailIcon.svg"
+              alt="email icon"
+            />
+            <p>info@pieceonearth.com</p>
+          </div>
+          <div class="dsktpContactItem">
+            <img
+              class="contactIcon"
+              src="../images/phoneIcon2.svg"
+              alt="phone icon"
+            />
+            <p>780 587 4567</p>
+          </div>
+        </div>
+        </div>
+        <div class="contactFormDsktp">
+          <h2>We love to hear from you!</h2>
+          <section class="contactForm">
+            <div class="contactFormItem">
+              <label for="name"><p class="formSectionTitle">Name*</p></label>
+              <input type="text" name="name" class="formBox" required />
+            </div>
+            <div class="contactFormItem">
+              <label for="email" class="formSectionTitle">Email*</label>
+              <input type="text" name="email" class="formBox" required />
+            </div>
+            <div class="contactFormItem">
+              <label for="message" class="formSectionTitle">Message*</label>
+              <textarea class="messageBox" class="formBox" name="message"></textarea>
+            </div>
+            <div class="submitButtonContainer">
+              <div class="submitButton"><p>Submit</p></div>
+            </div>
+        </div>
+      </div>
+      <iframe
+        class="googleMap"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.0815185849565!2d-113.51468968476074!3d53.52060098001591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a023712be78853%3A0x58af2fe662e092e0!2sHigh%20Dough!5e0!3m2!1sen!2sca!4v1614832324404!5m2!1sen!2sca"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </main>
+    <footer class="ftrMbl">
       <hr />
       <div class="footerGrid">
         <div class="addressInfo">
           <p class="textFooter">8424 109 St NW</p>
           <p class="textFooter">Edmonton, AB</p>
-          <a class="textFooter"id="inactiveDsktp" href="tel:7805874567">780 587 4567</a>
+          <a class="textFooter" id="inactiveDsktp" href="tel:7805874567"
+            >780 587 4567</a
+          >
         </div>
         <div class="socialMediaLogos">
           <img
@@ -114,6 +198,46 @@
           <p class="copyrightInfo">Copyright © 2021, Brittany</p>
         </div>
       </div>
+    </footer>
+    <footer class="ftrDsktp">
+      <hr />
+      <div class="ftrDsktpContainer">
+        <div class="leftContactInfo">
+          <p class="textFooter">8424 109 St NW</p>
+          <p class="textFooter">Edmonton, AB</p>
+          <p class="txtFtrDsktp">780 587 4567</p>
+        </div>
+        <div class="centerSocialMedia">
+          <img
+            class="ftrLogoAndName"
+            src="../images/PieceOnEarthVerticalSmall.png"
+            alt="Piece on Earth Logo with name below it"
+          />
+          <div class="socialMediaLogos">
+            <img
+              class="smLogo"
+              src="/images/facebookLogo.svg"
+              alt="Facebook logo"
+            />
+            <img
+              class="smLogo"
+              src="/images/instagramLogo.svg"
+              alt="Instagram logo"
+            />
+            <img
+              class="smLogo"
+              src="/images/twitterLogo.svg"
+              alt="Twitter logo"
+            />
+          </div>
+        </div>
+        <div class="rightHours">
+          <p>Sun - Thu 12 pm - 11 pm</p>
+          <p>Fri - Sat 12 pm - 1 am</p>
+          <a href="./contactPage.html">Call to order</a>
+        </div>
+      </div>
+      <p class="copyrightInfo">Copyright © 2021, Brittany</p>
     </footer>
   </body>
 </html>

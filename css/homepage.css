@@ -13,7 +13,11 @@ main {
   min-height: 70vh;
 }
 
-header {
+.dsktpHeader {
+  display: none;
+}
+
+.mblHeader {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr 1fr;
@@ -131,6 +135,52 @@ header {
   }
   .hamburgerMenu .mobileHeaderDropdown .linkHeaderDropdown {
     font-size: 10vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .mblHeader {
+    display: none;
+  }
+  .dsktpHeader {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .dsktpHeader .logoAndTitleDsktp {
+    width: 300px;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+  .dsktpHeader .dsktpLinks {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+    place-items: center;
+    width: 500px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 3%;
+    margin-left: 20%;
+  }
+  .dsktpHeader .dsktpLinks a, .dsktpHeader .dsktpLinks p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #403637;
+  }
+  .dsktpHeader .dsktpLinks a:hover, .dsktpHeader .dsktpLinks p:hover {
+    color: #d3b468;
+  }
+  .dsktpHeader .dsktpLinks p {
+    color: #d3b468;
+    font-size: 18px;
+    padding-top: 2px;
   }
 }
 

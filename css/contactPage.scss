@@ -1,7 +1,9 @@
 @import "_header.scss";
 @import "_footer.scss";
 @import "_global.scss";
-
+.dsktpMain {
+  display: none;
+}
 .heroImg {
   height: 200px;
   object-fit: cover;
@@ -11,19 +13,23 @@
 .contactUsContainer {
   @include pageTitle;
   margin-top: 2%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
   letter-spacing: 6px;
+  p,
+  a {
+    font-size: 18px;
+  }
   .phoneLink {
     color: $featureColor;
   }
 }
 .contactForm {
- margin: auto;
+  margin: auto;
   // margin-left: 5%;
   // margin-top: 5%;
   width: 90%;
   .contactFormItem {
-    padding-top: 8px;
+    margin-top: 8px;
   }
   .formSectionTitle {
     @include pageContent;
@@ -31,9 +37,8 @@
   .formBox {
     background: $homepageFontColor;
     border: $contentColor solid 0.5px;
-    width:95%;
-    // max-width: 95%;
-    // min-width: 95%;
+    max-width: 95%;
+    min-width: 95%;
     padding: 5px;
   }
   .submitButtonContainer {
@@ -66,45 +71,126 @@
     width: 100%;
   }
   .contactUsContainer {
-    h1{   font-size:50px;}
-    p{ font-size:30px}
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 25px;
+    }
     margin-top: 2%;
     grid-template-rows: 1fr 1fr;
     letter-spacing: 6px;
     .phoneLink {
       color: $featureColor;
     }
-    #inactiveDsktp{
+    #inactiveDsktp {
       pointer-events: none;
     }
   }
   .contactForm {
     .formSectionTitle {
-      font-size:2em;
+      font-size: 32px;
     }
     .formBox {
       padding: 10px;
     }
     .submitButtonContainer {
-      align-items: center;
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: end;
       .submitButton {
-        @include button();
-        font-size: 16px;
-        height: 20px;
-        padding-top: 2px;
-        margin-top: 10px;
-        margin-right: 1%;
-        width: 30%;
+        font-size: 20px;
+        height: 25px;
+        width: 20%;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .mblMain {
+    display: none;
+  }
+  .dsktpMain {
+    display: grid;
+  }
+  .contactInfoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    align-items: start;
+    h2 {
+      color: $contentColor;
+      font-size: 35px;
+    }
+    .contactInfoDsktp {
+      margin-top: 20px;
+      display: grid;
+      grid-template-rows: 1fr 3fr;
+      align-items: center;
+      border-right: 1px solid $contentColor;
+    }
+    h2 {
+      margin-bottom: 50px;
+      margin-left: 20px;
+    }
+  p {
+    color: $contentColor;
+    font-size: 20px;
+    font-family: $contentFont;
+  }}
+  .dsktpContactItem {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    align-items: center;
+    height: 100px;
+    .contactIcon {
+      opacity: 0.7;
+      width: 60px;
+      height: 62px;
+      justify-self: center;
+    }
+  }
+  .contactFormDsktp {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    align-items: center;
+    h2 {
+      margin-left: 20px;
+    }
+
+    .formSectionTitle {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .formBox {
+      max-width: 95%;
+      min-width: 95%;
+      padding: 8px;
+    }
+    .messageBox{
+      width: 100%;
+padding-top: 30px;
+padding-bottom: 30px;
+background: $homepageFontColor;
+border: $contentColor solid 0.5px;
+max-width: 100%;
+min-width: 100%;
+    }
+    .submitButtonContainer {
+      .submitButton {
+        p {
+          font-size: 16px;
+          &:hover {
+            font-size: 18px;
+          }
+        }
       }
     }
   }
   .googleMap {
-    height: 40vh;
-    max-width: 2000px;
-    padding: 10% 5% 2% 5%;
+    display: block;
+    margin: 30px auto 10px auto;
+    padding: 0;
     width: 90%;
   }
-  }
+}

@@ -1,5 +1,8 @@
 @import "_global.scss";
-footer {
+.ftrDsktp {
+  display: none;
+}
+.ftrMbl {
   min-height: 10vh;
 }
 hr {
@@ -10,31 +13,28 @@ hr {
 }
 .footerGrid {
   display: grid;
-  grid-auto-flow: row;
   place-items: center;
   text-align: center;
-  width: 70%;
-  margin:auto;
+  width: 80%;
+  margin: auto;
   .textFooter {
     color: $contentColor;
     font-family: $contentFont;
-    font-size: 55%;
+    font-size: 8px;
     letter-spacing: 3px;
   }
   :first-child {
-    padding-top: 3%;
+    margin-top: 10px;
   }
- #inactiveDsktp{
-   pointer-events:none;
- }  .socialMediaLogos {
-    // align-items: end;
+  #inactiveDsktp {
+    pointer-events: none;
+  }
+  .socialMediaLogos {
     column-gap: 5px;
     display: grid;
+    place-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    // justify-items: center;
-    // margin: auto;
-    width: 40%;
-    margin-right: 40px;
+    width: 50%;
     .smLogo {
       width: 42px;
       opacity: 0.7;
@@ -43,6 +43,77 @@ hr {
   .copyrightInfo {
     font-size: 100%;
     letter-spacing: normal;
+    padding-top: 4%;
+    padding-bottom: 2%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .textFooter {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+  .socialMediaLogos {
+    width: 30%;
+    .smLogo {
+      width: 50px;
+    }
+  }
+  .copyrightInfo {
     padding-top: 5%;
+    padding-bottom: 2%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .ftrMbl {
+    display: none;
+  }
+  .ftrDsktp {
+    display: grid;
+    .ftrDsktpContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      place-items: center;
+      a {
+        display: block;
+        margin: auto;
+      }
+      a,
+      p {
+        text-align: center;
+        font-family: $contentFont;
+        font-size: 10px;
+        color: $contentColor;
+        letter-spacing: 6px;
+      }
+      .centerSocialMedia {
+        margin-top: 10px;
+        display: grid;
+        place-items: center;
+        .ftrLogoAndName {
+          width: 180px;
+          margin-bottom:10px;
+        }
+        .socialMediaLogos {
+          column-gap: 5px;
+          display: grid;
+          place-items: center;
+          grid-template-columns: 1fr 1fr 1fr;
+          width: 100%;
+          margin-bottom: 10px;
+          .smLogo {
+            width: 42px;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  .copyrightInfo {
+    font-size: 12px;
+    letter-spacing: normal;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 1%;
   }
 }

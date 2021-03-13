@@ -38,13 +38,14 @@ main {
 @mixin pageTitle {
   color: $contentColor;
   display: grid;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   place-items: center;
   text-align: center;
   // font-family: $contentFont;
 }
 @mixin pageContent {
+  // font-family: $contentFont;
   color: $contentColor;
   font-size: 1em;
   font-weight: bold;

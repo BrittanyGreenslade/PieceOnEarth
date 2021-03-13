@@ -1,5 +1,8 @@
 @import "_global.scss";
-header {
+.dsktpHeader{
+  display: none;
+}
+.mblHeader {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   max-height: 20vh;
@@ -79,14 +82,13 @@ header {
   }
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
   .phoneIcon {
     height: 50px;
   }
-
   .logoAndTitle {
     align-self: center;
-    width: 30vw; 
+    width: 30vw;
     margin-top: 20px;
   }
   .hamburgerMenu {
@@ -105,4 +107,43 @@ header {
       }
     }
   }
+}
+@media only screen and (min-width: 1000px) {
+  .mblHeader {
+    display: none;
+  }
+  .dsktpHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100%;
+    .logoAndTitleDsktp {
+      width: 300px;
+      margin-left: 25px;
+      margin-top: 15px;
+    }
+    .dsktpLinks {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+      place-items: center;
+      width: 500px;
+      justify-self: center;
+      margin-top: 3%;
+margin-left: 20%;
+      a, p {
+        font-size: 20px;
+        font-weight: bold;
+        color: $contentColor;
+        &:hover {
+          color: $featureColor;
+        }
+      }
+      p{
+        color: $featureColor;
+        font-size: 18px;
+        padding-top: 2px;
+      }
+    }
+  }
+
 }

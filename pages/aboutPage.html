@@ -8,7 +8,22 @@
     <link rel="stylesheet" href="../css/aboutPage.css" />
   </head>
   <body>
-    <header>
+    <header class="dsktpHeader">
+      <a href="../index.html">
+      <img
+        class="logoAndTitleDsktp"
+        src="../images/PieceOnEarthHorizontal.png"
+        alt="Piece on Earth logo and name"
+      /></a>
+      <div class="dsktpLinks">
+        <p>780 587 4567</p>
+        <a href="../index.html">Home</a>
+        <a href="/pages/menuPage.html">Menu</a>
+        <a href="/pages/contactPage.html">Contact Us</a>
+        <a href="/pages/aboutPage.html">Our Story</a>
+      </div>
+    </header>
+    <header class="mblHeader">
       <a class="phoneLink" id="inactiveDsktp" href="tel:7805874567">
         <img
           class="phoneIcon"
@@ -55,12 +70,12 @@
         <input type="radio" class="radio" name="about" id="carFour" />
         <input type="radio" class="radio" name="about" id="carFive" />
         <input type="radio" class="radio" name="about" id="carSix" />
-        <label for="carOne" class="radioLbl" id="radioLbl1">1</label>
+        <div class="labelsContainer"><label for="carOne" class="radioLbl" id="radioLbl1">1</label>
         <label for="carTwo" class="radioLbl" id="radioLbl2">2</label>
         <label for="carThree" class="radioLbl" id="radioLbl3">3</label>
         <label for="carFour" class="radioLbl" id="radioLbl4">4</label>
         <label for="carFive" class="radioLbl" id="radioLbl5">5</label>
-        <label for="carSix" class="radioLbl" id="radioLbl6">6</label>
+        <label for="carSix" class="radioLbl" id="radioLbl6">6</label></div>
         <div class="caroImg" id="abtOne">
           <img
             src="/images/pizzaInFrontOfFire.jpg"
@@ -95,6 +110,7 @@
           />
         </div>
       </section>
+      <article class="abtContainer">
       <section class="aboutUsSection">
         <h1>- Our Story -</h1>
         <p>
@@ -110,7 +126,8 @@
           traditional Greek-style pizza his family perfected back in the mid 80s
           to a more modern and convenient comfort food for today’s family on the
           go.
-        </p>
+        </p></section>
+        <section class="f2TSection">
         <h1>- Farm to Table -</h1>
         <p class="f2TContent">
           Piece on Earth's pizzas are made with only the freshest, locally
@@ -121,7 +138,7 @@
           better knowing we're always ready to make you more. Our drink
           selection is also sourced by local Alberta breweries, wineries, and
           distilleries.
-        </p>
+        </p></section>
       </section>
       <iframe
         class="introVideo"
@@ -131,8 +148,9 @@
         allowfullscreen
       >
       </iframe>
+    </article>
     </main>
-    <footer>
+    <footer class="ftrMbl">
       <hr />
       <div class="footerGrid">
         <div class="addressInfo">
@@ -165,6 +183,45 @@
           <p class="copyrightInfo">Copyright © 2021, Brittany</p>
         </div>
       </div>
+    </footer>
+    <footer class="ftrDsktp">
+      <hr />
+      <div class="ftrDsktpContainer">
+        <div class="leftContactInfo">
+          <p class="textFooter">8424 109 St NW</p>
+          <p class="textFooter">Edmonton, AB</p>
+          <p class="txtFtrDsktp">780 587 4567</p>
+        </div>
+      <div class="centerSocialMedia">
+        <img
+        class="ftrLogoAndName"
+          src="../images/PieceOnEarthVerticalSmall.png"
+          alt="Piece on Earth Logo with name below it"
+        />
+        <div class="socialMediaLogos">
+          <img
+            class="smLogo"
+            src="/images/facebookLogo.svg"
+            alt="Facebook logo"
+          />
+          <img
+            class="smLogo"
+            src="/images/instagramLogo.svg"
+            alt="Instagram logo"
+          />
+          <img
+            class="smLogo"
+            src="/images/twitterLogo.svg"
+            alt="Twitter logo"
+          />
+        </div>
+      </div>
+      <div class="rightHours">
+        <p>Sun - Thu 12 pm - 11 pm</p>
+        <p>Fri - Sat 12 pm - 1 am</p>
+        <a href="./contactPage.html">Call to order</a>
+      </div></div>
+      <p class="copyrightInfo">Copyright © 2021, Brittany</p>
     </footer>
   </body>
 </html>

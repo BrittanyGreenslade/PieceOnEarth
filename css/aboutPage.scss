@@ -4,35 +4,47 @@
 .caroAbtPg {
   position: relative;
   .imgSpace {
-    height: 250px;
+    height: 200px;
     width: 100%;
     margin-bottom: 15px;
   }
-.radio{
-  display: none;
-}  .caroImg {
+  .radio {
+    display: none;
+  }
+  .labelsContainer {
+    display: grid;
+    grid-auto-flow: column;
+    width: 40vw;
+    margin: auto;
+    place-items:center;
+    .radioLbl {
+      @include pageContent;
+      font-size: 1em;
+    }
+  }
+  .caroImg {
     width: 100%;
-    height: 250px;
+    height: 200px;
     position: absolute;
     top: 0;
     left: 0;
     transition: all 0.2s ease-in-out;
     opacity: 0;
     transform: scale(0.8);
-  }
   img {
     padding-top: 2%;
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
+  }}
+  #carOne:checked ~ .labelsContainer #radioLbl1,
+  #carTwo:checked ~ .labelsContainer #radioLbl2,
+  #carThree:checked ~ .labelsContainer #radioLbl3,
+  #carFour:checked ~ .labelsContainer #radioLbl4,
+  #carFive:checked ~ .labelsContainer #radioLbl5,
+  #carSix:checked ~ .labelsContainer #radioLbl6 {
+    color: $featureColor;
   }
-  .radioLbl{
-@include pageContent; 
-font-size: 1.5em;
-letter-spacing: 6px; }
-#carOne:checked~ #radioLbl1,#carTwo:checked ~#radioLbl2,#carThree:checked~#radioLbl3,#carFour:checked~#radioLbl4,#carFive:checked~#radioLbl5,#carSix:checked~#radioLbl6{
-color:$featureColor;
-} 
   #carOne:checked ~ #abtOne,
   #carTwo:checked ~ #abtTwo,
   #carThree:checked ~ #abtThree,
@@ -43,33 +55,94 @@ color:$featureColor;
     transform: scale(1);
   }
 }
+#abtOne, #abtTwo, #abtThree, #abtFour, #abtFive, #abtSix{
+  transform-origin: 0 0;
+  transform: scaleY(0);
+}
+.abtContainer{
+  display:grid;
+  place-items: center;
 .aboutUsSection {
-  @include pageTitle;
-  grid-template-rows: 0.75fr 4fr 1fr 3fr;
+  display:grid;
   margin-top: 5%;
+  place-items: center;
+  h1 {
+    @include pageTitle;
+ font-size: 36px;;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+  }
   p {
+    text-align: center;
     @include pageContent;
     width: 90%;
     font-style: italic;
   }
+}
+.f2TSection{
+  display:grid;
+grid-auto-flow: row;
+  margin-top: 30px;
+  place-items: center;
   h1 {
-    letter-spacing: 6px;
-  }
-  .f2TContent {
-    align-self: start;
+    letter-spacing: 5px;
+    @include pageTitle;
+    margin-bottom: 20px;
+    font-size: 36px;
+   }
+  p {
+    text-align: center;
+    @include pageContent;
+    width: 90%;
+    font-style: italic;
   }
 }
-
 .introVideo {
-  width: 90%;
+  width: 95vw;
   height: 250px;
-  max-width: 550px;
-  margin: 2% 5% 2% 5%;
+  max-width: 1000px;
+  margin-top: 8%;
+  margin-bottom: 8px;
   border-radius: 10px;
-}
+}}
 
-@media only screen and (min-width:600px){
-  #inactiveDsktp{
+@media only screen and (min-width: 600px) {
+  #inactiveDsktp {
     pointer-events: none;
   }
-}
+  .caroAbtPg {
+    .imgSpace {
+      height:350px;
+    }
+    .labelsContainer {
+      width: 30vw;
+      .radioLbl {
+        font-size: 1.5em;
+      }
+    }
+    .caroImg {
+      height: 350px;
+    img {
+      height: 350px;
+    }}
+  }
+  .abtContainer{
+  .aboutUsSection {
+    h1 {
+   font-size: 50px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .f2TSection{
+    h1 {
+      font-size: 50px;
+     }
+    p {
+font-size:20px;    }
+  }
+  .introVideo {
+    height: 400px;
+  }}}
+  // @media only screen and (min-width: 1000px) {}
