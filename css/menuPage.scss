@@ -10,9 +10,15 @@
   padding-top: 2%;
   width: 100%;
 }
+#ordPickup{
+@include pageContent;
+font-style: italic;
+margin-top: 5px;
+font-size:20px;
+text-align: center;}
 .menuContainerMbl {
   @include pageTitle;
-  margin-top: 10px;
+  margin-top: 8px;
   display: grid;
   place-items: center;
 
@@ -144,6 +150,10 @@
   .heroImg {
     height: 400px;
   }
+  #ordPickup{
+    @include pageContent;
+    font-size:30px;
+}
   .menuContainerMbl {
     h1 {
       font-size: 50px;
@@ -193,15 +203,20 @@
     display: block;
     margin: auto;
   }
+  #ordPickup{
+    @include pageContent;
+    font-size:20px;
+  }
   .menuDsktpContainer {
     display: grid;
     place-items: center;
-    margin-top: 60px;
+    margin-top: 50px;
     h1 {
       @include pageTitle;
       font-size: 60px;
       margin-bottom: 20px;
     }
+
     .dsktpMenuSectionContainer3 {
       display: grid;
       grid-template-rows: 0.5fr 1.25fr 2fr;
@@ -222,6 +237,12 @@
       place-items: center;
       width: 80vw;
       margin-bottom: 50px;
+      #pizzaH1{
+        margin-bottom: 0;
+    }
+    .halfpricePizza{
+      margin-bottom: 30px;
+  }      
 
       .dsktpMenu9ItemContainer {
         display: grid;
@@ -253,6 +274,12 @@
       font-weight: bold;
     }
   }
+  .phNmbrDsktp{
+    font-size: 30px;
+    font-weight: bold;
+    color: $featureColor;
+
+  }
   .dsktpFoodImg {
     width: 70vw;
     height: 225px;
@@ -268,5 +295,4 @@
     font-weight: 14px;
     margin-bottom: 5px;
   }
-}
-}
+} }

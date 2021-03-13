@@ -168,19 +168,63 @@ main {
     -ms-grid-column-align: center;
         justify-self: center;
     margin-top: 3%;
-    margin-left: 20%;
+    margin-left: 11%;
   }
-  .dsktpHeader .dsktpLinks a, .dsktpHeader .dsktpLinks p {
+  .dsktpHeader .dsktpLinks a,
+  .dsktpHeader .dsktpLinks p {
     font-size: 20px;
     font-weight: bold;
     color: #403637;
   }
-  .dsktpHeader .dsktpLinks a:hover, .dsktpHeader .dsktpLinks p:hover {
+  .dsktpHeader .dsktpLinks a:hover,
+  .dsktpHeader .dsktpLinks p:hover {
     color: #d3b468;
   }
   .dsktpHeader .dsktpLinks p {
     color: #d3b468;
-    font-size: 18px;
+    font-size: 20px;
+    padding-top: 2px;
+  }
+  .dsktpHeaderHmpg {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .dsktpHeaderHmpg .logoAndTitleDsktp {
+    width: 300px;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+  .dsktpHeaderHmpg .dsktpLinks {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+    place-items: center;
+    width: 500px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 3%;
+    margin-left: 11%;
+  }
+  .dsktpHeaderHmpg .dsktpLinks a,
+  .dsktpHeaderHmpg .dsktpLinks p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ededed;
+  }
+  .dsktpHeaderHmpg .dsktpLinks a:hover,
+  .dsktpHeaderHmpg .dsktpLinks p:hover {
+    color: #d3b468;
+  }
+  .dsktpHeaderHmpg .dsktpLinks p {
+    color: #d3b468;
+    font-size: 20px;
     padding-top: 2px;
   }
 }
@@ -211,6 +255,7 @@ hr {
   opacity: 0.6;
   width: 90%;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .footerGrid {
@@ -229,10 +274,6 @@ hr {
   letter-spacing: 3px;
 }
 
-.footerGrid :first-child {
-  margin-top: 10px;
-}
-
 .footerGrid #inactiveDsktp {
   pointer-events: none;
 }
@@ -245,7 +286,7 @@ hr {
   place-items: center;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  width: 50%;
+  width: 30%;
 }
 
 .footerGrid .socialMediaLogos .smLogo {
@@ -292,10 +333,6 @@ hr {
         grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
   }
-  .ftrDsktp .ftrDsktpContainer a {
-    display: block;
-    margin: auto;
-  }
   .ftrDsktp .ftrDsktpContainer a,
   .ftrDsktp .ftrDsktpContainer p {
     text-align: center;
@@ -303,6 +340,12 @@ hr {
     font-size: 10px;
     color: #403637;
     letter-spacing: 6px;
+  }
+  .ftrDsktp .ftrDsktpContainer a {
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 15px;
   }
   .ftrDsktp .ftrDsktpContainer .centerSocialMedia {
     margin-top: 10px;
@@ -375,11 +418,17 @@ main {
   -ms-grid-rows: 0.5fr 1.5fr;
       grid-template-rows: 0.5fr 1.5fr;
   letter-spacing: 6px;
+  margin-bottom: 30px;
+}
+
+.contactUsContainer h1 {
+  font-size: 30px;
 }
 
 .contactUsContainer p,
 .contactUsContainer a {
-  font-size: 18px;
+  font-size: 15px;
+  letter-spacing: 4px;
 }
 
 .contactUsContainer .phoneLink {
@@ -468,7 +517,7 @@ main {
   .contactUsContainer h1 {
     font-size: 50px;
   }
-  .contactUsContainer p {
+  .contactUsContainer a, .contactUsContainer p {
     font-size: 25px;
   }
   .contactUsContainer .phoneLink {
@@ -528,6 +577,7 @@ main {
   .contactInfoContainer h2 {
     margin-bottom: 50px;
     margin-left: 20px;
+    margin-top: 10px;
   }
   .contactInfoContainer p {
     color: #403637;
@@ -555,14 +605,22 @@ main {
     margin-top: 20px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 4fr;
-        grid-template-rows: 1fr 4fr;
+    -ms-grid-rows: 1fr fr;
+        grid-template-rows: 1fr fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    justify-items: start;
+    max-width: 100%;
+    margin-left: 30px;
+  }
+  .contactFormDsktp .contactForm {
+    margin: 0;
+    margin-top: 20px;
+    width: 90%;
   }
   .contactFormDsktp h2 {
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .contactFormDsktp .formSectionTitle {
     font-size: 20px;
@@ -574,13 +632,12 @@ main {
     padding: 8px;
   }
   .contactFormDsktp .messageBox {
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    resize: none;
+    max-width: 99%;
+    min-width: 99%;
+    padding-bottom: 60px;
     background: #ededed;
     border: #403637 solid 0.5px;
-    max-width: 100%;
-    min-width: 100%;
   }
   .contactFormDsktp .submitButtonContainer .submitButton p {
     font-size: 16px;

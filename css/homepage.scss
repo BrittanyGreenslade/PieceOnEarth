@@ -77,4 +77,42 @@ article {
     }
   }
 }
-// @media only screen and (min-width: 1000px;){}
+@media only screen and (min-width: 1000px){
+  body{
+    background-image: url(../images/pizzaDarkWoodenBackgroundSide.jpg);
+  }
+  header{
+    min-height: 10vh;
+  }
+  article {
+    min-height:60vh;
+    .infoHomePage {
+      display: grid;
+      grid-template-rows: 0.25fr 0.25fr 0.25fr;
+      margin-left: 45vw;
+      margin-top: 10vh;
+      width: 50%;
+      height: 55vh;
+      .addressPhoneNumber {
+        font-size: 26px;
+        a{ color:$featureColor;}
+      }
+      .linksHomepage {
+        font-size: 100px;
+        font-weight: 600;
+      }
+    }
+  }
+  .socialMediaLogos {
+    min-height:20vh;
+    width: 15%;
+margin-left: 62vw;
+    align-items: start;
+    justify-items: center;
+    .smLogo {
+      // padding-bottom: 5px;
+      width: 42px;
+      opacity: 0.7;
+    }
+  }
+}

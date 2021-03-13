@@ -167,19 +167,63 @@ main {
     -ms-grid-column-align: center;
         justify-self: center;
     margin-top: 3%;
-    margin-left: 20%;
+    margin-left: 11%;
   }
-  .dsktpHeader .dsktpLinks a, .dsktpHeader .dsktpLinks p {
+  .dsktpHeader .dsktpLinks a,
+  .dsktpHeader .dsktpLinks p {
     font-size: 20px;
     font-weight: bold;
     color: #403637;
   }
-  .dsktpHeader .dsktpLinks a:hover, .dsktpHeader .dsktpLinks p:hover {
+  .dsktpHeader .dsktpLinks a:hover,
+  .dsktpHeader .dsktpLinks p:hover {
     color: #d3b468;
   }
   .dsktpHeader .dsktpLinks p {
     color: #d3b468;
-    font-size: 18px;
+    font-size: 20px;
+    padding-top: 2px;
+  }
+  .dsktpHeaderHmpg {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .dsktpHeaderHmpg .logoAndTitleDsktp {
+    width: 300px;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+  .dsktpHeaderHmpg .dsktpLinks {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+    place-items: center;
+    width: 500px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 3%;
+    margin-left: 11%;
+  }
+  .dsktpHeaderHmpg .dsktpLinks a,
+  .dsktpHeaderHmpg .dsktpLinks p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ededed;
+  }
+  .dsktpHeaderHmpg .dsktpLinks a:hover,
+  .dsktpHeaderHmpg .dsktpLinks p:hover {
+    color: #d3b468;
+  }
+  .dsktpHeaderHmpg .dsktpLinks p {
+    color: #d3b468;
+    font-size: 20px;
     padding-top: 2px;
   }
 }
@@ -289,6 +333,51 @@ article .infoHomePage .linksHomepage {
   }
   .socialMediaLogos .smLogo {
     width: 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-image: url(../images/pizzaDarkWoodenBackgroundSide.jpg);
+  }
+  header {
+    min-height: 10vh;
+  }
+  article {
+    min-height: 60vh;
+  }
+  article .infoHomePage {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.25fr 0.25fr 0.25fr;
+        grid-template-rows: 0.25fr 0.25fr 0.25fr;
+    margin-left: 45vw;
+    margin-top: 10vh;
+    width: 50%;
+    height: 55vh;
+  }
+  article .infoHomePage .addressPhoneNumber {
+    font-size: 26px;
+  }
+  article .infoHomePage .addressPhoneNumber a {
+    color: #d3b468;
+  }
+  article .infoHomePage .linksHomepage {
+    font-size: 100px;
+    font-weight: 600;
+  }
+  .socialMediaLogos {
+    min-height: 20vh;
+    width: 15%;
+    margin-left: 62vw;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    justify-items: center;
+  }
+  .socialMediaLogos .smLogo {
+    width: 42px;
+    opacity: 0.7;
   }
 }
 /*# sourceMappingURL=homepage.css.map */

@@ -27,6 +27,7 @@ hr {
   opacity: 0.6;
   width: 90%;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .footerGrid {
@@ -45,10 +46,6 @@ hr {
   letter-spacing: 3px;
 }
 
-.footerGrid :first-child {
-  margin-top: 10px;
-}
-
 .footerGrid #inactiveDsktp {
   pointer-events: none;
 }
@@ -61,7 +58,7 @@ hr {
   place-items: center;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  width: 50%;
+  width: 30%;
 }
 
 .footerGrid .socialMediaLogos .smLogo {
@@ -108,10 +105,6 @@ hr {
         grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
   }
-  .ftrDsktp .ftrDsktpContainer a {
-    display: block;
-    margin: auto;
-  }
   .ftrDsktp .ftrDsktpContainer a,
   .ftrDsktp .ftrDsktpContainer p {
     text-align: center;
@@ -119,6 +112,12 @@ hr {
     font-size: 10px;
     color: #403637;
     letter-spacing: 6px;
+  }
+  .ftrDsktp .ftrDsktpContainer a {
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 15px;
   }
   .ftrDsktp .ftrDsktpContainer .centerSocialMedia {
     margin-top: 10px;
@@ -321,19 +320,63 @@ main {
     -ms-grid-column-align: center;
         justify-self: center;
     margin-top: 3%;
-    margin-left: 20%;
+    margin-left: 11%;
   }
-  .dsktpHeader .dsktpLinks a, .dsktpHeader .dsktpLinks p {
+  .dsktpHeader .dsktpLinks a,
+  .dsktpHeader .dsktpLinks p {
     font-size: 20px;
     font-weight: bold;
     color: #403637;
   }
-  .dsktpHeader .dsktpLinks a:hover, .dsktpHeader .dsktpLinks p:hover {
+  .dsktpHeader .dsktpLinks a:hover,
+  .dsktpHeader .dsktpLinks p:hover {
     color: #d3b468;
   }
   .dsktpHeader .dsktpLinks p {
     color: #d3b468;
-    font-size: 18px;
+    font-size: 20px;
+    padding-top: 2px;
+  }
+  .dsktpHeaderHmpg {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .dsktpHeaderHmpg .logoAndTitleDsktp {
+    width: 300px;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+  .dsktpHeaderHmpg .dsktpLinks {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+    place-items: center;
+    width: 500px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 3%;
+    margin-left: 11%;
+  }
+  .dsktpHeaderHmpg .dsktpLinks a,
+  .dsktpHeaderHmpg .dsktpLinks p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ededed;
+  }
+  .dsktpHeaderHmpg .dsktpLinks a:hover,
+  .dsktpHeaderHmpg .dsktpLinks p:hover {
+    color: #d3b468;
+  }
+  .dsktpHeaderHmpg .dsktpLinks p {
+    color: #d3b468;
+    font-size: 20px;
     padding-top: 2px;
   }
 }
@@ -433,6 +476,8 @@ main {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  -ms-grid-rows: 1fr .75fr .5fr;
+      grid-template-rows: 1fr .75fr .5fr;
 }
 
 .abtContainer .aboutUsSection {
@@ -450,7 +495,7 @@ main {
   font-weight: bold;
   place-items: center;
   text-align: center;
-  font-size: 36px;
+  font-size: 30px;
   letter-spacing: 6px;
   margin-bottom: 20px;
 }
@@ -482,7 +527,7 @@ main {
   place-items: center;
   text-align: center;
   margin-bottom: 20px;
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .abtContainer .f2TSection p {
@@ -522,6 +567,12 @@ main {
   .caroAbtPg .caroImg img {
     height: 350px;
   }
+  .abtContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.75fr .5fr .5fr;
+        grid-template-rows: 0.75fr .5fr .5fr;
+  }
   .abtContainer .aboutUsSection h1 {
     font-size: 50px;
   }
@@ -536,6 +587,53 @@ main {
   }
   .abtContainer .introVideo {
     height: 400px;
+    width: 600px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .caroAbtPg .imgSpace {
+    height: 400px;
+  }
+  .caroAbtPg .labelsContainer {
+    width: 20vw;
+    margin-top: 25px;
+  }
+  .caroAbtPg .labelsContainer .radioLbl {
+    font-size: 1.25em;
+  }
+  .caroAbtPg .caroImg {
+    height: 400px;
+  }
+  .caroAbtPg .caroImg img {
+    height: 400px;
+  }
+  .abtContainer .aboutUsSection {
+    margin-top: 55px;
+    width: 70%;
+  }
+  .abtContainer .aboutUsSection h1 {
+    font-size: 50px;
+  }
+  .abtContainer .aboutUsSection p {
+    font-size: 20px;
+  }
+  .abtContainer .f2TSection {
+    width: 70%;
+    margin-top: 25px;
+  }
+  .abtContainer .f2TSection h1 {
+    font-size: 50px;
+  }
+  .abtContainer .f2TSection p {
+    font-size: 20px;
+  }
+  .abtContainer .introVideo {
+    height: 400px;
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 2%;
   }
 }
 /*# sourceMappingURL=aboutPage.css.map */

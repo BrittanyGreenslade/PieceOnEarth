@@ -27,6 +27,7 @@ hr {
   opacity: 0.6;
   width: 90%;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .footerGrid {
@@ -45,10 +46,6 @@ hr {
   letter-spacing: 3px;
 }
 
-.footerGrid :first-child {
-  margin-top: 10px;
-}
-
 .footerGrid #inactiveDsktp {
   pointer-events: none;
 }
@@ -61,7 +58,7 @@ hr {
   place-items: center;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  width: 50%;
+  width: 30%;
 }
 
 .footerGrid .socialMediaLogos .smLogo {
@@ -108,10 +105,6 @@ hr {
         grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
   }
-  .ftrDsktp .ftrDsktpContainer a {
-    display: block;
-    margin: auto;
-  }
   .ftrDsktp .ftrDsktpContainer a,
   .ftrDsktp .ftrDsktpContainer p {
     text-align: center;
@@ -119,6 +112,12 @@ hr {
     font-size: 10px;
     color: #403637;
     letter-spacing: 6px;
+  }
+  .ftrDsktp .ftrDsktpContainer a {
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 15px;
   }
   .ftrDsktp .ftrDsktpContainer .centerSocialMedia {
     margin-top: 10px;
@@ -321,19 +320,63 @@ main {
     -ms-grid-column-align: center;
         justify-self: center;
     margin-top: 3%;
-    margin-left: 20%;
+    margin-left: 11%;
   }
-  .dsktpHeader .dsktpLinks a, .dsktpHeader .dsktpLinks p {
+  .dsktpHeader .dsktpLinks a,
+  .dsktpHeader .dsktpLinks p {
     font-size: 20px;
     font-weight: bold;
     color: #403637;
   }
-  .dsktpHeader .dsktpLinks a:hover, .dsktpHeader .dsktpLinks p:hover {
+  .dsktpHeader .dsktpLinks a:hover,
+  .dsktpHeader .dsktpLinks p:hover {
     color: #d3b468;
   }
   .dsktpHeader .dsktpLinks p {
     color: #d3b468;
-    font-size: 18px;
+    font-size: 20px;
+    padding-top: 2px;
+  }
+  .dsktpHeaderHmpg {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .dsktpHeaderHmpg .logoAndTitleDsktp {
+    width: 300px;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+  .dsktpHeaderHmpg .dsktpLinks {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+    place-items: center;
+    width: 500px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 3%;
+    margin-left: 11%;
+  }
+  .dsktpHeaderHmpg .dsktpLinks a,
+  .dsktpHeaderHmpg .dsktpLinks p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ededed;
+  }
+  .dsktpHeaderHmpg .dsktpLinks a:hover,
+  .dsktpHeaderHmpg .dsktpLinks p:hover {
+    color: #d3b468;
+  }
+  .dsktpHeaderHmpg .dsktpLinks p {
+    color: #d3b468;
+    font-size: 20px;
     padding-top: 2px;
   }
 }
@@ -363,6 +406,16 @@ main {
   width: 100%;
 }
 
+#ordPickup {
+  color: #403637;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
 .menuContainerMbl {
   color: #403637;
   display: -ms-grid;
@@ -371,7 +424,7 @@ main {
   font-weight: bold;
   place-items: center;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 8px;
   display: grid;
   place-items: center;
 }
@@ -549,6 +602,12 @@ main {
   .heroImg {
     height: 400px;
   }
+  #ordPickup {
+    color: #403637;
+    font-size: 1em;
+    font-weight: bold;
+    font-size: 30px;
+  }
   .menuContainerMbl h1 {
     font-size: 50px;
   }
@@ -596,11 +655,17 @@ main {
     display: block;
     margin: auto;
   }
+  #ordPickup {
+    color: #403637;
+    font-size: 1em;
+    font-weight: bold;
+    font-size: 20px;
+  }
   .menuDsktpContainer {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .menuDsktpContainer h1 {
     color: #403637;
@@ -639,6 +704,12 @@ main {
     place-items: center;
     width: 80vw;
     margin-bottom: 50px;
+  }
+  .menuDsktpContainer .dsktpMenuSectionContainer9 #pizzaH1 {
+    margin-bottom: 0;
+  }
+  .menuDsktpContainer .dsktpMenuSectionContainer9 .halfpricePizza {
+    margin-bottom: 30px;
   }
   .menuDsktpContainer .dsktpMenuSectionContainer9 .dsktpMenu9ItemContainer {
     display: -ms-grid;
@@ -681,6 +752,11 @@ main {
     font-weight: bold;
     font-size: 18px;
     font-weight: bold;
+  }
+  .menuDsktpContainer .phNmbrDsktp {
+    font-size: 30px;
+    font-weight: bold;
+    color: #d3b468;
   }
   .menuDsktpContainer .dsktpFoodImg {
     width: 70vw;

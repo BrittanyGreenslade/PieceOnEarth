@@ -1,5 +1,5 @@
 @import "_global.scss";
-.dsktpHeader{
+.dsktpHeader {
   display: none;
 }
 .mblHeader {
@@ -129,8 +129,9 @@
       width: 500px;
       justify-self: center;
       margin-top: 3%;
-margin-left: 20%;
-      a, p {
+      margin-left:11%;
+      a,
+      p {
         font-size: 20px;
         font-weight: bold;
         color: $contentColor;
@@ -138,12 +139,45 @@ margin-left: 20%;
           color: $featureColor;
         }
       }
-      p{
+      p {
         color: $featureColor;
-        font-size: 18px;
+        font-size: 20px;
         padding-top: 2px;
       }
     }
   }
-
+  .dsktpHeaderHmpg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100%;
+    .logoAndTitleDsktp {
+      width: 300px;
+      margin-left: 25px;
+      margin-top: 15px;
+    }
+    .dsktpLinks {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+      place-items: center;
+      width: 500px;
+      justify-self: center;
+      margin-top: 3%;
+      margin-left:11%;
+      a,
+      p {
+        font-size: 20px;
+        font-weight: bold;
+        color: $homepageFontColor;
+        &:hover {
+          color: $featureColor;
+        }
+      }
+      p {
+        color: $featureColor;
+        font-size: 20px;
+        padding-top: 2px;
+      }
+    }
+  }
 }

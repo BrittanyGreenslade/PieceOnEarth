@@ -10,6 +10,7 @@ hr {
   opacity: 0.6;
   width: 90%;
   margin: auto;
+  margin-bottom: 10px;
 }
 .footerGrid {
   display: grid;
@@ -23,9 +24,6 @@ hr {
     font-size: 8px;
     letter-spacing: 3px;
   }
-  :first-child {
-    margin-top: 10px;
-  }
   #inactiveDsktp {
     pointer-events: none;
   }
@@ -34,7 +32,7 @@ hr {
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 50%;
+    width: 30%;
     .smLogo {
       width: 42px;
       opacity: 0.7;
@@ -74,10 +72,6 @@ hr {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       place-items: center;
-      a {
-        display: block;
-        margin: auto;
-      }
       a,
       p {
         text-align: center;
@@ -85,6 +79,12 @@ hr {
         font-size: 10px;
         color: $contentColor;
         letter-spacing: 6px;
+      }
+      a {
+        display: block;
+        margin: auto;
+        font-weight: bold;
+        font-size: 15px;
       }
       .centerSocialMedia {
         margin-top: 10px;
