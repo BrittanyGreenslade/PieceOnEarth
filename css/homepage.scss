@@ -8,111 +8,114 @@ body {
 a {
   color: $homepageFontColor;
 }
-
-article {
+.containerHmpg {
   display: grid;
-  align-items: center;
-  min-height: 70vh;
-  .infoHomePage {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    place-items: center;
-    width: 100%;
-    .addressPhoneNumber {
-      color: $homepageFontColor;
-      font-size: 4vw;
-      font-family: $homepageFont;
-      font-style: italic;
-      font-weight: bold;
-      text-align: center;
-      letter-spacing: 8px;
-    }
-    .linksHomepage {
-      color: $homepageFontColor;
-      font-size: 17vw;
-      padding: 2%;
-      font-family: $homepageFont;
-      font-weight: 500;
-    }
+  height: 85vh;
+  margin-top: 10vh;
+  grid-template-rows: 25% 25% 15% 15% 20%;
+  place-items: center;
+  width: 100vw;
+}
+.linksHomepage {
+  color: $homepageFontColor;
+  font-size: 5rem;
+  font-family: $homepageFont;
+  font-weight: 500;
+}
+.addressPhoneNumber,
+.hrsHomepg {
+  color: $homepageFontColor;
+  font-size: 1rem;
+  font-family: $contentFont;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 6px;
+  a{
+    color: $featureColor;
   }
+}
+.hrsHomepg {
+  align-self: end;
+}
+.hmpgFtrContainer {
+  display: grid;
+  place-items: center;
+  align-self: end;
 }
 .socialMediaLogos {
   display: grid;
-  width: 50%;
+  width: 40vw;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
-  min-height: 10vh;
-  margin-top: 5vh;
-  margin: auto;
-  align-items: end;
-  justify-items: center;
+  place-items: center;
   .smLogo {
-    padding-bottom: 10px;
     width: 42px;
     opacity: 0.7;
-  }
-}
-@media only screen and (min-width: 650px) {
-  article {
-    min-height: 70vh;
-    .infoHomePage {
-      grid-template-rows: 1fr 1.5fr 1.5fr;
-      margin-top: 50px;
-      .addressPhoneNumber {
-        font-size: 3.75vw;
-      }
-      .linksHomepage {
-        font-size: 15vw;
-      }
-    }
-  }
-  #inactiveDsktp{
-    pointer-events: none;
+  }}
 
-  }
-  .socialMediaLogos {
-    width: 40%;
-    .smLogo {
-      width: 50px;
-    }
-  }
-}
-@media only screen and (min-width: 1000px){
-  body{
-    background-image: url(../images/pizzaDarkWoodenBackgroundSide.jpg);
-  }
-  header{
-    min-height: 10vh;
-  }
-  article {
-    min-height:60vh;
-    .infoHomePage {
-      display: grid;
-      grid-template-rows: 0.25fr 0.25fr 0.25fr;
-      margin-left: 45vw;
-      margin-top: 10vh;
-      width: 50%;
-      height: 55vh;
-      .addressPhoneNumber {
-        font-size: 26px;
-        a{ color:$featureColor;}
-      }
-      .linksHomepage {
-        font-size: 100px;
-        font-weight: 600;
-      }
-    }
-  }
-  .socialMediaLogos {
-    min-height:20vh;
-    width: 15%;
-margin-left: 62vw;
-    align-items: start;
-    justify-items: center;
-    .smLogo {
-      // padding-bottom: 5px;
-      width: 42px;
-      opacity: 0.7;
-    }
-  }
-}
+// @media only screen and (min-width: 650px) {
+//   article {
+//     min-height: 70vh;
+//     .infoHomePage {
+//       grid-template-rows: 1fr 1.5fr 1.5fr;
+//       margin-top: 50px;
+//       .addressPhoneNumber {
+//         font-size: 30px;
+//       }
+//       .linksHomepage {
+//         font-size: 15vw;
+//       }
+//     }
+//   }
+//   #inactiveDsktp {
+//     pointer-events: none;
+//   }
+//   .socialMediaLogos {
+//     width: 40%;
+//     .smLogo {
+//       width: 50px;
+//     }
+//   }
+// }
+// @media only screen and (min-width: 1000px) {
+//   body {
+//     background-image: url(../images/pizzaDarkWoodenBackgroundSide.jpg);
+//   }
+//   header {
+//     min-height: 10vh;
+//   }
+//   article {
+//     min-height: 60vh;
+//     .infoHomePage {
+//       display: grid;
+//       grid-template-rows: 0.25fr 0.25fr 0.25fr;
+//       margin-left: 45vw;
+//       margin-top: 10vh;
+//       width: 50%;
+//       height: 55vh;
+//       .addressPhoneNumber {
+//         font-size: 24px;
+//         a {
+//           color: $featureColor;
+//         }
+//       }
+//       .linksHomepage {
+//         font-size: 100px;
+//         font-weight: 600;
+//       }
+//     }
+//   }
+//   .socialMediaLogos {
+//     min-height: 20vh;
+//     width: 15%;
+//     margin-left: 62vw;
+//     align-items: start;
+//     justify-items: center;
+//     .smLogo {
+//       // padding-bottom: 5px;
+//       width: 42px;
+//       opacity: 0.7;
+//     }
+//   }
+// }

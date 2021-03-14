@@ -1,11 +1,14 @@
 @import "_global.scss";
+.dsktpHeaderHmpg{ 
+  display:none;
+}
 .dsktpHeader {
   display: none;
 }
 .mblHeader {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  max-height: 20vh;
+  height: 15vh;
   width: 100%;
   place-items: center;
 }

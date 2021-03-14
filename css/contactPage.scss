@@ -17,6 +17,7 @@
   letter-spacing: 6px;
   margin-bottom: 30px;
   h1{
+    margin-top: 20px;
     font-size: 30px;
   }
   p,
@@ -29,6 +30,15 @@
   }
 }
 .contactForm {
+  .pageTitle{
+    letter-spacing: 4px;
+    margin-top: 3%;
+    color: $contentColor;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align:center;
+    // text-decoration: underline;
+  }
   margin: auto;
   width: 90%;
   .contactFormItem {
@@ -191,10 +201,14 @@ border: $contentColor solid 0.5px;
     }
     .submitButtonContainer {
       .submitButton {
+        &:active{
+          color: $featureColor;
+        }
         p {
-          font-size: 16px;
+          font-size: 15px;
+          padding-top:2px;
           &:hover {
-            font-size: 18px;
+            font-size: 17px;
           }
         }
       }
