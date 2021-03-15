@@ -8,6 +8,7 @@
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -168,6 +169,7 @@ hr {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -188,7 +190,7 @@ main {
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
   height: 15vh;
-  width: 100vw;
+  width: 100%;
   place-items: center;
 }
 
@@ -310,6 +312,7 @@ main {
 @media only screen and (min-width: 1000px) {
   .mblHeader {
     display: none;
+    min-height: 10vh;
   }
   .dsktpHeader,
   .dsktpHeaderHmpg {
@@ -374,6 +377,7 @@ main {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -404,8 +408,8 @@ main {
 }
 
 .caroAbtPg .labelsContainer .radioLbl {
+  font-family: "Libre Baskerville", serif;
   color: #403637;
-  font-size: 1em;
   font-weight: bold;
   font-size: 1em;
 }
@@ -475,12 +479,10 @@ main {
 
 .abtContainer .aboutUsSection h1 {
   color: #403637;
-  display: -ms-grid;
-  display: grid;
-  font-size: 1.5rem;
+  font-size: 30px;
   font-weight: bold;
-  place-items: center;
-  text-align: center;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 6px;
   font-size: 30px;
   letter-spacing: 6px;
   margin-bottom: 20px;
@@ -488,8 +490,8 @@ main {
 
 .abtContainer .aboutUsSection p {
   text-align: center;
+  font-family: "Libre Baskerville", serif;
   color: #403637;
-  font-size: 1em;
   font-weight: bold;
   width: 90%;
   font-style: italic;
@@ -506,20 +508,18 @@ main {
 .abtContainer .f2TSection h1 {
   letter-spacing: 5px;
   color: #403637;
-  display: -ms-grid;
-  display: grid;
-  font-size: 1.5rem;
+  font-size: 30px;
   font-weight: bold;
-  place-items: center;
-  text-align: center;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 6px;
   margin-bottom: 20px;
   font-size: 30px;
 }
 
 .abtContainer .f2TSection p {
   text-align: center;
+  font-family: "Libre Baskerville", serif;
   color: #403637;
-  font-size: 1em;
   font-weight: bold;
   width: 90%;
   font-style: italic;

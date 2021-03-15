@@ -9,45 +9,61 @@ $contentFont: "Libre Baskerville", serif;
 $contentColor: #403637;
 $featureColor: #d3b468;
 $buttonColor: #ddc589;
-$dropdownColor:  #010a0a;
+$dropdownColor: #010a0a;
 a {
   text-decoration: none;
+  display: block;
 }
 main {
   min-height: 70vh;
 }
 @mixin button {
+  display: grid;
+  place-items: center;
   background: $buttonColor;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 1.5px 1.5px 5px;
   color: $contentColor;
   font-weight: bold;
-  text-align: center;
-  // & :hover {
+  height: 20px;
+  font-size: 1rem;
+  font-family: $contentFont;
+  // &:active {
+  //   background: $featureColor;
+  //   transition: font 0.2s ease-in-out;
   // }
-  &:active {
-    height:25px;
-    background: $featureColor;
-    font-size: 20px;
-    transition: font 0.2s ease-in-out;
-  }
 }
-//  @mixin button: hover {
-//    background:#C9A446}
-// @mixin buttonActive{}
-
+@mixin heroImgMbl {
+  height: 200px;
+  object-fit: cover;
+  margin-top: 2%;
+  width: 100%;
+}
+@mixin mblPgLayout {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
 @mixin pageTitle {
   color: $contentColor;
-  display: grid;
-  font-size: 1.5rem;
+  font-size: 30px;
   font-weight: bold;
-  place-items: center;
-  text-align: center;
-  // font-family: $contentFont;
+  font-family: $homepageFont;
+  letter-spacing: 6px;
 }
 @mixin pageContent {
-  // font-family: $contentFont;
+  font-family: $contentFont;
   color: $contentColor;
-  font-size: 1em;
   font-weight: bold;
+}
+@mixin heroImgTblt {
+  height: 400px;
+  object-fit: cover;
+  margin-top: 2%;
+  width: 100%;
+}
+@mixin heroImgDsktp{
+  height: 375px;
+  margin-top: 0;
 }

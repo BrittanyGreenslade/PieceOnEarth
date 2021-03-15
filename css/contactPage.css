@@ -8,6 +8,7 @@
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -28,7 +29,7 @@ main {
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
   height: 15vh;
-  width: 100vw;
+  width: 100%;
   place-items: center;
 }
 
@@ -150,6 +151,7 @@ main {
 @media only screen and (min-width: 1000px) {
   .mblHeader {
     display: none;
+    min-height: 10vh;
   }
   .dsktpHeader,
   .dsktpHeaderHmpg {
@@ -214,6 +216,7 @@ main {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -374,6 +377,7 @@ hr {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -388,33 +392,43 @@ main {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  padding-top: 2%;
+  margin-top: 2%;
   width: 100%;
 }
 
-.contactUsContainer {
-  color: #403637;
+.mblMain {
   display: -ms-grid;
   display: grid;
-  font-size: 1.5rem;
-  font-weight: bold;
   place-items: center;
-  text-align: center;
-  margin-top: 2%;
+  width: 100%;
+  height: 100%;
+}
+
+.contactUsContainer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 90%;
   -ms-grid-rows: 0.5fr 1.5fr;
       grid-template-rows: 0.5fr 1.5fr;
-  letter-spacing: 6px;
-  margin-bottom: 30px;
 }
 
 .contactUsContainer h1 {
-  margin-top: 20px;
+  color: #403637;
   font-size: 30px;
+  font-weight: bold;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 6px;
+  margin-top: 20px;
 }
 
 .contactUsContainer p,
 .contactUsContainer a {
-  font-size: 15px;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  color: #403637;
+  font-weight: bold;
+  font-size: 0.72rem;
   letter-spacing: 4px;
 }
 
@@ -423,77 +437,95 @@ main {
 }
 
 .contactForm {
-  margin: auto;
+  margin-top: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.75fr 0.75fr 0.75fr 0.75fr 0.5fr;
+      grid-template-rows: 0.75fr 0.75fr 0.75fr 0.75fr 0.5fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   width: 90%;
 }
 
-.contactForm .pageTitle {
-  letter-spacing: 4px;
-  margin-top: 3%;
+.contactForm h1 {
   color: #403637;
-  margin-bottom: 20px;
   font-size: 30px;
-  text-align: center;
+  font-weight: bold;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 6px;
+  letter-spacing: 4px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 1.5rem;
 }
 
 .contactForm .contactFormItem {
-  margin-top: 8px;
-}
-
-.contactForm .formSectionTitle {
-  color: #403637;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.contactForm .formBox {
-  background: #ededed;
-  border: #403637 solid 0.5px;
-  max-width: 95%;
-  min-width: 95%;
-  padding: 5px;
-}
-
-.contactForm .submitButtonContainer {
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  justify-items: end;
+  justify-items: start;
 }
 
-.contactForm .submitButtonContainer .submitButton {
+.contactForm .formSectionTitle {
+  font-family: "Libre Baskerville", serif;
+  color: #403637;
+  font-weight: bold;
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+}
+
+.contactForm .formBox,
+.contactForm .messageBox {
+  height: 25px;
+  background: #ededed;
+  border: 1px solid #403637;
+  width: 99%;
+  resize: none;
+}
+
+.contactForm #messageBox {
+  height: 50px;
+}
+
+.submitButton {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   background: #ddc589;
-  border-radius: 10px;
+  border-radius: 8px;
   -webkit-box-shadow: 1.5px 1.5px 5px;
           box-shadow: 1.5px 1.5px 5px;
   color: #403637;
   font-weight: bold;
-  text-align: center;
-  font-size: 16px;
   height: 20px;
-  padding-top: 2px;
-  margin-top: 10px;
+  font-size: 1rem;
+  font-family: "Libre Baskerville", serif;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row-align: center;
+      align-self: center;
+  width: 27%;
+  font-size: 0.82rem;
+  height: 22px;
   margin-right: 1%;
-  width: 30%;
+  margin-top: 5px;
 }
 
-.contactForm .submitButtonContainer .submitButton:active {
+.submitButton:active {
   height: 25px;
-  background: #d3b468;
-  font-size: 20px;
-  -webkit-transition: font 0.2s ease-in-out;
-  transition: font 0.2s ease-in-out;
 }
 
 .googleMap {
-  height: 40vh;
+  height: 200px;
   max-width: 2000px;
-  padding: 10% 5% 2% 5%;
   width: 90%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 8px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -501,37 +533,64 @@ main {
     height: 400px;
     -o-object-fit: cover;
        object-fit: cover;
-    padding-top: 2%;
+    margin-top: 2%;
     width: 100%;
   }
+  .mblMain {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+  }
   .contactUsContainer {
-    margin-top: 2%;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-    letter-spacing: 6px;
   }
   .contactUsContainer h1 {
     font-size: 50px;
   }
-  .contactUsContainer a, .contactUsContainer p {
+  .contactUsContainer a,
+  .contactUsContainer p {
     font-size: 25px;
-  }
-  .contactUsContainer .phoneLink {
-    color: #d3b468;
   }
   .contactUsContainer #inactiveDsktp {
     pointer-events: none;
   }
+  .contactForm {
+    margin-top: 50px;
+    width: 80%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.75fr 0.75fr 0.75fr 0.5fr;
+        grid-template-rows: 0.75fr 0.75fr 0.75fr 0.5fr;
+  }
+  .contactForm h1 {
+    font-size: 2.75rem;
+  }
   .contactForm .formSectionTitle {
-    font-size: 32px;
+    font-size: 26px;
   }
-  .contactForm .formBox {
-    padding: 10px;
+  .contactForm .formBox,
+  .contactForm .messageBox {
+    height: 45px;
   }
-  .contactForm .submitButtonContainer .submitButton {
-    font-size: 20px;
-    height: 25px;
-    width: 20%;
+  .contactForm #messageBox {
+    height: 110px;
+  }
+  .contactForm .submitButton {
+    width: 30%;
+    font-size: 24px;
+    height: 38px;
+    margin-top: 15px;
+  }
+  .googleMap {
+    height: 400px;
+    width: 80%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -542,43 +601,60 @@ main {
   .dsktpMain {
     display: -ms-grid;
     display: grid;
+    min-height: 1000px;
   }
-  .contactInfoContainer {
+  .heroImg {
+    height: 375px;
+    margin-top: 0;
+  }
+  .contactInfoContDsktp {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    width: 80%;
+    width: 90%;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 50px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+    height: 550px;
   }
-  .contactInfoContainer h2 {
+  .contactInfoContDsktp h2 {
     color: #403637;
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Shippori Mincho", serif;
+    letter-spacing: 6px;
+    letter-spacing: 6px;
+    font-size: 2.5rem;
   }
-  .contactInfoContainer .contactInfoDsktp {
-    margin-top: 20px;
+  .contactInfoDsktp {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 3fr;
-        grid-template-rows: 1fr 3fr;
+    -ms-grid-rows: 25% 1fr;
+        grid-template-rows: 25% 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     border-right: 1px solid #403637;
+    height: 100%;
   }
-  .contactInfoContainer h2 {
-    margin-bottom: 50px;
-    margin-left: 20px;
-    margin-top: 10px;
+  .contactInfoDsktp h2 {
+    margin-left: 7%;
   }
-  .contactInfoContainer p {
-    color: #403637;
-    font-size: 20px;
+  .contactInfoDsktp p {
     font-family: "Libre Baskerville", serif;
+    color: #403637;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .contactInfoList {
+    height: 90%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .dsktpContactItem {
     display: -ms-grid;
@@ -598,58 +674,70 @@ main {
         justify-self: center;
   }
   .contactFormDsktp {
-    margin-top: 20px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr fr;
-        grid-template-rows: 1fr fr;
+    -ms-grid-rows: 25% 1fr;
+        grid-template-rows: 25% 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    justify-items: start;
-    max-width: 100%;
-    margin-left: 30px;
+    height: 100%;
+    margin-left: 10%;
   }
   .contactFormDsktp .contactForm {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1.5fr 1fr;
+        grid-template-rows: 1fr 1fr 1.5fr 1fr;
+    width: 100%;
     margin: 0;
-    margin-top: 20px;
-    width: 90%;
-  }
-  .contactFormDsktp h2 {
-    margin-left: 10px;
+    height: 90%;
+    margin-top: 62px;
   }
   .contactFormDsktp .formSectionTitle {
-    font-size: 20px;
+    font-family: "Libre Baskerville", serif;
+    color: #403637;
     font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
   }
   .contactFormDsktp .formBox {
-    max-width: 95%;
-    min-width: 95%;
-    padding: 8px;
+    width: 99%;
+    height: 35px;
   }
-  .contactFormDsktp .messageBox {
-    resize: none;
-    max-width: 99%;
-    min-width: 99%;
-    padding-bottom: 60px;
-    background: #ededed;
-    border: #403637 solid 0.5px;
+  .contactFormDsktp #messageBox {
+    height: 90px;
   }
-  .contactFormDsktp .submitButtonContainer .submitButton:active {
-    color: #d3b468;
+  .submitButtonContainer {
+    width: 30%;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-right: 1%;
   }
-  .contactFormDsktp .submitButtonContainer .submitButton p {
-    font-size: 15px;
-    padding-top: 2px;
+  .submitButtonContainer p {
+    font-size: 19px;
   }
-  .contactFormDsktp .submitButtonContainer .submitButton p:hover {
-    font-size: 17px;
+  .submitButtonContainer .submitButton {
+    width: 100%;
   }
-  .googleMap {
-    display: block;
-    margin: 30px auto 10px auto;
-    padding: 0;
-    width: 90%;
+  .submitButtonContainer .submitButton :hover {
+    font-size: 21px;
   }
+  .submitButtonContainer .submitButton:active {
+    background: #d3b468;
+    -webkit-transition: font 0.2s ease-in-out;
+    transition: font 0.2s ease-in-out;
+  }
+  .submitButtonContainer .submitButton:active p {
+    font-size: 21px;
+  }
+}
+
+.googleMap {
+  width: 90%;
+  margin-right: 1%;
 }
 /*# sourceMappingURL=contactPage.css.map */

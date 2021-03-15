@@ -8,6 +8,7 @@
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -168,6 +169,7 @@ hr {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -188,7 +190,7 @@ main {
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
   height: 15vh;
-  width: 100vw;
+  width: 100%;
   place-items: center;
 }
 
@@ -310,6 +312,7 @@ main {
 @media only screen and (min-width: 1000px) {
   .mblHeader {
     display: none;
+    min-height: 10vh;
   }
   .dsktpHeader,
   .dsktpHeaderHmpg {
@@ -374,6 +377,7 @@ main {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 main {
@@ -393,8 +397,8 @@ main {
 }
 
 #ordPickup {
+  font-family: "Libre Baskerville", serif;
   color: #403637;
-  font-size: 1em;
   font-weight: bold;
   font-style: italic;
   margin-top: 5px;
@@ -404,13 +408,12 @@ main {
 
 .menuContainerMbl {
   color: #403637;
-  display: -ms-grid;
-  display: grid;
-  font-size: 1.5rem;
+  font-size: 30px;
   font-weight: bold;
-  place-items: center;
-  text-align: center;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 6px;
   margin-top: 8px;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -521,8 +524,8 @@ main {
 }
 
 .menuContainerMbl .mblFoodDropdown .mblFoodMenuContents .menuItem .menuItemHeader h3 {
+  font-family: "Libre Baskerville", serif;
   color: #403637;
-  font-size: 1em;
   font-weight: bold;
   font-size: 18px;
 }
@@ -535,8 +538,8 @@ main {
 }
 
 .menuContainerMbl .mblFoodDropdown .mblFoodMenuContents .menuItem p {
+  font-family: "Libre Baskerville", serif;
   color: #403637;
-  font-size: 1em;
   font-weight: bold;
   font-size: 14px;
   text-align: left;
@@ -558,26 +561,23 @@ main {
 }
 
 .orderButton {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   background: #ddc589;
-  border-radius: 10px;
+  border-radius: 8px;
   -webkit-box-shadow: 1.5px 1.5px 5px;
           box-shadow: 1.5px 1.5px 5px;
   color: #403637;
   font-weight: bold;
-  text-align: center;
+  height: 20px;
+  font-size: 1rem;
+  font-family: "Libre Baskerville", serif;
   font-size: 18px;
   height: 25px;
   padding-top: 3px;
   width: 35%;
   margin-bottom: 10px;
-}
-
-.orderButton:active {
-  height: 25px;
-  background: #d3b468;
-  font-size: 20px;
-  -webkit-transition: font 0.2s ease-in-out;
-  transition: font 0.2s ease-in-out;
 }
 
 .orderButton a {
@@ -589,8 +589,8 @@ main {
     height: 400px;
   }
   #ordPickup {
+    font-family: "Libre Baskerville", serif;
     color: #403637;
-    font-size: 1em;
     font-weight: bold;
     font-size: 30px;
   }
@@ -642,8 +642,8 @@ main {
     margin: auto;
   }
   #ordPickup {
+    font-family: "Libre Baskerville", serif;
     color: #403637;
-    font-size: 1em;
     font-weight: bold;
     font-size: 20px;
   }
@@ -655,12 +655,10 @@ main {
   }
   .menuDsktpContainer h1 {
     color: #403637;
-    display: -ms-grid;
-    display: grid;
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: bold;
-    place-items: center;
-    text-align: center;
+    font-family: "Shippori Mincho", serif;
+    letter-spacing: 6px;
     font-size: 60px;
     margin-bottom: 20px;
   }
@@ -717,8 +715,8 @@ main {
         grid-template-rows: 0.5fr 2fr 0.5fr;
   }
   .menuDsktpContainer .dsktpMenuItemContainer h2 {
+    font-family: "Libre Baskerville", serif;
     color: #403637;
-    font-size: 1em;
     font-weight: bold;
     font-size: 22px;
     margin-bottom: 5px;
@@ -727,14 +725,14 @@ main {
     -ms-grid-column-align: center;
         justify-self: center;
     text-align: center;
+    font-family: "Libre Baskerville", serif;
     color: #403637;
-    font-size: 1em;
     font-weight: bold;
     font-style: italic;
   }
   .menuDsktpContainer .dsktpMenuItemContainer h4 {
+    font-family: "Libre Baskerville", serif;
     color: #403637;
-    font-size: 1em;
     font-weight: bold;
     font-size: 18px;
     font-weight: bold;
@@ -753,8 +751,8 @@ main {
     margin-top: 10px;
   }
   .menuDsktpContainer p {
+    font-family: "Libre Baskerville", serif;
     color: #403637;
-    font-size: 1em;
     font-weight: bold;
     font-style: italic;
     font-weight: 14px;

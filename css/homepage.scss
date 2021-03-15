@@ -5,33 +5,30 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-a {
-  color: $homepageFontColor;
-}
 .containerHmpg {
   display: grid;
-  height: 85vh;
-  margin-top: 10vh;
+  height: 80vh;
+  margin-top: 5vh;
   grid-template-rows: 25% 25% 15% 15% 20%;
   place-items: center;
-  width: 100vw;
+  width: 100%;
 }
 .linksHomepage {
   color: $homepageFontColor;
-  font-size: 3.5rem;
+  font-size: 4.25rem;
   font-family: $homepageFont;
   font-weight: 500;
+  align-self: end;
 }
 .addressPhoneNumber,
 .hrsHomepg {
+  @include pageContent;
   color: $homepageFontColor;
-  font-size: 1rem;
-  font-family: $contentFont;
+  font-size: 0.75rem;
   font-style: italic;
-  font-weight: bold;
   text-align: center;
-  letter-spacing: 6px;
-  a{
+  letter-spacing: 3px;
+  a {
     color: $featureColor;
   }
 }
@@ -42,80 +39,62 @@ a {
   display: grid;
   place-items: center;
   align-self: end;
+  width: 100%;
 }
 .socialMediaLogos {
   display: grid;
-  width: 40vw;
+  width: 40%;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
   place-items: center;
+  margin-bottom: 10px;
   .smLogo {
-    width: 42px;
+    width: 40px;
     opacity: 0.7;
-  }}
+  }
+}
 
-// @media only screen and (min-width: 650px) {
-//   article {
-//     min-height: 70vh;
-//     .infoHomePage {
-//       grid-template-rows: 1fr 1.5fr 1.5fr;
-//       margin-top: 50px;
-//       .addressPhoneNumber {
-//         font-size: 30px;
-//       }
-//       .linksHomepage {
-//         font-size: 15vw;
-//       }
-//     }
-//   }
-//   #inactiveDsktp {
-//     pointer-events: none;
-//   }
-//   .socialMediaLogos {
-//     width: 40%;
-//     .smLogo {
-//       width: 50px;
-//     }
-//   }
-// }
-// @media only screen and (min-width: 1000px) {
-//   body {
-//     background-image: url(../images/pizzaDarkWoodenBackgroundSide.jpg);
-//   }
-//   header {
-//     min-height: 10vh;
-//   }
-//   article {
-//     min-height: 60vh;
-//     .infoHomePage {
-//       display: grid;
-//       grid-template-rows: 0.25fr 0.25fr 0.25fr;
-//       margin-left: 45vw;
-//       margin-top: 10vh;
-//       width: 50%;
-//       height: 55vh;
-//       .addressPhoneNumber {
-//         font-size: 24px;
-//         a {
-//           color: $featureColor;
-//         }
-//       }
-//       .linksHomepage {
-//         font-size: 100px;
-//         font-weight: 600;
-//       }
-//     }
-//   }
-//   .socialMediaLogos {
-//     min-height: 20vh;
-//     width: 15%;
-//     margin-left: 62vw;
-//     align-items: start;
-//     justify-items: center;
-//     .smLogo {
-//       // padding-bottom: 5px;
-//       width: 42px;
-//       opacity: 0.7;
-//     }
-//   }
-// }
+@media only screen and (min-width: 650px) {
+  .addressPhoneNumber,
+  .hrsHomepg {
+    font-size: 1.25rem;
+  }
+  .linksHomepage {
+    font-size: 7.25rem;
+  }
+  .inactiveDsktp {
+    pointer-events: none;
+  }
+  .socialMediaLogos {
+    width: 25%;
+    .smLogo {
+      width: 50px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-image: url(../images/pizzaDarkWoodenBackgroundSide.jpg);
+  }
+  .containerHmpg {
+    height: 80vh;
+    margin-top: 5vh;
+    width: 40%;
+    margin-left: 50%;
+  }
+  .linksHomepage {
+    margin-top: 1rem;
+    font-size: 6.25rem;
+    font-weight: 450;
+  }
+  .hrsHomepg {
+    align-self: end;
+    margin-bottom: 15px;
+  }
+  .addressPhoneNumber,
+  .hrsHomepg {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+}

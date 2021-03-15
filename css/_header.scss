@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   height: 15vh;
-  width: 100vw;
+  width: 100%;
   place-items: center;
   #tbltPhIcon {
     display: none;
@@ -120,6 +120,7 @@
 @media only screen and (min-width: 1000px) {
   .mblHeader {
     display: none;
+    min-height: 10vh;
   }
   .dsktpHeader,
   .dsktpHeaderHmpg {

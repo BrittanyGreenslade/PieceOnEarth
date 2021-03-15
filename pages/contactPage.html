@@ -65,26 +65,26 @@
         </div>
       </div>
     </header>
+    <img
+      class="heroImg"
+      src="/images/barFrontDarkCropped.jpg"
+      alt="front of bar in restaurant"
+    />
     <main class="mblMain">
-      <img
-        class="heroImg"
-        src="/images/barFrontDarkCropped.jpg"
-        alt="front of bar in restaurant"
-      />
       <section class="contactUsContainer">
-        <h1 class="pageTitle">- Contact Us -</h1>
+        <h1>- Contact Us -</h1>
         <div class="contactInfo">
           <p>8424 109 St NW</p>
           <p>Edmonton, AB</p>
           <p>info@pieceonearth.com</p>
           <p>Order or make a reservation:</p>
-            <a class="phoneLink" id="inactiveDsktp" href="tel:7805874567"
+          <a class="phoneLink" id="inactiveDsktp" href="tel:7805874567"
             >780 587 4567</a
           >
         </div>
       </section>
       <section class="contactForm">
-        <h1 class="pageTitle">- Feedback -</h1>
+        <h1>- Feedback -</h1>
         <div class="contactFormItem">
           <label for="name"><p class="formSectionTitle">Name*</p></label>
           <input type="text" name="name" class="formBox" required />
@@ -95,11 +95,9 @@
         </div>
         <div class="contactFormItem">
           <label for="message" class="formSectionTitle">Message*</label>
-          <textarea class="formBox" name="message"></textarea>
+          <textarea class="formBox" id="messageBox" name="message"></textarea>
         </div>
-        <div class="submitButtonContainer">
-          <div class="submitButton"><p>Submit</p></div>
-        </div>
+        <div class="submitButton"><p>Submit</p></div>
       </section>
       <iframe
         class="googleMap"
@@ -110,43 +108,38 @@
       ></iframe>
     </main>
     <main class="dsktpMain">
-      <img
-        class="heroImg"
-        src="/images/barFrontDarkCropped.jpg"
-        alt="front of bar in restaurant"
-      />
-      <div class="contactInfoContainer">
+      <div class="contactInfoContDsktp">
         <div class="contactInfoDsktp">
           <h2>Contact Info</h2>
-          <div class="contactFormContainerDsk">
-          <div class="dsktpContactItem">
-            <img
-              class="contactIcon"
-              src="../images/pinIcon.svg"
-              alt="pin drop icon"
-            />
-            <p>8424 109 St NW, Edmonton, AB</p>
+          <div class="contactInfoList">
+            <div class="dsktpContactItem">
+              <img
+                class="contactIcon"
+                src="../images/pinIcon.svg"
+                alt="pin drop icon"
+              />
+              <p>8424 109 St NW, Edmonton, AB</p>
+            </div>
+            <div class="dsktpContactItem">
+              <img
+                class="contactIcon"
+                src="../images/emailIcon.svg"
+                alt="email icon"
+              />
+              <p>info@pieceonearth.com</p>
+            </div>
+            <div class="dsktpContactItem">
+              <img
+                class="contactIcon"
+                src="../images/phoneIcon2.svg"
+                alt="phone icon"
+              />
+              <p>Order: 780 587 4567</p>
+            </div>
           </div>
-          <div class="dsktpContactItem">
-            <img
-              class="contactIcon"
-              src="../images/emailIcon.svg"
-              alt="email icon"
-            />
-            <p>info@pieceonearth.com</p>
-          </div>
-          <div class="dsktpContactItem">
-            <img
-              class="contactIcon"
-              src="../images/phoneIcon2.svg"
-              alt="phone icon"
-            />
-            <p>Order: 780 587 4567</p>
-          </div>
-        </div>
         </div>
         <div class="contactFormDsktp">
-          <h2>Feedback </h2>
+          <h2>Feedback</h2>
           <section class="contactForm">
             <div class="contactFormItem">
               <label for="name"><p class="formSectionTitle">Name*</p></label>
@@ -158,11 +151,16 @@
             </div>
             <div class="contactFormItem">
               <label for="message" class="formSectionTitle">Message*</label>
-              <textarea class="messageBox" class="formBox" name="message"></textarea>
+              <textarea
+                id="messageBox"
+                class="formBox"
+                name="message"
+              ></textarea>
             </div>
             <div class="submitButtonContainer">
               <div class="submitButton"><p>Submit</p></div>
             </div>
+          </section>
         </div>
       </div>
       <iframe
