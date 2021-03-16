@@ -30,6 +30,7 @@ main {
   height: 15vh;
   width: 100%;
   place-items: center;
+  margin-bottom: 10px;
 }
 
 .mblHeader #tbltPhIcon {
@@ -159,6 +160,9 @@ main {
     display: none;
     min-height: 10vh;
   }
+  .dsktpHeader {
+    margin-bottom: 12px;
+  }
   .dsktpHeader,
   .dsktpHeaderHmpg {
     display: -ms-grid;
@@ -254,6 +258,8 @@ body {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  border-bottom: 3px solid #ededed;
+  line-height: 1.1;
 }
 
 .addressPhoneNumber,
@@ -350,6 +356,10 @@ body {
     margin-top: 1rem;
     font-size: 6.25rem;
     font-weight: 450;
+    border-bottom: 0;
+  }
+  .linksHomepage:hover {
+    color: #d3b468;
   }
   .hrsHomepg {
     -ms-flex-item-align: end;

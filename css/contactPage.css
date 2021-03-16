@@ -31,6 +31,7 @@ main {
   height: 15vh;
   width: 100%;
   place-items: center;
+  margin-bottom: 10px;
 }
 
 .mblHeader #tbltPhIcon {
@@ -159,6 +160,9 @@ main {
   .mblHeader {
     display: none;
     min-height: 10vh;
+  }
+  .dsktpHeader {
+    margin-bottom: 12px;
   }
   .dsktpHeader,
   .dsktpHeaderHmpg {
@@ -406,7 +410,6 @@ main {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-top: 2%;
   width: 100%;
 }
 

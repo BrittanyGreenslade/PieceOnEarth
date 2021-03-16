@@ -199,6 +199,7 @@ main {
   height: 15vh;
   width: 100%;
   place-items: center;
+  margin-bottom: 10px;
 }
 
 .mblHeader #tbltPhIcon {
@@ -328,6 +329,9 @@ main {
     display: none;
     min-height: 10vh;
   }
+  .dsktpHeader {
+    margin-bottom: 12px;
+  }
   .dsktpHeader,
   .dsktpHeaderHmpg {
     display: -ms-grid;
@@ -431,7 +435,6 @@ main {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-top: 2%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -448,7 +451,6 @@ main {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-top: 2%;
   width: 100%;
   margin-top: 0;
 }
@@ -545,7 +547,7 @@ main {
     height: 400px;
   }
   .caroAbtPg .imgSpace {
-    height: 415px;
+    height: 410px;
   }
   .caroAbtPg .labelsContainer {
     width: 30%;
@@ -594,7 +596,7 @@ main {
     height: 360px;
   }
   .caroAbtPg .imgSpace {
-    height: 410px;
+    height: 375px;
   }
   .caroAbtPg .caroImg img {
     height: 375px;
