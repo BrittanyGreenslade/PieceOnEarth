@@ -425,10 +425,16 @@ main {
 }
 
 .caroAbtPg .labelsContainer .radioLbl {
-  font-family: "Libre Baskerville", serif;
-  color: #403637;
-  font-weight: bold;
-  font-size: 1em;
+  background: #403637;
+  content: '';
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.caroAbtPg .labelsContainer .radioLbl:hover {
+  cursor: pointer;
 }
 
 .caroAbtPg .caroImg {
@@ -461,7 +467,21 @@ main {
 .caroAbtPg #carFour:checked ~ .labelsContainer #radioLbl4,
 .caroAbtPg #carFive:checked ~ .labelsContainer #radioLbl5,
 .caroAbtPg #carSix:checked ~ .labelsContainer #radioLbl6 {
-  color: #d3b468;
+  background: #d3b468;
+  content: '';
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.caroAbtPg #carOne:checked ~ .labelsContainer #radioLbl1:hover,
+.caroAbtPg #carTwo:checked ~ .labelsContainer #radioLbl2:hover,
+.caroAbtPg #carThree:checked ~ .labelsContainer #radioLbl3:hover,
+.caroAbtPg #carFour:checked ~ .labelsContainer #radioLbl4:hover,
+.caroAbtPg #carFive:checked ~ .labelsContainer #radioLbl5:hover,
+.caroAbtPg #carSix:checked ~ .labelsContainer #radioLbl6:hover {
+  cursor: pointer;
 }
 
 .caroAbtPg #carOne:checked ~ #abtOne,
@@ -596,7 +616,7 @@ main {
     height: 360px;
   }
   .caroAbtPg .imgSpace {
-    height: 375px;
+    height: 380px;
   }
   .caroAbtPg .caroImg img {
     height: 375px;

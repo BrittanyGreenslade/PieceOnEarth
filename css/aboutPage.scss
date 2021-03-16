@@ -17,8 +17,15 @@
     margin: auto;
     place-items: center;
     .radioLbl {
-      @include pageContent;
-      font-size: 1em;
+      background:$contentColor;
+      content: '';
+      height:15px;
+      width:15px;
+      display: inline-block;
+      border-radius: 50%  ;
+      &:hover{
+      cursor:pointer;
+    }
     }
   }
   .caroImg {
@@ -41,8 +48,14 @@
   #carFour:checked ~ .labelsContainer #radioLbl4,
   #carFive:checked ~ .labelsContainer #radioLbl5,
   #carSix:checked ~ .labelsContainer #radioLbl6 {
-    color: $featureColor;
-  }
+    background: $featureColor;
+    content: '';
+    height:15px;
+    width:15px;
+    display: inline-block;
+    border-radius: 50%  ;
+    &:hover{cursor:pointer;
+  }}
   #carOne:checked ~ #abtOne,
   #carTwo:checked ~ #abtTwo,
   #carThree:checked ~ #abtThree,
@@ -151,7 +164,7 @@
   .caroAbtPg {
     height: 360px;
     .imgSpace {
-      height: 375px;
+      height: 380px;
     }
   .caroImg {
     img {

@@ -19,10 +19,7 @@ body {
   font-family: $homepageFont;
   font-weight: 500;
   align-self: end;
- border-bottom: 3px solid $homepageFontColor;
- line-height: 1.1;
-  // text-decoration: underline;
-  // text-decoration-thickness:2px;
+
 }
 .addressPhoneNumber,
 .hrsHomepg {
@@ -104,7 +101,6 @@ body {
     margin-top: 1rem;
     font-size: 6.25rem;
     font-weight: 450;
- border-bottom: 0;
 &:hover{
   color:$featureColor;
 }  }
