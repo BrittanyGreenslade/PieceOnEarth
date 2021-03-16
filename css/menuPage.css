@@ -36,26 +36,29 @@ hr {
   display: grid;
   place-items: center;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
-.footerGrid .textFooter, .footerGrid a {
-  color: #403637;
+.resoFtr {
+  color: #d3b468;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resoFtr:active {
+  color: #d3b468;
+}
+
+.textFooter,
+a {
   font-family: "Libre Baskerville", serif;
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 3px;
+  color: #403637;
 }
 
-.footerGrid .textFooter:nth-child(4), .footerGrid a:nth-child(4) {
-  margin-bottom: 1%;
-}
-
-.footerGrid #inactiveDsktp {
-  pointer-events: none;
-}
-
-.footerGrid .socialMediaLogos {
+.socialMediaLogos {
   -webkit-column-gap: 5px;
           column-gap: 5px;
   display: -ms-grid;
@@ -63,36 +66,39 @@ hr {
   place-items: center;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  width: 50vw;
+  width: 40vw;
+  margin-bottom: 10px;
 }
 
-.footerGrid .socialMediaLogos .smLogo {
+.socialMediaLogos .smLogo {
   width: 42px;
   opacity: 0.7;
 }
 
-.footerGrid .copyrightInfo {
+.copyrightInfo {
   font-size: 100%;
   letter-spacing: normal;
-  padding-top: 4%;
+  padding-top: 2%;
   padding-bottom: 2%;
 }
 
 @media only screen and (min-width: 600px) {
-  .textFooter {
+  .textFooter,
+  a {
     font-size: 15px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
   }
   .footerGrid .socialMediaLogos {
-    width: 20vw;
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    width: 30vw;
     margin-bottom: 5px;
   }
   .footerGrid .socialMediaLogos .smLogo {
-    width: 50px;
+    width: 60px;
   }
-  .copyrightInfo {
-    padding-top: 5%;
-    padding-bottom: 2%;
+  #inactiveDsktp {
+    pointer-events: none;
   }
 }
 
@@ -124,9 +130,10 @@ hr {
     margin: auto;
     font-weight: bold;
     font-size: 14px;
+    color: #d3b468;
   }
   .ftrDsktp .ftrDsktpContainer a:hover {
-    color: #d3b468;
+    color: #403637;
   }
   .ftrDsktp .ftrDsktpContainer .centerSocialMedia {
     margin-top: 10px;
@@ -220,6 +227,13 @@ main {
 }
 
 .hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
+  opacity: 0.95;
+  top: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburgerMenu .mobileMenuCheckbox:checked ~ #homepageDropdown {
   opacity: 1;
   top: 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -272,7 +286,7 @@ main {
 .mobileHeaderDropdown .linkHeaderDropdown {
   color: #d3b468;
   font-family: "Shippori Mincho", serif;
-  font-size: 3.25rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -305,7 +319,7 @@ main {
     width: 40px;
   }
   .hamburgerMenu .linkHeaderDropdown {
-    font-size: 4.5rem;
+    font-size: 4.75rem;
   }
 }
 
@@ -325,29 +339,27 @@ main {
             align-items: center;
     height: 15vh;
   }
-  .dsktpHeader .logoAndTitleDsktp,
-  .dsktpHeaderHmpg .logoAndTitleDsktp {
+  .logoAndTitleDsktp {
     width: 300px;
     margin-left: 25px;
     margin-top: 15px;
   }
-  .dsktpHeader .dsktpLinks,
-  .dsktpHeaderHmpg .dsktpLinks {
+  .dsktpLinks {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
-        grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+    grid-auto-flow: column;
     place-items: center;
     width: 70%;
     -ms-grid-column-align: end;
         justify-self: end;
     margin-top: 2vh;
-    margin-left: 8%;
   }
   .dsktpHeader a,
   .dsktpHeader p, .dsktpHeaderHmpg a,
   .dsktpHeaderHmpg p {
-    font-size: 20px;
+    font-family: "Libre Baskerville", serif;
+    letter-spacing: 0;
+    font-size: 18px;
     font-weight: bold;
     color: #403637;
   }
@@ -358,8 +370,10 @@ main {
   }
   .dsktpHeader p, .dsktpHeaderHmpg p {
     color: #d3b468;
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 2px;
+    margin-bottom: 0;
+    font-style: italic;
   }
   .dsktpHeaderHmpg a,
   .dsktpHeaderHmpg p {
@@ -384,7 +398,7 @@ main {
   min-height: 70vh;
 }
 
-.menuDsktpContainer {
+.dsktpMain {
   display: none;
 }
 
@@ -392,115 +406,162 @@ main {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  padding-top: 2%;
+  margin-top: 2%;
   width: 100%;
 }
 
-#ordPickup {
-  font-family: "Libre Baskerville", serif;
-  color: #403637;
-  font-weight: bold;
-  font-style: italic;
-  margin-top: 5px;
-  font-size: 20px;
-  text-align: center;
+.mblMain {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  -ms-grid-rows: 90px 8fr;
+      grid-template-rows: 90px 8fr;
+  height: 100%;
+  row-gap: 25px;
 }
 
-.menuContainerMbl {
+.menuInfoMbl {
+  width: 90%;
+  height: 105%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 70px 35%;
+      grid-template-rows: 70px 35%;
+  place-items: center;
+  -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.menuInfoMbl h1 {
   color: #403637;
   font-size: 30px;
   font-weight: bold;
   font-family: "Shippori Mincho", serif;
   letter-spacing: 6px;
-  margin-top: 8px;
+  margin-top: 20px;
+}
+
+.menuInfoMbl p {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  color: #403637;
+  font-weight: bold;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  margin-top: -15px;
+}
+
+.dropdownMenu3Items,
+.dropdownMenu9Items {
+  width: 80%;
+}
+
+.mblFoodDropdown {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  position: relative;
+  width: 100%;
+  height: 170px;
 }
 
-.menuContainerMbl h1 {
-  font-size: 36px;
-  letter-spacing: 6px;
-  margin-top: 5%;
-}
-
-.menuContainerMbl .gfItem {
-  font-size: 14px;
-  font-style: italic;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
-.menuContainerMbl .mblFoodDropdown .mblFoodChkbox {
-  height: 120px;
-  width: 80vw;
-  left: 10vw;
+.mblFoodDropdown .mblFoodChkbox {
+  height: 100%;
+  width: 100%;
   position: absolute;
   opacity: 0;
   z-index: 1001;
+  padding-top: 30%;
 }
 
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuTitle {
+.mblFoodDropdown .mblFoodMenuTitle {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
   place-items: center;
-  margin: auto;
-  border-radius: 10px;
-  width: 80vw;
-  height: 120px;
-  margin-bottom: 5px;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
   background-size: cover;
 }
 
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuTitle h2 {
-  background: rgba(0, 0, 0, 0.7);
+.mblFoodDropdown .gridDivMenuSection {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  width: 100%;
+  height: 100%;
+}
+
+.mblFoodDropdown .txtBckgrnd {
+  background: #010a0a75;
   border: solid 1px rgba(198, 198, 198, 0.4);
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 4px #000000;
-          box-shadow: 2px 2px 4px #000000;
-  width: 45vw;
-  color: #ededed;
-  font-size: 1em;
+  -webkit-box-shadow: 2px 2px 4px #000000cc;
+          box-shadow: 2px 2px 4px #000000cc;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.mblFoodDropdown .txtBckgrnd h2 {
+  display: inline-block;
+  color: #403637;
+  font-size: 30px;
   font-weight: bold;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 6px;
+  margin-top: 20px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-top: 0;
+  text-align: center;
+  color: #ededed;
 }
 
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuTitle .dropdownArrow {
-  width: 15px;
+.mblFoodDropdown .txtBckgrnd .dropdownArrow {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  width: 20px;
+  margin-top: 5px;
 }
 
-.menuContainerMbl .mblFoodDropdown #foodMenuTitle1 {
+.mblFoodDropdown #foodMenuTitle1 {
   background-image: url(../images/bruschettaAppetizer2.jpg);
 }
 
-.menuContainerMbl .mblFoodDropdown #foodMenuTitle2 {
+.mblFoodDropdown #foodMenuTitle2 {
   background-image: url(/images/duckRadishPizza.jpg);
 }
 
-.menuContainerMbl .mblFoodDropdown #foodMenuTitle3 {
+.mblFoodDropdown #foodMenuTitle3 {
   background-image: url(../images/mushroomSpinachPappardelle.jpg);
 }
 
-.menuContainerMbl .mblFoodDropdown #foodMenuTitle4 {
+.mblFoodDropdown #foodMenuTitle4 {
   background-image: url(../images/craftBeerPints2.jpg);
 }
 
-.menuContainerMbl .mblFoodDropdown #foodMenuTitle5 {
+.mblFoodDropdown #foodMenuTitle5 {
   background-image: url(../images/cannoliDessert2.jpg);
 }
 
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuContents {
+.mblFoodMenuContents3,
+.mblFoodMenuContents9 {
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   position: absolute;
-  width: 100px;
+  width: 90%;
   background: #ededed;
-  border-radius: 10px;
+  border: solid 1px rgba(198, 198, 198, 0.4);
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 1px 3px #000000aa;
+          box-shadow: 1px 1px 3px #000000aa;
   display: -ms-grid;
   display: grid;
+  place-items: center;
   top: -50;
   min-height: 20vh;
   opacity: 0;
@@ -508,56 +569,71 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuContents .menuItem {
-  width: 70%;
-  margin-bottom: 5px;
-}
-
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuContents .menuItem .menuItemHeader {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 0.5fr;
-      grid-template-columns: 2fr 0.5fr;
-  width: 80vw;
-  place-items: start;
-  margin-top: 2%;
-}
-
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuContents .menuItem .menuItemHeader h3 {
+.mblFoodMenuContents3 p,
+.mblFoodMenuContents9 p {
   font-family: "Libre Baskerville", serif;
   color: #403637;
   font-weight: bold;
-  font-size: 18px;
-}
-
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuContents .menuItem .menuItemHeader .price {
-  -ms-grid-column-align: end;
-      justify-self: end;
-  border-left: 1px solid black;
-  padding-left: 25px;
-}
-
-.menuContainerMbl .mblFoodDropdown .mblFoodMenuContents .menuItem p {
-  font-family: "Libre Baskerville", serif;
-  color: #403637;
-  font-weight: bold;
-  font-size: 14px;
+  font-size: 0.72rem;
   text-align: left;
   font-style: italic;
 }
 
-.menuContainerMbl .mblFoodDropdown .mblFoodChkbox:checked ~ .mblFoodMenuContents {
+.mblFoodMenuContents3 .menuItem,
+.mblFoodMenuContents9 .menuItem {
+  display: -ms-grid;
+  display: grid;
+  width: 95%;
+}
+
+.mblFoodMenuContents3 .menuItemHeader,
+.mblFoodMenuContents9 .menuItemHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 0.5fr;
+      grid-template-columns: 2fr 0.5fr;
+}
+
+.mblFoodMenuContents3 .menuItemHeader h3,
+.mblFoodMenuContents3 .menuItemHeader .price,
+.mblFoodMenuContents9 .menuItemHeader h3,
+.mblFoodMenuContents9 .menuItemHeader .price {
+  font-family: "Libre Baskerville", serif;
+  color: #403637;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.mblFoodMenuContents3 .menuItemHeader .price,
+.mblFoodMenuContents9 .menuItemHeader .price {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.mblFoodChkbox:checked ~ .mblFoodMenuContents3,
+.mblFoodChkbox:checked ~ .mblFoodMenuContents9 {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
   top: 50;
   place-items: start;
   opacity: 1;
   z-index: 1000;
-  width: 80vw;
+  width: 100%;
   position: relative;
-  margin-top: 5px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-top: 5px;
+}
+
+.mblFoodChkbox:checked ~ .mblFoodMenuContents3 {
+  height: 200px;
+}
+
+.mblFoodChkbox:checked ~ .mblFoodMenuContents9 {
+  height: 600px;
 }
 
 .orderButton {
@@ -573,11 +649,16 @@ main {
   height: 20px;
   font-size: 1rem;
   font-family: "Libre Baskerville", serif;
-  font-size: 18px;
-  height: 25px;
-  padding-top: 3px;
-  width: 35%;
+  font-size: 0.82rem;
+  margin-top: -10px;
   margin-bottom: 10px;
+  width: 33%;
+  height: 22px;
+}
+
+.orderButton:active {
+  height: 25px;
+  background: #d3b468;
 }
 
 .orderButton a {
@@ -587,18 +668,78 @@ main {
 @media only screen and (min-width: 600px) {
   .heroImg {
     height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-top: 2%;
+    width: 100%;
   }
-  #ordPickup {
-    font-family: "Libre Baskerville", serif;
-    color: #403637;
-    font-weight: bold;
-    font-size: 30px;
+  .mblMain {
+    -ms-grid-rows: 90px 8fr;
+        grid-template-rows: 90px 8fr;
+    row-gap: 50px;
+    margin-top: 30px;
+  }
+  .menuInfoMbl {
+    width: 90%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 90px 35%;
+        grid-template-rows: 90px 35%;
+    place-items: center;
+    -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .menuInfoMbl h1 {
+    font-size: 50px;
+  }
+  .menuInfoMbl p {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
   .menuContainerMbl h1 {
     font-size: 50px;
   }
   .menuContainerMbl .gfItem {
     font-size: 22px;
+  }
+  .menuContainerMbl .gridDivMenuSection {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    width: 100%;
+    height: 100%;
+  }
+  .menuContainerMbl .txtBckgrnd {
+    background: #010a0a75;
+    border: solid 1px rgba(198, 198, 198, 0.4);
+    -webkit-box-shadow: 2px 2px 4px #000000cc;
+            box-shadow: 2px 2px 4px #000000cc;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+  }
+  .menuContainerMbl .txtBckgrnd h2 {
+    display: inline-block;
+    color: #403637;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Shippori Mincho", serif;
+    letter-spacing: 6px;
+    margin-top: 20px;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    margin-top: 0;
+    text-align: center;
+    color: #ededed;
+  }
+  .menuContainerMbl .txtBckgrnd .dropdownArrow {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    width: 20px;
+    margin-top: 5px;
   }
   .menuContainerMbl .mblFoodDropdown .mblFoodChkbox {
     height: 250px;
@@ -619,138 +760,165 @@ main {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    font-size: 30px;
     height: 50px;
     width: 30%;
   }
   .orderButton #inactiveDsktp {
     pointer-events: none;
   }
-  #inactiveDsktp {
-    pointer-events: none;
+  .orderButton a {
+    margin-top: 2px;
+    font-size: 25px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .menuContainerMbl {
+  .mblMain {
     display: none;
   }
-  .heroImg {
-    height: 400px;
-    width: 100%;
-    display: block;
-    margin: auto;
-  }
-  #ordPickup {
-    font-family: "Libre Baskerville", serif;
-    color: #403637;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  .menuDsktpContainer {
+  .dsktpMain {
     display: -ms-grid;
     display: grid;
+    min-height: 1000px;
     place-items: center;
-    margin-top: 50px;
   }
-  .menuDsktpContainer h1 {
+  .heroImg {
+    height: 375px;
+    margin-top: 0;
+  }
+  .menuInfoDsktp {
+    margin-bottom: 30px;
+  }
+  .menuInfoDsktp h1 {
     color: #403637;
     font-size: 30px;
     font-weight: bold;
     font-family: "Shippori Mincho", serif;
     letter-spacing: 6px;
-    font-size: 60px;
+    margin-top: 20px;
+    font-size: 50px;
+    letter-spacing: 6px;
     margin-bottom: 20px;
   }
-  .menuDsktpContainer .dsktpMenuSectionContainer3 {
+  .menuInfoDsktp p {
+    margin-top: -20px;
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    color: #403637;
+    font-weight: bold;
+    width: 90%;
+    font-style: italic;
+    margin-left: 20px;
+  }
+  .dsktpMenuSectionContainer3 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 0.5fr 1.25fr 2fr;
-        grid-template-rows: 0.5fr 1.25fr 2fr;
     place-items: center;
-    width: 80vw;
-    margin-bottom: 50px;
+    width: 80%;
   }
-  .menuDsktpContainer .dsktpMenuSectionContainer3 .dsktpMenu3ItemContainer {
+  .dsktpMenuSectionContainer3 h1 {
+    color: #403637;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Shippori Mincho", serif;
+    letter-spacing: 6px;
+    margin-top: 20px;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  .dsktpMenuSectionContainer3 .dsktpMenu3ItemContainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    width: 60vw;
+    width: 90%;
     -webkit-column-gap: 10px;
             column-gap: 10px;
+    margin-bottom: 2%;
   }
-  .menuDsktpContainer .dsktpMenuSectionContainer9 {
+  .dsktpMenuSectionContainer9 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 0.5fr 3fr 2fr;
-        grid-template-rows: 0.5fr 3fr 2fr;
     place-items: center;
-    width: 80vw;
-    margin-bottom: 50px;
+    width: 80%;
+    grid-auto-flow: row;
   }
-  .menuDsktpContainer .dsktpMenuSectionContainer9 #pizzaH1 {
-    margin-bottom: 0;
+  .dsktpMenuSectionContainer9 h1 {
+    color: #403637;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Shippori Mincho", serif;
+    letter-spacing: 6px;
+    margin-top: 20px;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 5px;
   }
-  .menuDsktpContainer .dsktpMenuSectionContainer9 .halfpricePizza {
-    margin-bottom: 30px;
-  }
-  .menuDsktpContainer .dsktpMenuSectionContainer9 .dsktpMenu9ItemContainer {
+  .dsktpMenuSectionContainer9 .dsktpMenu9ItemContainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-    width: 60vw;
-    -webkit-column-gap: 10px;
-            column-gap: 10px;
-    row-gap: 15px;
+    width: 100%;
+    height: 70%;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+    row-gap: 25px;
+    margin-bottom: 7%;
   }
-  .menuDsktpContainer .dsktpMenuItemContainer {
+  .pizzaSpclInfo {
+    text-align: center;
+    margin-bottom: -10px;
+  }
+  .dsktpMenuItemContainer {
     display: -ms-grid;
     display: grid;
     justify-items: center;
     -ms-grid-rows: 0.5fr 2fr 0.5fr;
         grid-template-rows: 0.5fr 2fr 0.5fr;
+    margin-bottom: 5px;
   }
-  .menuDsktpContainer .dsktpMenuItemContainer h2 {
+  .dsktpMenuItemContainer h2 {
     font-family: "Libre Baskerville", serif;
     color: #403637;
     font-weight: bold;
     font-size: 22px;
     margin-bottom: 5px;
   }
-  .menuDsktpContainer .dsktpMenuItemContainer p {
-    -ms-grid-column-align: center;
-        justify-self: center;
-    text-align: center;
+  .dsktpMenuItemContainer p {
     font-family: "Libre Baskerville", serif;
     color: #403637;
     font-weight: bold;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
     font-style: italic;
   }
-  .menuDsktpContainer .dsktpMenuItemContainer h4 {
+  .dsktpMenuItemContainer h4 {
     font-family: "Libre Baskerville", serif;
     color: #403637;
     font-weight: bold;
     font-size: 18px;
     font-weight: bold;
   }
-  .menuDsktpContainer .phNmbrDsktp {
+  .phNmbrDsktp {
     font-size: 30px;
     font-weight: bold;
     color: #d3b468;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
-  .menuDsktpContainer .dsktpFoodImg {
-    width: 70vw;
+  .dsktpFoodImg {
+    width: 100%;
     height: 225px;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 5px;
     margin-top: 10px;
   }
-  .menuDsktpContainer p {
+  p {
     font-family: "Libre Baskerville", serif;
     color: #403637;
     font-weight: bold;

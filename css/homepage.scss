@@ -40,6 +40,11 @@ body {
   place-items: center;
   align-self: end;
   width: 100%;
+  p{
+    font-size:10px;
+    color: $homepageFontColor;
+    margin-bottom: 2px;
+  }
 }
 .socialMediaLogos {
   display: grid;
@@ -47,14 +52,14 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
   place-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   .smLogo {
     width: 40px;
     opacity: 0.7;
   }
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 600px) {
   .addressPhoneNumber,
   .hrsHomepg {
     font-size: 1.25rem;
@@ -67,10 +72,17 @@ body {
   }
   .socialMediaLogos {
     width: 25%;
+    margin-bottom: 8px;
     .smLogo {
       width: 50px;
     }
   }
+  .hmpgFtrContainer{
+    p{
+      font-size:14px;
+      color: $homepageFontColor;
+      margin-bottom: 10px;
+    }}
 }
 
 @media only screen and (min-width: 1000px) {
@@ -97,4 +109,7 @@ body {
     font-size: 1.1rem;
     letter-spacing: 2px;
   }
-}
+  .socialMediaLogos {
+    width: 40%;
+
+}}

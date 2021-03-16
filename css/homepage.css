@@ -58,6 +58,13 @@ main {
 }
 
 .hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
+  opacity: 0.95;
+  top: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburgerMenu .mobileMenuCheckbox:checked ~ #homepageDropdown {
   opacity: 1;
   top: 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -110,7 +117,7 @@ main {
 .mobileHeaderDropdown .linkHeaderDropdown {
   color: #d3b468;
   font-family: "Shippori Mincho", serif;
-  font-size: 3.25rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -143,7 +150,7 @@ main {
     width: 40px;
   }
   .hamburgerMenu .linkHeaderDropdown {
-    font-size: 4.5rem;
+    font-size: 4.75rem;
   }
 }
 
@@ -163,29 +170,27 @@ main {
             align-items: center;
     height: 15vh;
   }
-  .dsktpHeader .logoAndTitleDsktp,
-  .dsktpHeaderHmpg .logoAndTitleDsktp {
+  .logoAndTitleDsktp {
     width: 300px;
     margin-left: 25px;
     margin-top: 15px;
   }
-  .dsktpHeader .dsktpLinks,
-  .dsktpHeaderHmpg .dsktpLinks {
+  .dsktpLinks {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
-        grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+    grid-auto-flow: column;
     place-items: center;
     width: 70%;
     -ms-grid-column-align: end;
         justify-self: end;
     margin-top: 2vh;
-    margin-left: 8%;
   }
   .dsktpHeader a,
   .dsktpHeader p, .dsktpHeaderHmpg a,
   .dsktpHeaderHmpg p {
-    font-size: 20px;
+    font-family: "Libre Baskerville", serif;
+    letter-spacing: 0;
+    font-size: 18px;
     font-weight: bold;
     color: #403637;
   }
@@ -196,8 +201,10 @@ main {
   }
   .dsktpHeader p, .dsktpHeaderHmpg p {
     color: #d3b468;
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 2px;
+    margin-bottom: 0;
+    font-style: italic;
   }
   .dsktpHeaderHmpg a,
   .dsktpHeaderHmpg p {
@@ -281,6 +288,12 @@ body {
   width: 100%;
 }
 
+.hmpgFtrContainer p {
+  font-size: 10px;
+  color: #ededed;
+  margin-bottom: 2px;
+}
+
 .socialMediaLogos {
   display: -ms-grid;
   display: grid;
@@ -290,7 +303,7 @@ body {
   -webkit-column-gap: 5px;
           column-gap: 5px;
   place-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .socialMediaLogos .smLogo {
@@ -298,7 +311,7 @@ body {
   opacity: 0.7;
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 600px) {
   .addressPhoneNumber,
   .hrsHomepg {
     font-size: 1.25rem;
@@ -311,9 +324,15 @@ body {
   }
   .socialMediaLogos {
     width: 25%;
+    margin-bottom: 8px;
   }
   .socialMediaLogos .smLogo {
     width: 50px;
+  }
+  .hmpgFtrContainer p {
+    font-size: 14px;
+    color: #ededed;
+    margin-bottom: 10px;
   }
 }
 
@@ -342,6 +361,9 @@ body {
   .hrsHomepg {
     font-size: 1.1rem;
     letter-spacing: 2px;
+  }
+  .socialMediaLogos {
+    width: 40%;
   }
 }
 /*# sourceMappingURL=homepage.css.map */

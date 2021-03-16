@@ -59,6 +59,13 @@ main {
 }
 
 .hamburgerMenu .mobileMenuCheckbox:checked ~ .mobileHeaderDropdown {
+  opacity: 0.95;
+  top: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburgerMenu .mobileMenuCheckbox:checked ~ #homepageDropdown {
   opacity: 1;
   top: 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -111,7 +118,7 @@ main {
 .mobileHeaderDropdown .linkHeaderDropdown {
   color: #d3b468;
   font-family: "Shippori Mincho", serif;
-  font-size: 3.25rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -144,7 +151,7 @@ main {
     width: 40px;
   }
   .hamburgerMenu .linkHeaderDropdown {
-    font-size: 4.5rem;
+    font-size: 4.75rem;
   }
 }
 
@@ -164,29 +171,27 @@ main {
             align-items: center;
     height: 15vh;
   }
-  .dsktpHeader .logoAndTitleDsktp,
-  .dsktpHeaderHmpg .logoAndTitleDsktp {
+  .logoAndTitleDsktp {
     width: 300px;
     margin-left: 25px;
     margin-top: 15px;
   }
-  .dsktpHeader .dsktpLinks,
-  .dsktpHeaderHmpg .dsktpLinks {
+  .dsktpLinks {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
-        grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr;
+    grid-auto-flow: column;
     place-items: center;
     width: 70%;
     -ms-grid-column-align: end;
         justify-self: end;
     margin-top: 2vh;
-    margin-left: 8%;
   }
   .dsktpHeader a,
   .dsktpHeader p, .dsktpHeaderHmpg a,
   .dsktpHeaderHmpg p {
-    font-size: 20px;
+    font-family: "Libre Baskerville", serif;
+    letter-spacing: 0;
+    font-size: 18px;
     font-weight: bold;
     color: #403637;
   }
@@ -197,8 +202,10 @@ main {
   }
   .dsktpHeader p, .dsktpHeaderHmpg p {
     color: #d3b468;
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 2px;
+    margin-bottom: 0;
+    font-style: italic;
   }
   .dsktpHeaderHmpg a,
   .dsktpHeaderHmpg p {
@@ -244,26 +251,29 @@ hr {
   display: grid;
   place-items: center;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
-.footerGrid .textFooter, .footerGrid a {
-  color: #403637;
+.resoFtr {
+  color: #d3b468;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resoFtr:active {
+  color: #d3b468;
+}
+
+.textFooter,
+a {
   font-family: "Libre Baskerville", serif;
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 3px;
+  color: #403637;
 }
 
-.footerGrid .textFooter:nth-child(4), .footerGrid a:nth-child(4) {
-  margin-bottom: 1%;
-}
-
-.footerGrid #inactiveDsktp {
-  pointer-events: none;
-}
-
-.footerGrid .socialMediaLogos {
+.socialMediaLogos {
   -webkit-column-gap: 5px;
           column-gap: 5px;
   display: -ms-grid;
@@ -271,36 +281,39 @@ hr {
   place-items: center;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  width: 50vw;
+  width: 40vw;
+  margin-bottom: 10px;
 }
 
-.footerGrid .socialMediaLogos .smLogo {
+.socialMediaLogos .smLogo {
   width: 42px;
   opacity: 0.7;
 }
 
-.footerGrid .copyrightInfo {
+.copyrightInfo {
   font-size: 100%;
   letter-spacing: normal;
-  padding-top: 4%;
+  padding-top: 2%;
   padding-bottom: 2%;
 }
 
 @media only screen and (min-width: 600px) {
-  .textFooter {
+  .textFooter,
+  a {
     font-size: 15px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
   }
   .footerGrid .socialMediaLogos {
-    width: 20vw;
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    width: 30vw;
     margin-bottom: 5px;
   }
   .footerGrid .socialMediaLogos .smLogo {
-    width: 50px;
+    width: 60px;
   }
-  .copyrightInfo {
-    padding-top: 5%;
-    padding-bottom: 2%;
+  #inactiveDsktp {
+    pointer-events: none;
   }
 }
 
@@ -332,9 +345,10 @@ hr {
     margin: auto;
     font-weight: bold;
     font-size: 14px;
+    color: #d3b468;
   }
   .ftrDsktp .ftrDsktpContainer a:hover {
-    color: #d3b468;
+    color: #403637;
   }
   .ftrDsktp .ftrDsktpContainer .centerSocialMedia {
     margin-top: 10px;
@@ -402,6 +416,7 @@ main {
   place-items: center;
   width: 100%;
   height: 100%;
+  min-height: 70vh;
 }
 
 .contactUsContainer {
@@ -409,8 +424,8 @@ main {
   display: grid;
   place-items: center;
   width: 90%;
-  -ms-grid-rows: 0.5fr 1.5fr;
-      grid-template-rows: 0.5fr 1.5fr;
+  -ms-grid-rows: 70px 60%;
+      grid-template-rows: 70px 60%;
 }
 
 .contactUsContainer h1 {
@@ -445,7 +460,7 @@ main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  width: 90%;
+  width: 85%;
 }
 
 .contactForm h1 {
@@ -454,10 +469,13 @@ main {
   font-weight: bold;
   font-family: "Shippori Mincho", serif;
   letter-spacing: 6px;
+  margin-top: 20px;
   letter-spacing: 4px;
   -ms-grid-column-align: center;
       justify-self: center;
   font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .contactForm .contactFormItem {
@@ -516,12 +534,13 @@ main {
 
 .submitButton:active {
   height: 25px;
+  background: #d3b468;
 }
 
 .googleMap {
   height: 200px;
   max-width: 2000px;
-  width: 90%;
+  width: 85%;
   -ms-grid-column-align: center;
       justify-self: center;
   margin-top: 8px;
@@ -542,10 +561,13 @@ main {
     place-items: center;
     width: 100%;
     height: 100%;
+    min-height: 70vh;
   }
   .contactUsContainer {
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 120px 60%;
+        grid-template-rows: 120px 60%;
   }
   .contactUsContainer h1 {
     font-size: 50px;
@@ -558,7 +580,7 @@ main {
     pointer-events: none;
   }
   .contactForm {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 80%;
     display: -ms-grid;
     display: grid;
@@ -566,7 +588,9 @@ main {
         grid-template-rows: 0.75fr 0.75fr 0.75fr 0.5fr;
   }
   .contactForm h1 {
+    margin-top: 15px;
     font-size: 2.75rem;
+    margin-bottom: 40px;
   }
   .contactForm .formSectionTitle {
     font-size: 26px;
@@ -626,6 +650,7 @@ main {
     font-weight: bold;
     font-family: "Shippori Mincho", serif;
     letter-spacing: 6px;
+    margin-top: 20px;
     letter-spacing: 6px;
     font-size: 2.5rem;
   }
@@ -647,7 +672,7 @@ main {
     font-family: "Libre Baskerville", serif;
     color: #403637;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 3px;
   }
   .contactInfoList {
@@ -655,6 +680,7 @@ main {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin-right: 20px;
   }
   .dsktpContactItem {
     display: -ms-grid;
@@ -698,7 +724,7 @@ main {
     font-family: "Libre Baskerville", serif;
     color: #403637;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 3px;
   }
   .contactFormDsktp .formBox {
@@ -739,5 +765,6 @@ main {
 .googleMap {
   width: 90%;
   margin-right: 1%;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=contactPage.css.map */

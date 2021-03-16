@@ -4,9 +4,8 @@
 .caroAbtPg {
   position: relative;
   .imgSpace {
-    height: 200px;
+    height: 210px;
     width: 100%;
-    margin-bottom: 15px;
   }
   .radio {
     display: none;
@@ -16,27 +15,26 @@
     grid-auto-flow: column;
     width: 40vw;
     margin: auto;
-    place-items:center;
+    place-items: center;
     .radioLbl {
       @include pageContent;
       font-size: 1em;
     }
   }
   .caroImg {
-    width: 100%;
-    height: 200px;
+    @include heroImgMbl;
     position: absolute;
     top: 0;
     left: 0;
     transition: all 0.2s ease-in-out;
     opacity: 0;
     transform: scale(0.8);
-  img {
-    padding-top: 2%;
-    width: 100%;
     height: 200px;
-    object-fit: cover;
-  }}
+    img {
+      @include heroImgMbl;
+      margin-top: 0;
+    }
+  }
   #carOne:checked ~ .labelsContainer #radioLbl1,
   #carTwo:checked ~ .labelsContainer #radioLbl2,
   #carThree:checked ~ .labelsContainer #radioLbl3,
@@ -55,143 +53,136 @@
     transform: scale(1);
   }
 }
-#abtOne, #abtTwo, #abtThree, #abtFour, #abtFive, #abtSix{
+#abtOne,
+#abtTwo,
+#abtThree,
+#abtFour,
+#abtFive,
+#abtSix {
   transform-origin: 0 0;
   transform: scaleY(0);
 }
-.abtContainer{
-  display:grid;
+.abtContainer {
+  display: grid;
   place-items: center;
-  grid-template-rows: 1fr .75fr .5fr;
-.aboutUsSection {
-  display:grid;
-  margin-top: 5%;
-  place-items: center;
-  h1 {
-    @include pageTitle;
- font-size: 30px;
-    letter-spacing: 6px;
-    margin-bottom: 20px;
-  }
-  p {
-    text-align: center;
-    @include pageContent;
+  // grid-template-rows: 1fr .75fr .5fr;
+  .aboutUsSection,
+  .f2TSection {
     width: 90%;
-    font-style: italic;
+    display: grid;
+    place-items: center;
+    h1 {
+      @include pageTitle;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+    }
+    p {
+      letter-spacing: 2px;
+      @include pageContent;
+      font-size: 0.8rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .f2TSection {
+    h1 {
+      font-size: 28px;
+      letter-spacing: 3.5px;
+      margin-top: 15px;
+    }
+  }
+  .introVideo {
+    width: 90%;
+    height: 250px;
+    max-width: 1000px;
+    margin-top: 6%;
+    margin-bottom: 15px;
+    border-radius: 8px;
   }
 }
-.f2TSection{
-  display:grid;
-grid-auto-flow: row;
-  margin-top: 30px;
-  place-items: center;
-  h1 {
-    letter-spacing: 5px;
-    @include pageTitle;
-    margin-bottom: 20px;
-    font-size: 30px;
-   }
-  p {
-    text-align: center;
-    @include pageContent;
-    width: 90%;
-    font-style: italic;
-  }
-}
-.introVideo {
-  width: 95vw;
-  height: 250px;
-  max-width: 1000px;
-  margin-top: 8%;
-  margin-bottom: 8px;
-  border-radius: 10px;
-}}
 
 @media only screen and (min-width: 600px) {
   #inactiveDsktp {
     pointer-events: none;
   }
   .caroAbtPg {
+    height: 400px;
     .imgSpace {
-      height:350px;
+      height: 415px;
     }
     .labelsContainer {
-      width: 30vw;
+      width: 30%;
       .radioLbl {
         font-size: 1.5em;
       }
     }
     .caroImg {
-      height: 350px;
-    img {
-      height: 350px;
-    }}
-  }
-  .abtContainer{
-    display:grid;
-    grid-template-rows: 0.75fr 5fr .5fr;
-  .aboutUsSection {
-    h1 {
-   font-size: 50px;
-    }
-    p {
-      font-size: 20px;
-    }
-  }
-  .f2TSection{
-    h1 {
-      font-size: 50px;
-     }
-    p {
-font-size:20px;    }
-  }
-  .introVideo {
-    height: 400px;
-    width: 600px;
-    margin-bottom:10px;
-  }}}
-  @media only screen and (min-width: 1000px) {
-    .caroAbtPg {
-      .imgSpace {
-        height:400px;
-      }
-      .labelsContainer {
-        width: 20vw;
-        margin-top: 25px;
-        .radioLbl {
-          font-size: 1.25em;
-        }
-      }
-      .caroImg {
-        height: 400px;
       img {
-        height: 400px;
-      }}
-    }
-    .abtContainer{
-    .aboutUsSection {
-      margin-top: 55px;
-      width:70%;  
-      h1 {
-     font-size: 50px;
-      }
-      p {
-        font-size: 20px;
+        @include heroImgTblt;
+        margin-top: 0%;
       }
     }
-    .f2TSection{
-      width:70%;  
-      margin-top: 25px;
+  }
+  .abtContainer {
+    display: grid;
+    margin-top: 50px;
+    .aboutUsSection,
+    .f2TSection {
+      width: 90%;
       h1 {
+        margin-top: 15px;
+        margin-bottom: 15px;
         font-size: 50px;
-       }
+      }
       p {
-  font-size:20px;    }
+        letter-spacing: 4px;
+        font-size: 18px;
+      }
     }
     .introVideo {
       height: 400px;
-      width:600px;
-      margin-top: 20px;
-      margin-bottom: 2%;
-    }}}
-  
+      width: 600px;
+      margin-top: 4%;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .caroAbtPg {
+    height: 360px;
+    .imgSpace {
+      height: 400px;
+    }
+  .caroImg {
+    img {
+      @include heroImgDsktp;
+      margin-top: 0;
+    }
+  }
+  .labelsContainer {
+    width: 15%;
+    .radioLbl {
+      font-size: 1.25em;
+    }
+  }}
+  .abtContainer {
+    .aboutUsSection, .f2TSection {
+      margin-top: 55px;
+      width: 70%;
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+    .f2TSection {
+      margin-top: 25px;
+    }}
+    .introVideo {
+      height: 500px;
+      width: 800px;
+      margin-top: 1%;
+      margin-bottom: 20px;
+    }
+  }

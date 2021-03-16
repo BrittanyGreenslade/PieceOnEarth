@@ -16,55 +16,62 @@ hr {
   display: grid;
   place-items: center;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  .textFooter, a {
-    color: $contentColor;
-    font-family: $contentFont;
-    font-size: 8px;
-    letter-spacing: 3px;
-    &:nth-child(4){
-      margin-bottom: 1%;
+}
+  .resoFtr {
+    color: $featureColor;
+    font-weight: bold;
+    margin-bottom: 10px;
+    &:active {
+      color: $featureColor;
+    }
+  }
+.textFooter,
+a {
+  font-family: $contentFont;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: $contentColor;
+}
+
+.socialMediaLogos {
+  column-gap: 5px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 40vw;
+  margin-bottom: 10px;
+  .smLogo {
+    width: 42px;
+    opacity: 0.7;
+  }
+}
+.copyrightInfo {
+  font-size: 100%;
+  letter-spacing: normal;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+@media only screen and (min-width: 600px) {
+  .textFooter,
+  a {
+    font-size: 15px;
+    letter-spacing: 4px;
+  }
+  .footerGrid {
+    .socialMediaLogos {
+      column-gap: 0;
+      width: 30vw;
+      margin-bottom: 5px;
+      .smLogo {
+        width: 60px;
+      }
     }
   }
   #inactiveDsktp {
     pointer-events: none;
-  }
-  .socialMediaLogos {
-    column-gap: 5px;
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 50vw;
-    .smLogo {
-      width: 42px;
-      opacity: 0.7;
-    }
-  }
-  .copyrightInfo {
-    font-size: 100%;
-    letter-spacing: normal;
-    padding-top: 4%;
-    padding-bottom: 2%;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .textFooter {
-    font-size: 15px;
-    letter-spacing: 3px;
-  }
-  .footerGrid{
-  .socialMediaLogos {
-    width: 20vw;
-    margin-bottom: 5px;
-    .smLogo {
-      width: 50px;
-    }
-  }}
-  .copyrightInfo {
-    padding-top: 5%;
-    padding-bottom: 2%;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -90,8 +97,9 @@ hr {
         margin: auto;
         font-weight: bold;
         font-size: 14px;
-        &:hover{
-          color: $featureColor;
+        color: $featureColor;
+        &:hover {
+          color: $contentColor;
         }
       }
       .centerSocialMedia {
@@ -100,7 +108,7 @@ hr {
         place-items: center;
         .ftrLogoAndName {
           width: 180px;
-          margin-bottom:10px;
+          margin-bottom: 10px;
         }
         .socialMediaLogos {
           column-gap: 5px;
